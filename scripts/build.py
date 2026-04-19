@@ -6,6 +6,15 @@ import re
 import json
 from collections import defaultdict
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
+from quality import (
+    probe_stream,
+    measure_first_frame_delay,
+    snapshot_blur_score,
+    quality_score,
+    cache
+)
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCES_DIR = ROOT / "sources"
@@ -16,7 +25,7 @@ CHANNEL_LIST_FILE = SOURCES_DIR / "channel_list.txt"
 BLACKLIST_FILE = SOURCES_DIR / "blacklist.txt"
 
 # ============================
-# 图标映射（央视 + 常见卫视）
+# 图标映射
 # ============================
 LOGO_ID_MAP = {
     "CCTV1": "cctv1",
@@ -48,10 +57,7 @@ LOGO_ID_MAP = {
 
 LOGO_BASE = "https://raw.githubusercontent.com/fanmingming/live/main/tv/"
 
-def get_logo(name: str) -> str | None:
-    """
-    返回可用的 logo URL，如果没有映射则返回 None。
-    """
+def get_logo(name: str):
     key = LOGO_ID_MAP.get(name)
     if not key:
         return None
@@ -77,7 +83,7 @@ def load_live_urls():
 
 
 # ============================
-# 读取频道白名单
+# 读取白名单
 # ============================
 def load_channel_whitelist():
     whitelist = set()
@@ -135,7 +141,7 @@ def normalize_name(name: str) -> str:
 
 
 # ============================
-# URL 过滤规则
+# URL 过滤
 # ============================
 def is_good_url(u: str) -> bool:
     u = u.strip()
@@ -150,7 +156,7 @@ def is_good_url(u: str) -> bool:
 
 
 # ============================
-# 黑名单匹配（仅娱乐频道）
+# 黑名单
 # ============================
 def is_blacklisted(name: str, urls: list, blacklist: list) -> bool:
     for key in blacklist:
@@ -163,7 +169,7 @@ def is_blacklisted(name: str, urls: list, blacklist: list) -> bool:
 
 
 # ============================
-# 纯数字频道过滤
+# 数字频道过滤
 # ============================
 def is_numeric_channel(name: str) -> bool:
     n = name.strip()
@@ -184,7 +190,7 @@ def add_channel(channels, name, url):
 
 
 # ============================
-# 解析 txt 格式
+# 解析 txt
 # ============================
 def parse_txt_like(content, channels):
     for line in content.splitlines():
@@ -201,7 +207,7 @@ def parse_txt_like(content, channels):
 
 
 # ============================
-# 解析 m3u 格式
+# 解析 m3u
 # ============================
 def parse_m3u(content, channels):
     last_name = None
@@ -259,7 +265,51 @@ def channel_sort_key(name: str):
 
 
 # ============================
-# 输出 TXT
+# 并发 + 缓存 + 详细进度 B
+# ============================
+def detect_and_sort_urls(name, urls):
+    good_urls = [u for u in urls if is_good_url(u)]
+    total = len(good_urls)
+
+    print(f"\n[{name}] 开始检测，共 {total} 条源\n")
+
+    results = {}
+    THREADS = 6
+
+    with ThreadPoolExecutor(max_workers=THREADS) as exe:
+        future_map = {exe.submit(quality_score, u): u for u in good_urls}
+
+        for idx, future in enumerate(as_completed(future_map), start=1):
+            url = future_map[future]
+            score = future.result()
+
+            if url in cache:
+                w = cache[url]["width"]
+                h = cache[url]["height"]
+                bitrate = cache[url]["bitrate"]
+                delay = cache[url]["delay"]
+                blur = cache[url]["blur"]
+                cached = True
+            else:
+                w = h = bitrate = delay = blur = 0
+                cached = False
+
+            print(
+                f"[{name}] {idx}/{total}  "
+                f"{'缓存' if cached else '检测'}  "
+                f"{w}x{h}  {bitrate}kbps  延迟{delay}s  清晰度{blur:.1f}  总分{score:.1f}",
+                flush=True
+            )
+
+            results[url] = score
+
+    print(f">>> {name} 排序完成\n")
+
+    return sorted(results.keys(), key=lambda u: results[u], reverse=True)
+
+
+# ============================
+# TXT 输出
 # ============================
 def build_output_txt(channels, whitelist, blacklist):
     lines = []
@@ -268,9 +318,9 @@ def build_output_txt(channels, whitelist, blacklist):
     for name in sorted(channels.keys(), key=channel_sort_key):
         if name not in whitelist:
             continue
-        urls = [u for u in channels[name] if is_good_url(u)]
-        if not urls:
-            continue
+
+        urls = detect_and_sort_urls(name, channels[name])
+
         for url in urls:
             lines.append(f"{name},{url}")
         lines.append("")
@@ -280,7 +330,7 @@ def build_output_txt(channels, whitelist, blacklist):
         if name in whitelist:
             continue
 
-        urls = [u for u in channels[name] if is_good_url(u)]
+        urls = detect_and_sort_urls(name, channels[name])
 
         if is_blacklisted(name, urls, blacklist):
             continue
@@ -288,7 +338,6 @@ def build_output_txt(channels, whitelist, blacklist):
         if is_numeric_channel(name):
             continue
 
-        # 源数量必须 ≥ 8（你原来的规则）
         if len(urls) < 8:
             continue
 
@@ -300,7 +349,7 @@ def build_output_txt(channels, whitelist, blacklist):
 
 
 # ============================
-# 输出 M3U（带图标）
+# M3U 输出
 # ============================
 def build_output_m3u(channels, whitelist, blacklist):
     lines = []
@@ -310,19 +359,15 @@ def build_output_m3u(channels, whitelist, blacklist):
     for name in sorted(channels.keys(), key=channel_sort_key):
         if name not in whitelist:
             continue
-        urls = [u for u in channels[name] if is_good_url(u)]
-        if not urls:
-            continue
+
+        urls = detect_and_sort_urls(name, channels[name])
         logo = get_logo(name)
+
         for url in urls:
             if logo:
-                lines.append(
-                    f'#EXTINF:-1 tvg-id="{name}" tvg-logo="{logo}" group-title="电视频道",{name}'
-                )
+                lines.append(f'#EXTINF:-1 tvg-id="{name}" tvg-logo="{logo}" group-title="电视频道",{name}')
             else:
-                lines.append(
-                    f'#EXTINF:-1 tvg-id="{name}" group-title="电视频道",{name}'
-                )
+                lines.append(f'#EXTINF:-1 tvg-id="{name}" group-title="电视频道",{name}')
             lines.append(url)
 
     # 娱乐频道
@@ -330,7 +375,7 @@ def build_output_m3u(channels, whitelist, blacklist):
         if name in whitelist:
             continue
 
-        urls = [u for u in channels[name] if is_good_url(u)]
+        urls = detect_and_sort_urls(name, channels[name])
 
         if is_blacklisted(name, urls, blacklist):
             continue
@@ -338,20 +383,16 @@ def build_output_m3u(channels, whitelist, blacklist):
         if is_numeric_channel(name):
             continue
 
-        # 源数量必须 ≥ 8（和 TXT 保持一致）
         if len(urls) < 8:
             continue
 
         logo = get_logo(name)
+
         for url in urls:
             if logo:
-                lines.append(
-                    f'#EXTINF:-1 tvg-id="{name}" tvg-logo="{logo}" group-title="娱乐频道",{name}'
-                )
+                lines.append(f'#EXTINF:-1 tvg-id="{name}" tvg-logo="{logo}" group-title="娱乐频道",{name}')
             else:
-                lines.append(
-                    f'#EXTINF:-1 tvg-id="{name}" group-title="娱乐频道",{name}'
-                )
+                lines.append(f'#EXTINF:-1 tvg-id="{name}" group-title="娱乐频道",{name}')
             lines.append(url)
 
     return "\n".join(lines)
