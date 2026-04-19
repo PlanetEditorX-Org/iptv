@@ -16,11 +16,46 @@ CHANNEL_LIST_FILE = SOURCES_DIR / "channel_list.txt"
 BLACKLIST_FILE = SOURCES_DIR / "blacklist.txt"
 
 # ============================
-# 图标映射（央视 + 卫视）
+# 图标映射（央视 + 常见卫视）
 # ============================
-LOGO_BASE = "https://live.fanmingming.com/tv/"
-def get_logo(name):
-    return f"{LOGO_BASE}{name}.png"
+LOGO_ID_MAP = {
+    "CCTV1": "cctv1",
+    "CCTV2": "cctv2",
+    "CCTV3": "cctv3",
+    "CCTV4": "cctv4",
+    "CCTV5": "cctv5",
+    "CCTV6": "cctv6",
+    "CCTV7": "cctv7",
+    "CCTV8": "cctv8",
+    "CCTV9": "cctv9",
+    "CCTV10": "cctv10",
+    "CCTV11": "cctv11",
+    "CCTV12": "cctv12",
+    "CCTV13": "cctv13",
+    "CCTV14": "cctv14",
+    "CCTV15": "cctv15",
+    "CCTV16": "cctv16",
+    "CCTV17": "cctv17",
+
+    "湖南卫视": "hunantv",
+    "浙江卫视": "zhejiangtv",
+    "东方卫视": "dongfangtv",
+    "江苏卫视": "jiangsutv",
+    "北京卫视": "bjtv",
+    "广东卫视": "gdws",
+    "深圳卫视": "sztv",
+}
+
+LOGO_BASE = "https://raw.githubusercontent.com/fanmingming/live/main/tv/"
+
+def get_logo(name: str) -> str | None:
+    """
+    返回可用的 logo URL，如果没有映射则返回 None。
+    """
+    key = LOGO_ID_MAP.get(name)
+    if not key:
+        return None
+    return f"{LOGO_BASE}{key}.png"
 
 
 # ============================
@@ -253,7 +288,8 @@ def build_output_txt(channels, whitelist, blacklist):
         if is_numeric_channel(name):
             continue
 
-        if len(urls) < 2:
+        # 源数量必须 ≥ 8（你原来的规则）
+        if len(urls) < 8:
             continue
 
         for url in urls:
@@ -279,7 +315,14 @@ def build_output_m3u(channels, whitelist, blacklist):
             continue
         logo = get_logo(name)
         for url in urls:
-            lines.append(f'#EXTINF:-1 tvg-id="{name}" tvg-logo="{logo}" group-title="电视频道",{name}')
+            if logo:
+                lines.append(
+                    f'#EXTINF:-1 tvg-id="{name}" tvg-logo="{logo}" group-title="电视频道",{name}'
+                )
+            else:
+                lines.append(
+                    f'#EXTINF:-1 tvg-id="{name}" group-title="电视频道",{name}'
+                )
             lines.append(url)
 
     # 娱乐频道
@@ -295,13 +338,20 @@ def build_output_m3u(channels, whitelist, blacklist):
         if is_numeric_channel(name):
             continue
 
-				# 源数量必须 ≥ 10
-        if len(urls) < 10:
+        # 源数量必须 ≥ 8（和 TXT 保持一致）
+        if len(urls) < 8:
             continue
 
         logo = get_logo(name)
         for url in urls:
-            lines.append(f'#EXTINF:-1 tvg-id="{name}" tvg-logo="{logo}" group-title="娱乐频道",{name}')
+            if logo:
+                lines.append(
+                    f'#EXTINF:-1 tvg-id="{name}" tvg-logo="{logo}" group-title="娱乐频道",{name}'
+                )
+            else:
+                lines.append(
+                    f'#EXTINF:-1 tvg-id="{name}" group-title="娱乐频道",{name}'
+                )
             lines.append(url)
 
     return "\n".join(lines)
