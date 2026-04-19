@@ -25,44 +25,59 @@ CHANNEL_LIST_FILE = SOURCES_DIR / "channel_list.txt"
 BLACKLIST_FILE = SOURCES_DIR / "blacklist.txt"
 
 # ============================
-# 图标映射
+# 图标映射（完全匹配 xn--rgv465a.top）
 # ============================
-LOGO_ID_MAP = {
-    "CCTV1": "cctv1",
-    "CCTV2": "cctv2",
-    "CCTV3": "cctv3",
-    "CCTV4": "cctv4",
-    "CCTV5": "cctv5",
-    "CCTV6": "cctv6",
-    "CCTV7": "cctv7",
-    "CCTV8": "cctv8",
-    "CCTV9": "cctv9",
-    "CCTV10": "cctv10",
-    "CCTV11": "cctv11",
-    "CCTV12": "cctv12",
-    "CCTV13": "cctv13",
-    "CCTV14": "cctv14",
-    "CCTV15": "cctv15",
-    "CCTV16": "cctv16",
-    "CCTV17": "cctv17",
 
-    "湖南卫视": "hunantv",
-    "浙江卫视": "zhejiangtv",
-    "东方卫视": "dongfangtv",
-    "江苏卫视": "jiangsutv",
-    "北京卫视": "bjtv",
-    "广东卫视": "gdws",
-    "深圳卫视": "sztv",
+LOGO_ID_MAP = {
+    # CCTV 系列（必须带横杠）
+    "CCTV1": "CCTV-1",
+    "CCTV2": "CCTV-2",
+    "CCTV3": "CCTV-3",
+    "CCTV4": "CCTV-4",
+    "CCTV5": "CCTV-5",
+    "CCTV5+": "CCTV-5+",
+    "CCTV6": "CCTV-6",
+    "CCTV7": "CCTV-7",
+    "CCTV8": "CCTV-8",
+    "CCTV9": "CCTV-9",
+    "CCTV10": "CCTV-10",
+    "CCTV11": "CCTV-11",
+    "CCTV12": "CCTV-12",
+    "CCTV13": "CCTV-13",
+    "CCTV14": "CCTV-14",
+    "CCTV15": "CCTV-15",
+    "CCTV16": "CCTV-16",
+    "CCTV17": "CCTV-17",
+
+    # 卫视（中文名直接作为文件名）
+    "湖南卫视": "湖南卫视",
+    "浙江卫视": "浙江卫视",
+    "东方卫视": "东方卫视",
+    "江苏卫视": "江苏卫视",
+    "北京卫视": "北京卫视",
+    "广东卫视": "广东卫视",
+    "深圳卫视": "深圳卫视",
+    "湖北卫视": "湖北卫视",
+    "黑龙江卫视": "黑龙江卫视",
+    "安徽卫视": "安徽卫视",
+    "重庆卫视": "重庆卫视",
+    "东南卫视": "东南卫视",
+    "甘肃卫视": "甘肃卫视",
+    "广西卫视": "广西卫视",
+    "贵州卫视": "贵州卫视",
+    "海南卫视": "海南卫视",
+    "河北卫视": "河北卫视",
+    "河南卫视": "河南卫视",
+    "吉林卫视": "吉林卫视",
 }
 
-LOGO_BASE = "https://raw.githubusercontent.com/fanmingming/live/main/tv/"
+LOGO_BASE = "https://www.xn--rgv465a.top/tvlogo/"
 
 def get_logo(name: str):
     key = LOGO_ID_MAP.get(name)
     if not key:
         return None
     return f"{LOGO_BASE}{key}.png"
-
 
 # ============================
 # 读取上游 LIVE_URLS
