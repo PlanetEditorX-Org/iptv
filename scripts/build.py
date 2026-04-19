@@ -13,6 +13,7 @@ OUTPUT_DIR = ROOT / "output"
 
 LIVE_URLS_FILE = SOURCES_DIR / "live_urls.txt"
 CHANNEL_LIST_FILE = SOURCES_DIR / "channel_list.txt"
+BLACKLIST_FILE = SOURCES_DIR / "blacklist.txt"
 
 
 # ============================
@@ -45,6 +46,20 @@ def load_channel_whitelist():
                 if name:
                     whitelist.add(normalize_name(name))
     return whitelist
+
+
+# ============================
+# 读取黑名单
+# ============================
+def load_blacklist():
+    bl = []
+    if BLACKLIST_FILE.exists():
+        with BLACKLIST_FILE.open("r", encoding="utf-8") as f:
+            for line in f:
+                key = line.strip()
+                if key:
+                    bl.append(key)
+    return bl
 
 
 # ============================
@@ -94,6 +109,19 @@ def is_good_url(u: str) -> bool:
     if any(k in u for k in bad_keywords):
         return False
     return True
+
+
+# ============================
+# 黑名单匹配（仅娱乐频道）
+# ============================
+def is_blacklisted(name: str, urls: list, blacklist: list) -> bool:
+    for key in blacklist:
+        if key in name:
+            return True
+        for u in urls:
+            if key in u:
+                return True
+    return False
 
 
 # ============================
@@ -184,9 +212,9 @@ def channel_sort_key(name: str):
 
 
 # ============================
-# 输出酷9可用 txt（含娱乐频道）
+# 输出酷9可用 txt（含娱乐频道 + 黑名单过滤）
 # ============================
-def build_output_txt(channels, whitelist):
+def build_output_txt(channels, whitelist, blacklist):
     lines = []
 
     # 主频道分组
@@ -206,9 +234,17 @@ def build_output_txt(channels, whitelist):
     for name in sorted(channels.keys()):
         if name in whitelist:
             continue
+
         urls = [u for u in channels[name] if is_good_url(u)]
-        if len(urls) < 2:
-            continue  # 源少于 2 的直接丢弃
+
+        # 黑名单过滤
+        if is_blacklisted(name, urls, blacklist):
+            continue
+
+        # 源数量必须 ≥ 5
+        if len(urls) < 5:
+            continue
+
         for url in urls:
             lines.append(f"{name},{url}")
         lines.append("")
@@ -224,6 +260,7 @@ def main():
 
     channels = defaultdict(list)
     whitelist = load_channel_whitelist()
+    blacklist = load_blacklist()
     live_sources = load_live_urls()
 
     for url, label in live_sources:
@@ -233,7 +270,7 @@ def main():
         except Exception as e:
             print(f"[error] {url} -> {e}")
 
-    out_txt = build_output_txt(channels, whitelist)
+    out_txt = build_output_txt(channels, whitelist, blacklist)
     out_file = OUTPUT_DIR / "ku9_live.txt"
     out_file.write_text(out_txt, encoding="utf-8")
 
