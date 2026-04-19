@@ -179,6 +179,18 @@ def normalize_name(name: str) -> str:
     name = re.sub(r"[^\u4e00-\u9fa5A-Za-z0-9+]+", "", name)
     return name
 
+def channel_sort_key(name: str):
+    """
+    自然排序：
+    - CCTV1、CCTV2、CCTV10 按数字排序
+    - CETV 同理
+    - 其他频道按字典序排序
+    """
+    m = re.match(r"(CCTV|CETV)(\d+)", name)
+    if m:
+        return (m.group(1), int(m.group(2)))
+    return ("ZZZ", name)
+
 # ============================
 # URL 过滤
 # ============================
