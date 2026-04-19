@@ -15,6 +15,13 @@ LIVE_URLS_FILE = SOURCES_DIR / "live_urls.txt"
 CHANNEL_LIST_FILE = SOURCES_DIR / "channel_list.txt"
 BLACKLIST_FILE = SOURCES_DIR / "blacklist.txt"
 
+# ============================
+# 图标映射（央视 + 卫视）
+# ============================
+LOGO_BASE = "https://live.fanmingming.com/tv/"
+def get_logo(name):
+    return f"{LOGO_BASE}{name}.png"
+
 
 # ============================
 # 读取上游 LIVE_URLS
@@ -80,19 +87,15 @@ def fetch_text(url, timeout=8):
 def normalize_name(name: str) -> str:
     name = name.strip()
 
-    # CCTV 系列
     m = re.match(r"CCTV[- ]?0?(\d+)", name.upper())
     if m:
         return f"CCTV{m.group(1)}"
 
-    # CETV 系列
     m = re.match(r"CETV[- ]?0?(\d+)", name.upper())
     if m:
         return f"CETV{m.group(1)}"
 
-    # 去掉乱码
     name = re.sub(r"[^\u4e00-\u9fa5A-Za-z0-9]+", "", name)
-
     return name
 
 
@@ -202,13 +205,13 @@ def detect_and_parse(content, channels):
     if text.startswith("{") and '"lives"' in text:
         parse_tvbox_json(text, channels)
     elif "#EXTM3U" in text or "#EXTINF" in text:
-        parse_m3u(text)
+        parse_m3u(text, channels)
     else:
         parse_txt_like(text, channels)
 
 
 # ============================
-# 自然排序（CCTV1 < CCTV2 < CCTV10）
+# 自然排序
 # ============================
 def channel_sort_key(name: str):
     m = re.match(r"(CCTV|CETV)(\d+)$", name.upper())
@@ -221,12 +224,11 @@ def channel_sort_key(name: str):
 
 
 # ============================
-# 输出酷9可用 txt（含娱乐频道 + 黑名单 + 数字过滤）
+# 输出 TXT
 # ============================
 def build_output_txt(channels, whitelist, blacklist):
     lines = []
 
-    # 电视频道
     lines.append("电视频道,#genre#")
     for name in sorted(channels.keys(), key=channel_sort_key):
         if name not in whitelist:
@@ -238,7 +240,6 @@ def build_output_txt(channels, whitelist, blacklist):
             lines.append(f"{name},{url}")
         lines.append("")
 
-    # 娱乐频道
     lines.append("娱乐频道,#genre#")
     for name in sorted(channels.keys()):
         if name in whitelist:
@@ -246,21 +247,62 @@ def build_output_txt(channels, whitelist, blacklist):
 
         urls = [u for u in channels[name] if is_good_url(u)]
 
-        # 黑名单过滤
         if is_blacklisted(name, urls, blacklist):
             continue
 
-        # 纯数字频道过滤
         if is_numeric_channel(name):
             continue
 
-        # 源数量必须 ≥ 2
         if len(urls) < 2:
             continue
 
         for url in urls:
             lines.append(f"{name},{url}")
         lines.append("")
+
+    return "\n".join(lines)
+
+
+# ============================
+# 输出 M3U（带图标）
+# ============================
+def build_output_m3u(channels, whitelist, blacklist):
+    lines = []
+    lines.append("#EXTM3U")
+
+    # 电视频道
+    for name in sorted(channels.keys(), key=channel_sort_key):
+        if name not in whitelist:
+            continue
+        urls = [u for u in channels[name] if is_good_url(u)]
+        if not urls:
+            continue
+        logo = get_logo(name)
+        for url in urls:
+            lines.append(f'#EXTINF:-1 tvg-id="{name}" tvg-logo="{logo}" group-title="电视频道",{name}')
+            lines.append(url)
+
+    # 娱乐频道
+    for name in sorted(channels.keys()):
+        if name in whitelist:
+            continue
+
+        urls = [u for u in channels[name] if is_good_url(u)]
+
+        if is_blacklisted(name, urls, blacklist):
+            continue
+
+        if is_numeric_channel(name):
+            continue
+
+				# 源数量必须 ≥ 5
+        if len(urls) < 5:
+            continue
+
+        logo = get_logo(name)
+        for url in urls:
+            lines.append(f'#EXTINF:-1 tvg-id="{name}" tvg-logo="{logo}" group-title="娱乐频道",{name}')
+            lines.append(url)
 
     return "\n".join(lines)
 
@@ -283,11 +325,15 @@ def main():
         except Exception as e:
             print(f"[error] {url} -> {e}")
 
+    # TXT
     out_txt = build_output_txt(channels, whitelist, blacklist)
-    out_file = OUTPUT_DIR / "ku9_live.txt"
-    out_file.write_text(out_txt, encoding="utf-8")
+    (OUTPUT_DIR / "ku9_live.txt").write_text(out_txt, encoding="utf-8")
 
-    print(f"[done] wrote {out_file}")
+    # M3U
+    out_m3u = build_output_m3u(channels, whitelist, blacklist)
+    (OUTPUT_DIR / "ku9_live.m3u").write_text(out_m3u, encoding="utf-8")
+
+    print("[done] wrote ku9_live.txt + ku9_live.m3u")
 
 
 if __name__ == "__main__":
