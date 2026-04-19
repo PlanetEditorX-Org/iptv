@@ -295,8 +295,8 @@ def build_output_m3u(channels, whitelist, blacklist):
         if is_numeric_channel(name):
             continue
 
-				# 源数量必须 ≥ 5
-        if len(urls) < 5:
+				# 源数量必须 ≥ 10
+        if len(urls) < 10:
             continue
 
         logo = get_logo(name)
