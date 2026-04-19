@@ -75,7 +75,7 @@ def normalize_name(name: str) -> str:
     if m:
         return f"CETV{m.group(1)}"
 
-    # 卫视（去掉乱码）
+    # 去掉乱码
     name = re.sub(r"[^\u4e00-\u9fa5A-Za-z0-9]+", "", name)
 
     return name
@@ -169,42 +169,50 @@ def detect_and_parse(content, channels):
     else:
         parse_txt_like(text, channels)
 
+
 # ============================
-# 节目排序
+# 自然排序（CCTV1 < CCTV2 < CCTV10）
 # ============================
 def channel_sort_key(name: str):
-    """
-    让 CCTV1, CCTV2, ... CCTV10 按数字顺序排，
-    其他频道正常字典序。
-    """
     m = re.match(r"(CCTV|CETV)(\d+)$", name.upper())
     if m:
         prefix = m.group(1)
         num = int(m.group(2))
-        # 让 CCTV 系列排在最前，CETV 其次，其他频道再后
         order_prefix = {"CCTV": 0, "CETV": 1}.get(prefix, 2)
         return (order_prefix, num, "")
-    # 非数字频道：放在后面，按名字排
     return (3, 0, name)
 
+
 # ============================
-# 输出酷9可用 txt
+# 输出酷9可用 txt（含娱乐频道）
 # ============================
 def build_output_txt(channels, whitelist):
     lines = []
-    lines.append("央视频道,#genre#")
 
+    # 主频道分组
+    lines.append("主频道,#genre#")
     for name in sorted(channels.keys(), key=channel_sort_key):
         if name not in whitelist:
             continue
-
         urls = [u for u in channels[name] if is_good_url(u)]
         if not urls:
             continue
-
         for url in urls:
             lines.append(f"{name},{url}")
         lines.append("")
+
+    # 娱乐频道分组
+    lines.append("娱乐频道,#genre#")
+    for name in sorted(channels.keys()):
+        if name in whitelist:
+            continue
+        urls = [u for u in channels[name] if is_good_url(u)]
+        if len(urls) < 2:
+            continue  # 源少于 2 的直接丢弃
+        for url in urls:
+            lines.append(f"{name},{url}")
+        lines.append("")
+
     return "\n".join(lines)
 
 
