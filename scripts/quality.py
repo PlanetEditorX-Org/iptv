@@ -85,7 +85,7 @@ def quality_score(url):
     # 缓存命中
     with cache_lock:
         if url in cache:
-            return cache[url]["score"]
+            return cache[url]["score"], True
 
     # 检测
     ok, w, h, bitrate = probe_stream(url)
@@ -118,7 +118,7 @@ def quality_score(url):
             "score": score
         }
 
-    return score
+    return score, False
 
 
 def save_all():

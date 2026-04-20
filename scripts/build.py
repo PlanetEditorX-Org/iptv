@@ -387,7 +387,7 @@ def detect_and_parse(content, channels, source_url=None):
 
 def detect_and_sort_urls(name, urls, is_entertainment=False):
     # 永久封禁：fail_count >= 10 的 URL 不再使用
-    urls = [u for u in urls if fail_count.get(u, 0) < 10]
+    urls = [u for u in list(set(urls)) if fail_count.get(u, 0) < 10]
 
     good_urls = [u for u in urls if is_good_url(u)]
     total = len(good_urls)
@@ -399,47 +399,42 @@ def detect_and_sort_urls(name, urls, is_entertainment=False):
     THREADS = 6
 
     with ThreadPoolExecutor(max_workers=THREADS) as exe:
+        # ⭐ 这里 future.result() 会返回 (score, from_cache)
         future_map = {exe.submit(quality_score, u): u for u in good_urls}
 
         for idx, future in enumerate(as_completed(future_map), start=1):
             url = future_map[future]
-            score = future.result()
+            score, cached_before = future.result()   # ⭐ 正确接收两个值
 
             info = cache.get(url, {})
             w = info.get("width", 0)
             h = info.get("height", 0)
             bitrate = info.get("bitrate", 0)
+            mbps = bitrate / 1_000_000
             delay = info.get("delay", 0)
             blur = info.get("blur", 0)
 
-            cached = (url in cache)
-
             print(
                 f"[{name}] {idx}/{total}  "
-                f"{'缓存' if cached else '检测'}  "
-                f"{w}x{h}  {bitrate}kbps  延迟{delay}s  清晰度{blur:.1f}  总分{score:.1f}",
+                f"{'缓存' if cached_before else '检测'}  "
+                f"{w}x{h}  {mbps:.2f}Mbps  延迟{delay}s  清晰度{blur:.1f}  总分{score:.1f}",
                 flush=True
             )
 
             results[url] = score
             meta[url] = (w, h, bitrate, delay, blur, score)
 
-            # 永久封禁：失败 +1
+            # 永久封禁逻辑
             if score <= 0:
                 fail_count[url] = fail_count.get(url, 0) + 1
             else:
-                # 标记上游源可用
                 src = URL_SOURCE.get(url)
                 if src:
                     SOURCE_OK[src] = True
 
-    # ============================
-    # 娱乐频道过滤（720p+）
-    # ============================
-
+    # 娱乐频道过滤
     if is_entertainment:
         filtered = {}
-
         for url, (w, h, bitrate, delay, blur, score) in meta.items():
             if w < 1280 or h < 720:
                 continue
@@ -461,10 +456,7 @@ def detect_and_sort_urls(name, urls, is_entertainment=False):
 
         results = filtered
 
-    # ============================
-    # 统计最佳源
-    # ============================
-
+    # 统计
     usable = sum(1 for s in results.values() if s > 0)
 
     best_url = None
