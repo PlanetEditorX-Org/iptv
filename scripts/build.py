@@ -293,7 +293,10 @@ def detect_and_parse(content, channels, blacklist):
 # ============================
 
 def detect_and_sort_urls(name, urls):
+    # 过滤失败次数过多的
     urls = [u for u in urls if fail_count.get(u, 0) < 10]
+
+    # 基础过滤
     good_urls = [u for u in urls if is_good_url(u)]
     total = len(good_urls)
 
@@ -325,10 +328,15 @@ def detect_and_sort_urls(name, urls):
                 flush=True
             )
 
+            # 记录得分
             results[url] = score
 
-    print(f">>> {name} 排序完成\n")
+    # 统计可用源（得分 > 0）
+    usable = sum(1 for s in results.values() if s > 0)
 
+    print(f">>> {name} 排序完成（可用 {usable} / 总 {total}）\n")
+
+    # 按得分排序
     return sorted(results.keys(), key=lambda u: results[u], reverse=True)
 
 # ============================
