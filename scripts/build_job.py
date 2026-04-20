@@ -168,7 +168,7 @@ def detect_and_sort_urls(name, urls):
     good_urls = [u for u in urls if is_good_url(u)]
     total = len(good_urls)
 
-    print(f"\n[{name}] 检测 {total} 条源\n")
+    print(f"\n[{name}] 开始检测，共 {total} 条源\n", flush=True)
 
     results = {}
     THREADS = 4
@@ -177,10 +177,31 @@ def detect_and_sort_urls(name, urls):
         future_map = {exe.submit(quality_score, u): u for u in good_urls}
 
         for idx, future in enumerate(as_completed(future_map), start=1):
-            time.sleep(random.uniform(0.1, 0.5))
             url = future_map[future]
             score, cached = future.result()
+
+            info = cache.get(url, {})
+            w = info.get("width", 0)
+            h = info.get("height", 0)
+            bitrate = info.get("bitrate", 0)
+            delay = info.get("delay", 0)
+            blur = info.get("blur", 0)
+
+            if bitrate and bitrate > 0:
+                mbps_text = f"{bitrate / 1_000_000:.2f}Mbps"
+            else:
+                mbps_text = "N/A"
+
+            print(
+                f"[{name}] {idx}/{total} "
+                f"{'缓存' if cached else '检测'} → "
+                f"{w}x{h} | {mbps_text} | 延迟 {delay}s | 清晰度 {blur:.1f} | 得分 {score:.1f}",
+                flush=True
+            )
+
             results[url] = score
+
+    print(f"[{name}] 检测完成，可用 {sum(1 for s in results.values() if s > 0)} / {total}\n", flush=True)
 
     return sorted(results.keys(), key=lambda u: results[u], reverse=True)
 
