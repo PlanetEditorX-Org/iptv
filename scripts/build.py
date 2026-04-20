@@ -17,6 +17,10 @@ from quality import (
     save_all
 )
 
+# ============================
+# 全局路径
+# ============================
+
 ROOT = Path(__file__).resolve().parent.parent
 SOURCES_DIR = ROOT / "sources"
 OUTPUT_DIR = ROOT / "output"
@@ -26,11 +30,17 @@ CHANNEL_LIST_FILE = SOURCES_DIR / "channel_list.txt"
 BLACKLIST_FILE = SOURCES_DIR / "blacklist.txt"
 
 # ============================
+# 全局白名单 / 黑名单（不再传参）
+# ============================
+
+WHITELIST = set()
+BLACKLIST = []
+
+# ============================
 # 上游源失效记录（写入 README）
 # ============================
 
 FAILED_SOURCES = {}  # {url: {"fail_time": "...", "remove_time": "..."}}
-
 FAILED_SOURCES_FILE = SOURCES_DIR / "failed_sources.json"
 
 def load_failed_sources():
@@ -67,7 +77,10 @@ def load_source_fail():
     return {}
 
 def save_source_fail(data):
-    SOURCE_FAIL_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    SOURCE_FAIL_FILE.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
 
 SOURCE_FAIL = load_source_fail()
 
@@ -175,7 +188,7 @@ def load_live_urls():
     return items
 
 # ============================
-# 白名单 / 黑名单
+# 白名单 / 黑名单加载（全局）
 # ============================
 
 def load_channel_whitelist():
@@ -247,15 +260,6 @@ def is_good_url(u: str) -> bool:
         return False
     return True
 
-def is_blacklisted(name: str, urls: list, blacklist: list) -> bool:
-    for key in blacklist:
-        if key in name:
-            return True
-        for u in urls:
-            if key in u:
-                return True
-    return False
-
 def is_numeric_channel(name: str) -> bool:
     n = name.strip()
     n = re.sub(r"[台频道]+$", "", n)
@@ -281,7 +285,6 @@ def normalize_url(url: str) -> str:
     }
 
     query = {k: v for k, v in query.items() if k.lower() not in drop_keys}
-
     sorted_query = urlencode(sorted(query.items()))
 
     path = parsed.path.rstrip("/")
@@ -298,19 +301,21 @@ def normalize_url(url: str) -> str:
     ))
 
 # ============================
-# 添加频道源（支持上游源追踪）
+# 添加频道源（使用全局 WHITELIST / BLACKLIST）
 # ============================
 
-def add_channel(channels, name, url, blacklist, source_url=None):
+def add_channel(channels, name, url, source_url=None):
     name = normalize_name(name)
     url = normalize_url(url.strip())
 
     if not name or not url:
         return
 
-    for key in blacklist:
-        if key in name or key in url:
-            return
+    # 黑名单只对非白名单频道生效
+    if name not in WHITELIST:
+        for key in BLACKLIST:
+            if key in name or key in url:
+                return
 
     if is_numeric_channel(name):
         return
@@ -324,10 +329,10 @@ def add_channel(channels, name, url, blacklist, source_url=None):
             URL_SOURCE[url] = source_url
 
 # ============================
-# 解析 TXT / M3U / JSON（支持 source_url）
+# 解析 TXT / M3U / JSON（已移除 blacklist 参数）
 # ============================
 
-def parse_txt_like(content, channels, blacklist, source_url=None):
+def parse_txt_like(content, channels, source_url=None):
     for line in content.splitlines():
         line = line.strip()
         if not line or line.startswith("#") or line.startswith("//"):
@@ -338,9 +343,9 @@ def parse_txt_like(content, channels, blacklist, source_url=None):
             name, url = line.split("#", 1)
         else:
             continue
-        add_channel(channels, name, url, blacklist, source_url)
+        add_channel(channels, name, url, source_url)
 
-def parse_m3u(content, channels, blacklist, source_url=None):
+def parse_m3u(content, channels, source_url=None):
     last_name = None
     for line in content.splitlines():
         line = line.strip()
@@ -348,10 +353,10 @@ def parse_m3u(content, channels, blacklist, source_url=None):
             if "," in line:
                 last_name = line.split(",", 1)[1].strip()
         elif line and not line.startswith("#") and last_name:
-            add_channel(channels, last_name, line, blacklist, source_url)
+            add_channel(channels, last_name, line, source_url)
             last_name = None
 
-def parse_tvbox_json(content, channels, blacklist, source_url=None):
+def parse_tvbox_json(content, channels, source_url=None):
     try:
         data = json.loads(content)
     except:
@@ -362,22 +367,26 @@ def parse_tvbox_json(content, channels, blacklist, source_url=None):
             name = ch.get("name")
             urls = ch.get("urls") or []
             for url in urls:
-                add_channel(channels, name, url, blacklist, source_url)
-
-def detect_and_parse(content, channels, blacklist, source_url=None):
-    text = content.lstrip()
-    if text.startswith("{") and '"lives"' in text:
-        parse_tvbox_json(text, channels, blacklist, source_url)
-    elif "#EXTM3U" in text or "#EXTINF" in text:
-        parse_m3u(text, channels, blacklist, source_url)
-    else:
-        parse_txt_like(text, channels, blacklist, source_url)
+                add_channel(channels, name, url, source_url)
 
 # ============================
-# 并发检测 + 排序（支持上游源可用标记）
+# 自动识别格式
+# ============================
+
+def detect_and_parse(content, channels, source_url=None):
+    text = content.lstrip()
+    if text.startswith("{") and '"lives"' in text:
+        parse_tvbox_json(text, channels, source_url)
+    elif "#EXTM3U" in text or "#EXTINF" in text:
+        parse_m3u(text, channels, source_url)
+    else:
+        parse_txt_like(text, channels, source_url)
+# ============================
+# 并发检测 + 排序（URL 永久封禁）
 # ============================
 
 def detect_and_sort_urls(name, urls, is_entertainment=False):
+    # 永久封禁：fail_count >= 10 的 URL 不再使用
     urls = [u for u in urls if fail_count.get(u, 0) < 10]
 
     good_urls = [u for u in urls if is_good_url(u)]
@@ -408,21 +417,26 @@ def detect_and_sort_urls(name, urls, is_entertainment=False):
             print(
                 f"[{name}] {idx}/{total}  "
                 f"{'缓存' if cached else '检测'}  "
-                f"{w}x{h}  延迟{delay}s  清晰度{blur:.1f}  总分{score:.1f}",
+                f"{w}x{h}  {bitrate}kbps  延迟{delay}s  清晰度{blur:.1f}  总分{score:.1f}",
                 flush=True
             )
 
             results[url] = score
             meta[url] = (w, h, bitrate, delay, blur, score)
 
+            # 永久封禁：失败 +1
             if score <= 0:
                 fail_count[url] = fail_count.get(url, 0) + 1
             else:
+                # 标记上游源可用
                 src = URL_SOURCE.get(url)
                 if src:
                     SOURCE_OK[src] = True
 
-    # 娱乐频道过滤
+    # ============================
+    # 娱乐频道过滤（720p+）
+    # ============================
+
     if is_entertainment:
         filtered = {}
 
@@ -447,11 +461,16 @@ def detect_and_sort_urls(name, urls, is_entertainment=False):
 
         results = filtered
 
+    # ============================
+    # 统计最佳源
+    # ============================
+
     usable = sum(1 for s in results.values() if s > 0)
 
     best_url = None
     best_score = -1
     best_res = "N/A"
+
     for url, score in results.items():
         if score > best_score:
             best_score = score
@@ -478,18 +497,17 @@ def detect_and_sort_urls(name, urls, is_entertainment=False):
 # TXT 输出
 # ============================
 
-def build_output_txt(channels, whitelist, blacklist, mode):
+def build_output_txt(channels, mode):
     lines = []
 
     if mode in ("all", "cctv", "satellite"):
         lines.append("电视频道,#genre#")
         for idx, name in enumerate(sorted(channels.keys(), key=channel_sort_key), start=1):
-            if name not in whitelist:
+            if name not in WHITELIST:
                 continue
 
             if mode == "cctv" and not name.startswith("CCTV"):
                 continue
-
             if mode == "satellite" and name.startswith("CCTV"):
                 continue
 
@@ -502,14 +520,12 @@ def build_output_txt(channels, whitelist, blacklist, mode):
     if mode in ("all", "entertainment"):
         lines.append("娱乐频道,#genre#")
         for idx, name in enumerate(sorted(channels.keys()), start=1):
-            if name in whitelist:
+            if name in WHITELIST:
                 continue
 
             raw_urls = channels[name]
 
             if len(raw_urls) < 8:
-                continue
-            if is_blacklisted(name, raw_urls, blacklist):
                 continue
             if is_numeric_channel(name):
                 continue
@@ -526,18 +542,17 @@ def build_output_txt(channels, whitelist, blacklist, mode):
 # M3U 输出
 # ============================
 
-def build_output_m3u(channels, whitelist, blacklist, mode):
+def build_output_m3u(channels, mode):
     lines = []
     lines.append('#EXTM3U x-tvg-url="http://gh.qninq.cn/https://raw.githubusercontent.com/PlanetEditorX/iptv-api/refs/heads/master/output/epg/epg.gz"')
 
     if mode in ("all", "cctv", "satellite"):
         for idx, name in enumerate(sorted(channels.keys(), key=channel_sort_key), start=1):
-            if name not in whitelist:
+            if name not in WHITELIST:
                 continue
 
             if mode == "cctv" and not name.startswith("CCTV"):
                 continue
-
             if mode == "satellite" and name.startswith("CCTV"):
                 continue
 
@@ -552,14 +567,12 @@ def build_output_m3u(channels, whitelist, blacklist, mode):
 
     if mode in ("all", "entertainment"):
         for idx, name in enumerate(sorted(channels.keys()), start=1):
-            if name in whitelist:
+            if name in WHITELIST:
                 continue
 
             raw_urls = channels[name]
 
             if len(raw_urls) < 8:
-                continue
-            if is_blacklisted(name, raw_urls, blacklist):
                 continue
             if is_numeric_channel(name):
                 continue
@@ -630,6 +643,7 @@ def build_readme():
     # ============================
     # 电视频道表格
     # ============================
+
     html.append("## 📺 电视频道\n\n<table>")
     html.append("<tr><th>频道</th><th>可用源/总源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
 
@@ -655,6 +669,7 @@ def build_readme():
     # ============================
     # 娱乐频道表格
     # ============================
+
     html.append("## 📡 娱乐频道\n\n<table>")
     html.append("<tr><th>频道</th><th>可用源/总源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
 
@@ -687,9 +702,13 @@ def build_readme():
 def main(mode):
     OUTPUT_DIR.mkdir(exist_ok=True)
 
+    # 加载上游源
     live_sources = load_live_urls()
-    whitelist = load_channel_whitelist()
-    blacklist = load_blacklist()
+
+    # 加载白名单 / 黑名单（全局）
+    global WHITELIST, BLACKLIST
+    WHITELIST = load_channel_whitelist()
+    BLACKLIST = load_blacklist()
 
     channels = defaultdict(list)
 
@@ -701,13 +720,14 @@ def main(mode):
     for src, label in live_sources:
         try:
             content = fetch_text(src)
-            detect_and_parse(content, channels, blacklist, source_url=src)
+            detect_and_parse(content, channels, source_url=src)
         except Exception as e:
             print(f"[error] {src} -> {e}")
 
     # ============================
     # 上游源连续失败统计
     # ============================
+
     updated_live_urls = []
     cst = timezone(timedelta(hours=8))
     today = datetime.now(cst).strftime("%Y-%m-%d")
@@ -746,8 +766,9 @@ def main(mode):
     # ============================
     # 输出 TXT / M3U
     # ============================
-    txt = build_output_txt(channels, whitelist, blacklist, mode)
-    m3u = build_output_m3u(channels, whitelist, blacklist, mode)
+
+    txt = build_output_txt(channels, mode)
+    m3u = build_output_m3u(channels, mode)
 
     (OUTPUT_DIR / f"channels_{mode}.txt").write_text(txt, encoding="utf-8")
     (OUTPUT_DIR / f"channels_{mode}.m3u").write_text(m3u, encoding="utf-8")
