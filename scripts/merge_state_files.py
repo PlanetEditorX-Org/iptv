@@ -76,7 +76,7 @@ def load_channels():
     return channels
 
 # ============================
-# 频道排序
+# 频道排序（自然排序）
 # ============================
 
 def channel_sort_key(name: str):
@@ -202,14 +202,16 @@ def build_readme(report, failed_sources):
     html.append(f"- **已删除频道数：** {removed_channels}")
     html.append(f"- **总可用源数：** {total_usable}\n\n")
 
-    # TV 频道
+    # ============================
+    # TV 频道（使用自然排序）
+    # ============================
+
     html.append("## 📺 电视频道\n\n<table>")
     html.append("<tr><th>频道</th><th>可用源/总源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
 
-    for name, info in sorted(report.items(), key=lambda x: (x[1]["removed"], x[0])):
-        if info["type"] != "tv":
-            continue
+    tv_items = [(name, info) for name, info in report.items() if info["type"] == "tv"]
 
+    for name, info in sorted(tv_items, key=lambda x: (x[1]["removed"], channel_sort_key(x[0]))):
         status = '<span style="color:red">已删除</span>' if info["removed"] else '<span style="color:green">保留</span>'
         html.append(
             f"<tr>"
@@ -223,14 +225,16 @@ def build_readme(report, failed_sources):
 
     html.append("</table>\n")
 
-    # 娱乐频道
+    # ============================
+    # 娱乐频道（保持原排序）
+    # ============================
+
     html.append("## 📡 娱乐频道\n\n<table>")
     html.append("<tr><th>频道</th><th>可用源/总源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
 
-    for name, info in sorted(report.items(), key=lambda x: (x[1]["removed"], x[0])):
-        if info["type"] != "entertainment":
-            continue
+    ent_items = [(name, info) for name, info in report.items() if info["type"] == "entertainment"]
 
+    for name, info in sorted(ent_items, key=lambda x: (x[1]["removed"], x[0])):
         status = '<span style="color:red">已删除</span>' if info["removed"] else '<span style="color:green">保留</span>'
         html.append(
             f"<tr>"
