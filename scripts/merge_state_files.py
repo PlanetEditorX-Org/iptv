@@ -12,17 +12,17 @@ import re
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCES_DIR = ROOT / "sources"
+STATE_DIR = SOURCES_DIR / "state"     # 统一状态目录
 OUTPUT_DIR = ROOT / "output"
-SCRIPTS_DIR = ROOT / "scripts"
 
 RAW_FILES = [
-    SOURCES_DIR / "raw_results_cctv.json",
-    SOURCES_DIR / "raw_results_satellite.json",
-    SOURCES_DIR / "raw_results_entertainment.json",
+    STATE_DIR / "raw_results_cctv.json",
+    STATE_DIR / "raw_results_satellite.json",
+    STATE_DIR / "raw_results_entertainment.json",
 ]
 
-FAIL_COUNT_FILE = SCRIPTS_DIR / "fail_count.json"
-FAILED_SOURCES_FILE = SOURCES_DIR / "failed_sources.json"
+FAIL_COUNT_FILE = STATE_DIR / "fail_count.json"
+FAILED_SOURCES_FILE = STATE_DIR / "failed_sources.json"
 LIVE_URLS_FILE = SOURCES_DIR / "live_urls.txt"
 README_FILE = ROOT / "README.md"
 
@@ -175,7 +175,7 @@ def rebuild_live_urls(failed_sources):
 
 def build_readme(report, failed_sources):
     html = []
-    html.append("# IPTV 质量报表\n")
+    html.append("# IPTV 质量报表（CI 合并版）\n")
 
     cst = timezone(timedelta(hours=8))
     build_time = datetime.now(cst).strftime("%Y-%m-%d %H:%M:%S")

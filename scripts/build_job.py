@@ -23,6 +23,7 @@ from quality_raw import (
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCES_DIR = ROOT / "sources"
+STATE_DIR = SOURCES_DIR / "state"     # 统一状态目录
 OUTPUT_DIR = ROOT / "output"
 
 LIVE_URLS_FILE = SOURCES_DIR / "live_urls.txt"

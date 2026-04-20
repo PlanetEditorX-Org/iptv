@@ -49,8 +49,8 @@ jobs:
         with:
           name: state-${{ matrix.name }}
           path: |
-            sources/raw_results_${{ matrix.name }}.json
-            scripts/cache.json
+            sources/state/raw_results_${{ matrix.name }}.json
+            sources/state/cache.json
 
   # ============================
   # 合并 Job（唯一提交点）
@@ -79,13 +79,13 @@ jobs:
       - name: Restore state files
         run: |
           echo "=== 恢复 raw_results_* ==="
-          cp merged/state-*/sources/raw_results_*.json sources/ || true
+          cp merged/state-*/state/raw_results_*.json sources/state/ || true
 
           echo "=== 恢复 cache.json ==="
-          cp merged/state-*/scripts/cache.json scripts/ || true
+          cp merged/state-*/state/cache.json sources/state/ || true
 
       # ============================
-      # 统一判刑（fail_count / source_fail / failed_sources / live_urls / README）
+      # 统一判刑（fail_count / failed_sources / live_urls / README）
       # ============================
       - name: Merge state files
         run: |
@@ -125,9 +125,6 @@ jobs:
           else
             for f in "${m3u_files[@]}"; do
               echo "合并：$f"
-              # -a：强制按文本处理，避免二进制错误
-              # -h：不显示文件名
-              # -v "#EXTM3U"：去掉头部
               grep -a -h -v "#EXTM3U" "$f" >> output/channels_all.m3u || true
             done
           fi
@@ -144,7 +141,7 @@ jobs:
       - name: Cleanup raw_results
         run: |
           echo "=== 清理 raw_results_* ==="
-          rm -f sources/raw_results_*.json || true
+          rm -f sources/state/raw_results_*.json || true
 
       # ============================
       # 最终一次性提交所有文件
@@ -155,8 +152,10 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
 
           # 只提交真正需要跨运行保存的状态文件
-          git add scripts/fail_count.json || true
-          git add sources/failed_sources.json sources/live_urls.txt || true
+          git add sources/state/fail_count.json || true
+          git add sources/state/failed_sources.json || true
+          git add sources/state/source_fail.json || true
+          git add sources/live_urls.txt || true
 
           # 提交最终输出
           git add output/*.txt output/*.m3u || true

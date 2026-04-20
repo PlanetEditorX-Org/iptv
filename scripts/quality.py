@@ -7,8 +7,19 @@ from PIL import Image
 import numpy as np
 import cv2
 
-CACHE_FILE = Path(__file__).parent / "cache.json"
-FAIL_FILE = Path(__file__).parent / "fail_count.json"
+# ============================
+# 全局路径
+# ============================
+
+ROOT = Path(__file__).resolve().parent.parent
+STATE_DIR = ROOT / "sources/state"
+
+CACHE_FILE = STATE_DIR / "cache.json"
+FAIL_FILE  = STATE_DIR / "fail_count.json"
+
+# ============================
+# 全局缓存 + 失败计数
+# ============================
 
 cache_lock = threading.Lock()
 fail_lock = threading.Lock()
@@ -27,6 +38,9 @@ def save_json(path, data):
 cache = load_json(CACHE_FILE)
 fail_count = load_json(FAIL_FILE)
 
+# ============================
+# 静默运行子进程
+# ============================
 
 def run_silent(cmd, timeout=5):
     return subprocess.run(
@@ -36,6 +50,9 @@ def run_silent(cmd, timeout=5):
         timeout=timeout
     )
 
+# ============================
+# ffprobe：分辨率 + 码率
+# ============================
 
 def probe_stream(url, timeout=5):
     try:
@@ -59,6 +76,9 @@ def probe_stream(url, timeout=5):
     except:
         return False, 0, 0, 0
 
+# ============================
+# ffmpeg：首帧延迟
+# ============================
 
 def measure_first_frame_delay(url, timeout=5):
     try:
@@ -68,6 +88,9 @@ def measure_first_frame_delay(url, timeout=5):
     except:
         return 999
 
+# ============================
+# ffmpeg：截图 + 清晰度
+# ============================
 
 def snapshot_blur_score(url, timeout=5):
     try:
@@ -80,6 +103,9 @@ def snapshot_blur_score(url, timeout=5):
     except:
         return 0
 
+# ============================
+# 质量检测（核心）
+# ============================
 
 def quality_score(url):
     # 缓存命中
@@ -120,6 +146,9 @@ def quality_score(url):
 
     return score, False
 
+# ============================
+# 保存（cache + fail_count）
+# ============================
 
 def save_all():
     save_json(CACHE_FILE, cache)

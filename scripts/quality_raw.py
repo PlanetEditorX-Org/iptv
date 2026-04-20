@@ -15,8 +15,8 @@ import cv2
 # ============================
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCES_DIR = ROOT / "sources"
-CACHE_FILE = Path(__file__).parent / "cache.json"
+STATE_DIR = ROOT / "sources/state"
+CACHE_FILE = STATE_DIR / "cache.json"
 
 # ============================
 # 全局缓存 + 原始观测
@@ -167,5 +167,5 @@ def save_all(job_name=None):
 
     # 保存原始观测（CI 合并时使用）
     if job_name:
-        raw_file = SOURCES_DIR / f"raw_results_{job_name}.json"
+        raw_file = STATE_DIR / f"raw_results_{job_name}.json"
         save_json(raw_file, RAW_RESULTS)
