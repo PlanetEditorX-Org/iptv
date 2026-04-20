@@ -11,10 +11,14 @@ on:
 jobs:
 
   # ============================
-  # CCTV 构建
+  # 三个构建 Job（自动匹配输出目录）
   # ============================
-  cctv:
+  build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        name: [cctv, satellite, entertainment]
+
     steps:
       - uses: actions/checkout@v4
 
@@ -25,7 +29,7 @@ jobs:
           path: |
             scripts/cache.json
             scripts/fail_count.json
-          key: quality-cctv
+          key: quality-${{ matrix.name }}
           restore-keys: |
             quality-
 
@@ -35,87 +39,27 @@ jobs:
           sudo apt install -y ffmpeg python3-pip
           pip3 install pillow numpy opencv-python-headless
 
-      - name: Build CCTV
-        run: python3 scripts/build.py cctv
-
-      - name: Upload CCTV artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: cctv
-          path: output/
-
-  # ============================
-  # 卫视 构建
-  # ============================
-  satellite:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Restore quality cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            scripts/cache.json
-            scripts/fail_count.json
-          key: quality-satellite
-          restore-keys: |
-            quality-
-
-      - name: Install dependencies
+      - name: Build ${{ matrix.name }}
         run: |
-          sudo apt update
-          sudo apt install -y ffmpeg python3-pip
-          pip3 install pillow numpy opencv-python-headless
+          rm -rf output
+          python3 scripts/build.py ${{ matrix.name }}
 
-      - name: Build Satellite
-        run: python3 scripts/build.py satellite
+          # 自动创建 output_目录
+          mkdir -p output_${{ matrix.name }}
+          mv output/* output_${{ matrix.name }}/
 
-      - name: Upload Satellite artifact
+      - name: Upload artifact ${{ matrix.name }}
         uses: actions/upload-artifact@v4
         with:
-          name: satellite
-          path: output/
+          name: ${{ matrix.name }}
+          path: output_${{ matrix.name }}/
 
   # ============================
-  # 娱乐频道 构建
-  # ============================
-  entertainment:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Restore quality cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            scripts/cache.json
-            scripts/fail_count.json
-          key: quality-entertainment
-          restore-keys: |
-            quality-
-
-      - name: Install dependencies
-        run: |
-          sudo apt update
-          sudo apt install -y ffmpeg python3-pip
-          pip3 install pillow numpy opencv-python-headless
-
-      - name: Build Entertainment
-        run: python3 scripts/build.py entertainment
-
-      - name: Upload Entertainment artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: entertainment
-          path: output/
-
-  # ============================
-  # 合并 Job（依赖前 3 个 Job）
+  # 合并 Job（自动匹配所有 output_*）
   # ============================
   merge:
     runs-on: ubuntu-latest
-    needs: [cctv, satellite, entertainment]
+    needs: build
 
     steps:
       - uses: actions/checkout@v4
@@ -130,22 +74,18 @@ jobs:
           mkdir -p output
 
           echo "合并 TXT..."
-          touch output/channels_all.txt
-          for f in merged/*/*.txt; do
-            if [ -f "$f" ]; then
-              echo "合并 $f"
-              cat "$f" >> output/channels_all.txt
-              echo "" >> output/channels_all.txt
-            fi
+          echo "" > output/channels_all.txt
+          for f in merged/*/output_*/channels_*.txt; do
+            echo "合并 $f"
+            cat "$f" >> output/channels_all.txt
+            echo "" >> output/channels_all.txt
           done
 
           echo "合并 M3U..."
           echo '#EXTM3U' > output/channels_all.m3u
-          for f in merged/*/*.m3u; do
-            if [ -f "$f" ]; then
-              echo "合并 $f"
-              grep -h -v '#EXTM3U' "$f" >> output/channels_all.m3u
-            fi
+          for f in merged/*/output_*/channels_*.m3u; do
+            echo "合并 $f"
+            grep -h -v '#EXTM3U' "$f" >> output/channels_all.m3u || true
           done
 
       - name: Upload final merged output
