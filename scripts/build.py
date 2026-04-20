@@ -215,19 +215,34 @@ def is_numeric_channel(name: str) -> bool:
 # 添加频道源
 # ============================
 
-def add_channel(channels, name, url):
+def add_channel(channels, name, url, blacklist):
     name = normalize_name(name)
     url = url.strip()
+
     if not name or not url:
         return
+
+    # 黑名单过滤（频道名或 URL 命中黑名单）
+    for key in blacklist:
+        if key in name or key in url:
+            return
+
+    # 数字频道过滤（可选）
+    if is_numeric_channel(name):
+        return
+
+    # URL 基础过滤
+    if not is_good_url(url):
+        return
+
+    # 添加源
     if url not in channels[name]:
         channels[name].append(url)
 
 # ============================
 # 解析 TXT / M3U / JSON
 # ============================
-
-def parse_txt_like(content, channels):
+def parse_txt_like(content, channels, blacklist):
     for line in content.splitlines():
         line = line.strip()
         if not line or line.startswith("#") or line.startswith("//"):
@@ -238,9 +253,9 @@ def parse_txt_like(content, channels):
             name, url = line.split("#", 1)
         else:
             continue
-        add_channel(channels, name, url)
+        add_channel(channels, name, url, blacklist)
 
-def parse_m3u(content, channels):
+def parse_m3u(content, channels, blacklist):
     last_name = None
     for line in content.splitlines():
         line = line.strip()
@@ -248,10 +263,10 @@ def parse_m3u(content, channels):
             if "," in line:
                 last_name = line.split(",", 1)[1].strip()
         elif line and not line.startswith("#") and last_name:
-            add_channel(channels, last_name, line)
+            add_channel(channels, last_name, line, blacklist)
             last_name = None
 
-def parse_tvbox_json(content, channels):
+def parse_tvbox_json(content, channels, blacklist):
     try:
         data = json.loads(content)
     except:
@@ -262,16 +277,16 @@ def parse_tvbox_json(content, channels):
             name = ch.get("name")
             urls = ch.get("urls") or []
             for url in urls:
-                add_channel(channels, name, url)
+                add_channel(channels, name, url, blacklist)
 
-def detect_and_parse(content, channels):
+def detect_and_parse(content, channels, blacklist):
     text = content.lstrip()
     if text.startswith("{") and '"lives"' in text:
-        parse_tvbox_json(text, channels)
+        parse_tvbox_json(text, channels, blacklist)
     elif "#EXTM3U" in text or "#EXTINF" in text:
-        parse_m3u(text, channels)
+        parse_m3u(text, channels, blacklist)
     else:
-        parse_txt_like(text, channels)
+        parse_txt_like(text, channels, blacklist)
 
 # ============================
 # 并发检测 + 排序
@@ -397,7 +412,7 @@ def build_output_m3u(channels, whitelist, blacklist, mode):
                     f'#EXTINF:-1 tvg-id="{epg["id"]}" tvg-name="{epg["name"]}" '
                     f'tvg-chno="{epg["chno"]}" tvg-language="{epg["lang"]}" '
                     f'tvg-country="{epg["country"]}" '
-                    f'tvg-logo="{logo}" group-title="📺央视频道",{epg["name"]}'
+                    f'tvg-logo="{logo}" group-title="📺电视频道",{epg["name"]}'
                 )
                 lines.append(url)
 
@@ -425,7 +440,7 @@ def build_output_m3u(channels, whitelist, blacklist, mode):
                     f'#EXTINF:-1 tvg-id="{epg["id"]}" tvg-name="{epg["name"]}" '
                     f'tvg-chno="{epg["chno"]}" tvg-language="{epg["lang"]}" '
                     f'tvg-country="{epg["country"]}" '
-                    f'tvg-logo="{logo}" group-title="📡卫视频道",{name}'
+                    f'tvg-logo="{logo}" group-title="📡娱乐频道",{name}'
                 )
                 lines.append(url)
 
@@ -452,7 +467,7 @@ def main():
     for url, label in live_sources:
         try:
             content = fetch_text(url)
-            detect_and_parse(content, channels)
+            detect_and_parse(content, channels, blacklist)
         except Exception as e:
             print(f"[error] {url} -> {e}")
 
