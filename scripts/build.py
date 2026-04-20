@@ -348,7 +348,7 @@ def detect_and_parse(content, channels, blacklist):
 # 并发检测 + 排序
 # ============================
 
-def detect_and_sort_urls(name, urls):
+def detect_and_sort_urls(name, urls, is_entertainment=False):
     # 过滤失败次数过多的
     urls = [u for u in urls if fail_count.get(u, 0) < 10]
 
@@ -359,6 +359,7 @@ def detect_and_sort_urls(name, urls):
     print(f"\n[{name}] 开始检测，共 {total} 条源\n")
 
     results = {}
+    meta = {}   # 保存分辨率等信息
     THREADS = 6
 
     with ThreadPoolExecutor(max_workers=THREADS) as exe:
@@ -384,15 +385,44 @@ def detect_and_sort_urls(name, urls):
                 flush=True
             )
 
-            # 记录得分
             results[url] = score
+            meta[url] = (w, h, score)
 
-    # 统计可用源（得分 > 0）
+            # 超时或失败源累积 fail_count
+            if score <= 0:
+                fail_count[url] = fail_count.get(url, 0) + 1
+
+    # ============================
+    # 娱乐频道专属过滤逻辑
+    # ============================
+    if is_entertainment:
+        filtered = {}
+
+        for url, (w, h, score) in meta.items():
+            # 1. 分辨率低于 1080p → 丢弃
+            if w < 1280 or h < 720:
+                continue
+
+            # 2. 超时源（score=0）丢弃
+            if score <= 0:
+                continue
+
+            filtered[url] = score
+
+        # 如果全部源都是低分辨率或超时 → 删除频道
+        if not filtered:
+            print(f">>> {name} 全部为低分辨率或超时，删除该频道\n")
+            return []
+
+        # 用过滤后的源排序
+        results = filtered
+
+    # ============================
+    # 统计可用源
+    # ============================
     usable = sum(1 for s in results.values() if s > 0)
-
     print(f">>> {name} 排序完成（可用 {usable} / 总 {total}）\n")
 
-    # 按得分排序
     return sorted(results.keys(), key=lambda u: results[u], reverse=True)
 
 # ============================
@@ -439,7 +469,7 @@ def build_output_txt(channels, whitelist, blacklist, mode):
             if is_numeric_channel(name):
                 continue
 
-            urls = detect_and_sort_urls(name, raw_urls)
+            urls = detect_and_sort_urls(name, raw_urls, is_entertainment=True)
 
             for url in urls:
                 lines.append(f"{name},{url}")
@@ -495,7 +525,7 @@ def build_output_m3u(channels, whitelist, blacklist, mode):
             if is_numeric_channel(name):
                 continue
 
-            urls = detect_and_sort_urls(name, raw_urls)
+            urls = detect_and_sort_urls(name, raw_urls, is_entertainment=True)
             logo = get_logo(name)
             epg = get_epg_meta(name, idx)
 
