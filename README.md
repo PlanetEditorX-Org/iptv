@@ -1,23 +1,29 @@
-# IPTV 质量报表
+# IPTV 质量报表（CI 合并版）
 
-⏱ **构建时间：2026-04-20 16:04:14 (CST)**
+⏱ **构建时间：2026-04-20 17:01:02 (CST)**
 
 
 ## 📊 总览统计
 
 - **总频道数：** 164
-- **保留频道数：** 4
-- **已删除频道数：** 160
-- **总可用源数：** 42
+- **保留频道数：** 0
+- **已删除频道数：** 164
+- **总可用源数：** 0
 
 
 ## 📺 电视频道
 
 <table>
 <tr><th>频道</th><th>可用源/总源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>
-<tr><td>CCTV1</td><td>6 / 269</td><td>1920x1080</td><td>2261.7</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV2</td><td>18 / 217</td><td>1920x1080</td><td>2507.6</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV3</td><td>15 / 217</td><td>1920x1080</td><td>2326.0</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV1</td><td>0 / 295</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV2</td><td>0 / 235</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV3</td><td>0 / 236</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV4</td><td>0 / 207</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV5</td><td>0 / 295</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV6</td><td>0 / 165</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV7</td><td>0 / 158</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV8</td><td>0 / 167</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV9</td><td>0 / 160</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>CCTV10</td><td>0 / 159</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>CCTV11</td><td>0 / 156</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>CCTV12</td><td>0 / 156</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
@@ -26,24 +32,18 @@
 <tr><td>CCTV15</td><td>0 / 161</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>CCTV16</td><td>0 / 94</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>CCTV17</td><td>0 / 118</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV4</td><td>0 / 207</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV5</td><td>0 / 295</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV6</td><td>0 / 165</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV7</td><td>0 / 158</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV8</td><td>0 / 167</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV9</td><td>0 / 160</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 </table>
 
 ## 📡 娱乐频道
 
 <table>
 <tr><th>频道</th><th>可用源/总源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>
-<tr><td>CHC</td><td>3 / 3</td><td>1920x1080</td><td>2236.5</td><td><span style="color:green">保留</span></td></tr>
 <tr><td>1080p</td><td>0 / 32</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>1080pNot247</td><td>0 / 11</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>241080p</td><td>0 / 18</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>4Gtv</td><td>0 / 193</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>Andromeda</td><td>0 / 8</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CHC</td><td>0 / 4</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>CHC影迷电影</td><td>0 / 21</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>DJ</td><td>0 / 11</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>FYtv</td><td>0 / 31</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
@@ -97,7 +97,7 @@
 <tr><td>天元围棋</td><td>0 / 7</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>天津卫视</td><td>0 / 105</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>天龙八部</td><td>0 / 11</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>娱乐频道</td><td>0 / 4</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>娱乐频道</td><td>0 / 5</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>宁夏卫视</td><td>0 / 72</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>安多卫视</td><td>0 / 16</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>安徽卫视</td><td>0 / 101</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
@@ -155,7 +155,7 @@
 <tr><td>爱动漫</td><td>0 / 8</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>猫和老鼠</td><td>0 / 15</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>甘肃卫视</td><td>0 / 72</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>电视频道</td><td>0 / 8</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>电视频道</td><td>0 / 10</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>神雕侠侣</td><td>0 / 9</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>福建少儿</td><td>0 / 9</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>福建新闻</td><td>0 / 12</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
