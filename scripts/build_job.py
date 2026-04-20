@@ -230,7 +230,7 @@ def detect_and_sort_urls(name, urls, is_entertainment=False):
 
             results[url] = score
 
-    # 娱乐频道过滤（保留原逻辑）
+    # 媒体频道过滤（保留原逻辑）
     if is_entertainment:
         filtered = {}
         for url, score in results.items():
@@ -278,7 +278,7 @@ def build_output_txt(channels, mode):
             lines.append("")
 
     if mode in ("all", "entertainment"):
-        lines.append("娱乐频道,#genre#")
+        lines.append("媒体频道,#genre#")
         for name in sorted(channels.keys()):
 
             if name in WHITELIST:
@@ -318,10 +318,10 @@ def build_output_m3u(channels, mode):
 
     def get_group(name):
         if name.startswith("CCTV"):
-            return "📺 CCTV"
+            return "📺 央视"
         if "卫视" in name:
             return "🛰️ 卫视"
-        return "🎬 娱乐"
+        return "🎬 媒体"
 
     # ============================
     # CCTV + 卫视
@@ -352,7 +352,7 @@ def build_output_m3u(channels, mode):
                 lines.append(url)
 
     # ============================
-    # 娱乐频道
+    # 媒体频道
     # ============================
     if mode in ("all", "entertainment"):
         for name in sorted(channels.keys()):

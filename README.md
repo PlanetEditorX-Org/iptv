@@ -34,7 +34,7 @@
 <tr><td>CCTV17</td><td>16 / 156</td><td>1920x1080</td><td>2574.0</td><td><span style="color:green">保留</span></td></tr>
 </table>
 
-## 📡 娱乐频道
+## 📡 媒体频道
 
 <table>
 <tr><th>频道</th><th>可用源/总源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>
@@ -121,7 +121,7 @@
 <tr><td>大唐双龙传</td><td>0 / 8</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>天元围棋</td><td>0 / 7</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>天龙八部</td><td>0 / 11</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>娱乐频道</td><td>0 / 7</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>媒体频道</td><td>0 / 7</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>安多卫视</td><td>0 / 16</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>家庭理财</td><td>0 / 8</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>封神榜</td><td>0 / 11</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>

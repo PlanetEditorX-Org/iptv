@@ -443,7 +443,7 @@ def detect_and_sort_urls(name, urls, is_entertainment=False):
                 if src:
                     SOURCE_OK[src] = True
 
-    # 娱乐频道过滤
+    # 媒体频道过滤
     if is_entertainment:
         filtered = {}
         for url, (w, h, bitrate, delay, blur, score) in meta.items():
@@ -521,7 +521,7 @@ def build_output_txt(channels, mode):
             lines.append("")
 
     if mode in ("all", "entertainment"):
-        lines.append("娱乐频道,#genre#")
+        lines.append("媒体频道,#genre#")
         for idx, name in enumerate(sorted(channels.keys()), start=1):
             if name in WHITELIST:
                 continue
@@ -670,10 +670,10 @@ def build_readme():
     html.append("</table>\n")
 
     # ============================
-    # 娱乐频道表格
+    # 媒体频道表格
     # ============================
 
-    html.append("## 📡 娱乐频道\n\n<table>")
+    html.append("## 📡 媒体频道\n\n<table>")
     html.append("<tr><th>频道</th><th>可用源/总源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
 
     for name, info in sorted(CHANNEL_REPORT.items(), key=lambda x: (x[1]["removed"], x[0])):
