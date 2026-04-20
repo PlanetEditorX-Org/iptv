@@ -79,10 +79,10 @@ jobs:
       - name: Restore state files
         run: |
           echo "=== 恢复 raw_results_* ==="
-          cp merged/state-*/raw_results_*.json sources/ || true
+          cp merged/state-*/sources/raw_results_*.json sources/ || true
 
           echo "=== 恢复 cache.json ==="
-          cp merged/state-*/cache.json scripts/ || true
+          cp merged/state-*/scripts/cache.json scripts/ || true
 
       # ============================
       # 统一判刑（fail_count / source_fail / failed_sources / live_urls / README）
@@ -151,5 +151,5 @@ jobs:
           git add output/*.txt output/*.m3u || true
           git add README.md || true
 
-          git commit -m "Unified IPTV update (raw merge + outputs)" || echo "No changes"
+          git commit -m "Unified IPTV Update" || echo "No changes"
           git push || true
