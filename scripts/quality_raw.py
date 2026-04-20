@@ -1,15 +1,13 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
+import math
+import time
+import threading
 import subprocess
 import json
 import tempfile
-import threading
 from pathlib import Path
 from PIL import Image
 import numpy as np
 import cv2
-import time
 
 # ============================
 # 全局路径
@@ -113,18 +111,30 @@ def snapshot_blur_score(url, timeout=5):
         return 0
 
 # ============================
+# 正态分布观感映射：raw_score → 0~100
+# ============================
+
+def map_to_0_100(raw_score):
+    if raw_score <= -100:
+        return 0.0
+
+    x = raw_score / 25.0
+    y = math.tanh(x)
+    return (y + 1) * 50
+
+# ============================
 # 质量检测（核心）
 # ============================
 
 def quality_score(url):
     now = time.time()
-    # 1. 缓存命中 + 未过期
+
+    # 1. 缓存命中
     with cache_lock:
         if url in cache:
             ts = cache[url].get("ts", 0)
             if now - ts < EXPIRE_SECONDS:
                 return cache[url]["score"], True
-            # 否则缓存过期，继续检测
 
     # 2. ffprobe / ffmpeg 检测
     ok, w, h, bitrate = probe_stream(url)
@@ -135,11 +145,19 @@ def quality_score(url):
 
     # 3. 评分
     if failed:
-        score = 0
+        raw_score = -100
     else:
-        score = (w * h) / 1000 + bitrate / 10000 + blur - delay * 10
+        resolution_score = (w * h) / 50000
+        blur_score = min(blur / 20, 20)
+        bitrate_score = 0
+        delay_penalty = min(delay, 5) * 15
 
-    # 4. 写入缓存（带时间戳）
+        raw_score = resolution_score + blur_score + bitrate_score - delay_penalty
+
+    # 4. 映射到 0~100
+    final_score = map_to_0_100(raw_score)
+
+    # 5. 写入缓存
     with cache_lock:
         cache[url] = {
             "width": w,
@@ -147,14 +165,16 @@ def quality_score(url):
             "bitrate": bitrate,
             "delay": delay,
             "blur": blur,
-            "score": score,
+            "raw_score": raw_score,
+            "score": final_score,
             "ts": now
         }
 
-    # 5. 上报原始观测
+    # 6. 上报原始观测
     RAW_RESULTS[url] = {
         "ok": not failed,
-        "score": score,
+        "raw_score": raw_score,
+        "score": final_score,
         "width": w,
         "height": h,
         "bitrate": bitrate,
@@ -162,17 +182,15 @@ def quality_score(url):
         "blur": blur
     }
 
-    return score, False
+    return final_score, False
 
 # ============================
 # 保存（cache + raw_results）
 # ============================
 
 def save_all(job_name=None):
-    # 保存缓存
     save_json(CACHE_FILE, cache)
 
-    # 保存原始观测（CI 合并时使用）
     if job_name:
         raw_file = STATE_DIR / f"raw_results_{job_name}.json"
         save_json(raw_file, RAW_RESULTS)
