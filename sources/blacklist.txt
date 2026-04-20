@@ -23,11 +23,7 @@ Pdtv
 FYtv
 Hktv
 
-PlutoTVHorror
-PlutoTVParanormal
-PlutoTVSciFi
-PlutoTVSnooker900720p
-PlutoTVTrueCrime
+PlutoTV
 NewTV惊悚悬疑
 RTHK31
 VIUTV
@@ -58,14 +54,14 @@ MissionImpossible
 生活时尚
 电视指南
 
-北京纪实科教
-上海都市
-东方影视
+科教
+上海
+东方
 石家庄
 西藏
 新疆
 安多
-金川新闻综合
+新闻
 商都
 
 倚天屠龙记
