@@ -11,6 +11,7 @@ Not247
 720p
 1080
 4G
+4K
 4k
 HD
 
@@ -31,7 +32,9 @@ UFC
 WorldPokerTour
 TopGear
 Andromeda
+Arirang
 MissionImpossible
+KIX
 
 体育
 足球
