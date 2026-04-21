@@ -233,6 +233,9 @@ def detect_and_sort_urls(name, urls, is_entertainment=False):
         for idx, future in enumerate(as_completed(future_map), start=1):
             url = future_map[future]
             score, cached = future.result()
+            # 来源加权：本地 spider 源优先
+            if URL_SOURCE.get(url) == "local_spider":
+                score += 15
 
             info = cache.get(url, {})
             w = info.get("width", 0)
@@ -510,6 +513,13 @@ def main(mode):
     for src, label in live_sources:
         content = fetch_text(src)
         detect_and_parse(content, channels, source_url=src)
+
+    # 解析本地 spider 源
+    local_file = SOURCES_DIR / "local_spider.m3u"
+    if local_file.exists():
+        print("[local spider] 加载本地 spider 源")
+        content = local_file.read_text(encoding="utf-8")
+        detect_and_parse(content, channels, source_url="local_spider")
 
     # 输出
     txt = build_output_txt(channels, mode)
