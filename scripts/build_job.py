@@ -52,28 +52,41 @@ FILTERED_LOG = defaultdict(list)
 # ============================
 
 def normalize_name(name: str) -> str:
-    name = name.strip()
+    raw = name.strip().upper()
 
-    # CCTV 归一化（保留 CCTV 前缀）
-    m = re.match(r"CCTV[- ]?0?(\d+)", name.upper())
+    # ============================
+    # 1. CCTV 系列强力归一化
+    # ============================
+    m = re.match(r"CCTV[- ]?0?(\d+)", raw)
     if m:
-        return f"CCTV{m.group(1)}"
+        num = m.group(1)
+        return f"CCTV{num}"
 
-    # 去掉常见分辨率后缀（湖南卫视4M1080 → 湖南卫视）
-    name = re.sub(
-        r"(4K|8K|HD|FHD|UHD|超清|高清|标清|4M1080|8M1080|1080P|720P)$",
+    # ============================
+    # 2. 卫视归一化
+    # ============================
+
+    # 通用卫视
+    m2 = re.match(r"(.*?卫视)", raw)
+    if m2:
+        return m2.group(1)
+
+    # ============================
+    # 3. 去掉画质/后缀（HD/高清/超清/频道/综合）
+    # ============================
+    cleaned = re.sub(
+        r"(4K|8K|HD|FHD|UHD|超清|高清|标清|频道|综合)$",
         "",
-        name,
-        flags=re.IGNORECASE
+        raw
     )
 
     # 去掉尾部数字+单位（如 4M1080、8M、4M）
-    name = re.sub(r"\d+[MPKp]+$", "", name)
+    cleaned = re.sub(r"\d+[MPKp]+$", "", cleaned)
 
     # 去掉非中文英文数字
-    name = re.sub(r"[^\u4e00-\u9fa5A-Za-z0-9]+", "", name)
+    cleaned = re.sub(r"[^\u4e00-\u9fa5A-Za-z0-9]+", "", cleaned)
 
-    return name
+    return cleaned
 
 # ============================
 # URL 过滤
