@@ -53,13 +53,26 @@ FILTERED_LOG = defaultdict(list)
 
 def normalize_name(name: str) -> str:
     name = name.strip()
+
+    # CCTV 归一化（保留 CCTV 前缀）
     m = re.match(r"CCTV[- ]?0?(\d+)", name.upper())
     if m:
         return f"CCTV{m.group(1)}"
-    m = re.match(r"CETV[- ]?0?(\d+)", name.upper())
-    if m:
-        return f"CETV{m.group(1)}"
-    name = re.sub(r"[^\u4e00-\u9fa5A-Za-z0-9+]+", "", name)
+
+    # 去掉常见分辨率后缀（湖南卫视4M1080 → 湖南卫视）
+    name = re.sub(
+        r"(4K|8K|HD|FHD|UHD|超清|高清|标清|4M1080|8M1080|1080P|720P)$",
+        "",
+        name,
+        flags=re.IGNORECASE
+    )
+
+    # 去掉尾部数字+单位（如 4M1080、8M、4M）
+    name = re.sub(r"\d+[MPKp]+$", "", name)
+
+    # 去掉非中文英文数字
+    name = re.sub(r"[^\u4e00-\u9fa5A-Za-z0-9]+", "", name)
+
     return name
 
 # ============================
