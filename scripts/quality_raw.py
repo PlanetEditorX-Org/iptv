@@ -188,9 +188,36 @@ def quality_score(url):
 # 保存（cache + raw_results）
 # ============================
 
+def cleanup_cache():
+    now = time.time()
+    new_cache = {}
+
+    for url, info in cache.items():
+        ts = info.get("ts", 0)
+        score = info.get("score", 0)
+
+        # 失败源：短 TTL（1 小时）
+        if score <= 0:
+            if now - ts < 3600:
+                new_cache[url] = info
+            continue
+
+        # 正常源：标准 TTL（24 小时）
+        if now - ts < EXPIRE_SECONDS:
+            new_cache[url] = info
+
+    return new_cache
+
 def save_all(job_name=None):
+    global cache
+
+    # 自动清理过期缓存
+    cache = cleanup_cache()
+
+    # 保存 cache.json
     save_json(CACHE_FILE, cache)
 
+    # 保存 raw_results
     if job_name:
         raw_file = STATE_DIR / f"raw_results_{job_name}.json"
         save_json(raw_file, RAW_RESULTS)

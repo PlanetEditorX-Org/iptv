@@ -84,8 +84,16 @@ jobs:
           echo "=== 恢复 raw_results_* ==="
           cp merged/state-*/raw_results_*.json sources/state/ || true
 
-          echo "=== 恢复 cache.json ==="
-          cp merged/state-*/cache.json sources/state/ || true
+          echo "=== 恢复 cache.json（多个） ==="
+          mkdir -p sources/state/
+          cp merged/state-*/cache.json merged/cache_list/ || true
+
+      # ============================
+      # 合并 cache.json（关键步骤）
+      # ============================
+      - name: Merge cache.json
+        run: |
+          python3 scripts/merge_cache.py
 
       # ============================
       # 统一判刑（fail_count / failed_sources / live_urls / README）
@@ -116,7 +124,6 @@ jobs:
               echo "" >> output/channels_all.txt
             done
           fi
-
 
           echo "=== 合并 M3U ==="
           echo "#EXTM3U" > output/channels_all.m3u
@@ -162,6 +169,7 @@ jobs:
           git add sources/state/failed_sources.json || true
           git add sources/state/source_fail.json || true
           git add sources/live_urls.txt || true
+          git add sources/state/cache.json || true
 
           # 提交最终输出
           git add output/*.txt output/*.m3u || true
