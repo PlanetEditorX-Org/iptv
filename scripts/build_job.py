@@ -131,7 +131,7 @@ def add_channel(channels, name, url, source_url=None):
     # 黑名单只对非白名单频道生效
     if name not in WHITELIST:
         for key in BLACKLIST:
-            if key in name or key in url:
+            if key in name:
                 FILTERED_LOG[name].append({
                     "url": url,
                     "keyword": key,
