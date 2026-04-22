@@ -24,7 +24,7 @@ jobs:
         run: |
           RUNNERS=$(curl -s \
             -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
-            https://api.github.com/repos/${{ github.repository }}/actions/runners \
+            https://api.github.com/orgs/${{ github.repository_owner }}/actions/runners \
             | jq '.runners[] | select(.status=="online") | .name')
 
           if [[ -n "$RUNNERS" ]]; then
