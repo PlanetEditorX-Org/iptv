@@ -11,12 +11,15 @@ import sys
 import time
 import random
 import urllib.parse
+import os
 
 from quality_raw import (
     quality_score,
     cache,
     save_all
 )
+
+IS_LOCAL_RUNNER = os.getenv("SELF_RUNNER", "false") == "true"
 
 # ============================
 # 全局路径
@@ -266,11 +269,15 @@ def detect_and_sort_urls(name, urls, is_entertainment=False):
 
         for u in good_urls:
 
-            # 本地源：不测速，默认 100 分
+            # 本地源逻辑：本地 runner 测速，云端 runner 跳过
             if is_local_source(u):
-                results[u] = 100.0
-                print(f"[{name}] 本地源 → 默认 100 分 | {u}", flush=True)
-                continue
+                if IS_LOCAL_RUNNER:
+                    print(f"[{name}] 本地 runner → 本地源参与测速 | {u}", flush=True)
+                    # 不 continue，让它进入 quality_score 测试
+                else:
+                    results[u] = 100.0
+                    print(f"[{name}] 云端 runner → 本地源默认 100 分 | {u}", flush=True)
+                    continue
 
             # 远程源：正常测速
             future_map[exe.submit(quality_score, u)] = u

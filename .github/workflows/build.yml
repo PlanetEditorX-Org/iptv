@@ -64,6 +64,10 @@ jobs:
         run: |
           pip3 install --user pillow numpy opencv-python-headless || true
 
+      - name: Export runner type
+        run: |
+          echo "SELF_RUNNER=${{ needs.check-runner.outputs.local_available }}" >> $GITHUB_ENV
+
       - name: Build ${{ matrix.name }}
         run: |
           rm -rf output
@@ -98,6 +102,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Export runner type
+        run: |
+          echo "SELF_RUNNER=${{ needs.check-runner.outputs.local_available }}" >> $GITHUB_ENV
+          
       - name: Download all artifacts
         uses: actions/download-artifact@v4
         with:
