@@ -299,6 +299,19 @@ def detect_and_sort_urls(name, urls, is_entertainment=False):
                 flush=True
             )
 
+            info = cache.get(url, {})
+            err = info.get("error", "")
+
+            # 网络不可达
+            if err in ("timeout", "connection refused", "network unreachable", "dns error"):
+                print(f"[{name}] 不可达源跳过 → 错误类型: {err} - {url}")
+                continue
+
+            # 其它失败
+            if score <= 0:
+                print(f"[{name}] 失败源跳过 → {url}")
+                continue
+
             results[url] = score
 
     # 媒体频道过滤
