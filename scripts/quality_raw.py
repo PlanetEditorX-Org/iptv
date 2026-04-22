@@ -114,37 +114,98 @@ def snapshot_blur_score(url, timeout=5):
 # ffmpeg：检测静态画面（帧差）
 # ============================
 
-def is_static_stream(url, timeout=5):
+def is_black_or_solid_color(arr, threshold=5):
+    """
+    检测是否为纯黑屏、纯白屏、纯蓝屏等“纯色画面”
+    threshold 越大越宽松
+    """
+    mean_val = np.mean(arr)
+    std_val = np.std(arr)
+
+    # 纯色画面：亮度变化极低
+    if std_val < threshold:
+        return True
+
+    return False
+
+def detect_logo(img, region_ratio=0.2):
+    """
+    检测右上角是否存在台标（亮度 + 对比度 + 边缘密度）
+    img: 灰度图 (numpy array)
+    """
+
+    h, w = img.shape
+
+    # 右上角区域
+    rh = int(h * region_ratio)
+    rw = int(w * region_ratio)
+    roi = img[0:rh, w-rw:w]
+
+    # 亮度均值
+    mean_val = np.mean(roi)
+
+    # 对比度（标准差）
+    std_val = np.std(roi)
+
+    # 边缘密度（Canny）
+    edges = cv2.Canny(roi, 80, 150)
+    edge_ratio = np.sum(edges > 0) / edges.size
+
+    # 台标判定条件
+    if mean_val > 80 and std_val > 20 and edge_ratio > 0.02:
+        return True
+
+    return False
+
+def is_static_stream(url, timeout=5, checks=3, interval=1):
+    """
+    连续 checks 次静态 → 判定为假台
+    避免加载黑屏误判
+    """
+    static_count = 0
+
+    for _ in range(checks):
+        if _check_static_once(url, timeout):
+            static_count += 1
+        time.sleep(interval)
+
+    # 连续 3 次静态 → 假台
+    return static_count == checks
+
+def _check_static_once(url, timeout=5):
     try:
-        # 抓取两帧
         tmp1 = tempfile.NamedTemporaryFile(suffix=".jpg", delete=False).name
         tmp2 = tempfile.NamedTemporaryFile(suffix=".jpg", delete=False).name
 
-        cmd1 = ["ffmpeg", "-v", "quiet", "-y", "-i", url, "-vframes", "1", tmp1]
-        run_silent(cmd1, timeout=timeout)
-
+        run_silent(["ffmpeg", "-v", "quiet", "-y", "-i", url, "-vframes", "1", tmp1], timeout=timeout)
         time.sleep(1)
+        run_silent(["ffmpeg", "-v", "quiet", "-y", "-i", url, "-vframes", "1", tmp2], timeout=timeout)
 
-        cmd2 = ["ffmpeg", "-v", "quiet", "-y", "-i", url, "-vframes", "1", tmp2]
-        run_silent(cmd2, timeout=timeout)
+        img1 = np.array(Image.open(tmp1).convert("L"))
+        img2 = np.array(Image.open(tmp2).convert("L"))
 
-        # 读取两帧
-        img1 = Image.open(tmp1).convert("L")
-        img2 = Image.open(tmp2).convert("L")
+        # ① 检测纯色画面（黑屏/蓝屏/绿屏）
+        if is_black_or_solid_color(img1) and is_black_or_solid_color(img2):
+            return True
 
-        arr1 = np.array(img1)
-        arr2 = np.array(img2)
+        # ② 台标检测（有台标 → 绝不可能是假台）
+        if detect_logo(img1) or detect_logo(img2):
+            return False  # 有台标 → 不是静态假台
 
-        # 帧差
-        diff = cv2.absdiff(arr1, arr2)
-        score = np.mean(diff)
+        diff = cv2.absdiff(img1, img2)
 
-        # 阈值：< 2 基本就是静态画面
-        return score < 2
+        # ③ 帧差检测
+        changed_pixels = np.sum(diff > 10)
+        total_pixels = diff.size
+        change_ratio = changed_pixels / total_pixels
+
+        # < 0.5% → 静态
+        return change_ratio < 0.005
 
     except:
-        # 读取失败 → 当作静态
-        return True
+        # 抓帧失败 → 不判定为静态（避免误杀）
+        return False
+
 
 # ============================
 # 正态分布观感映射：raw_score → 0~100
