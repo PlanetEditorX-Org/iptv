@@ -371,7 +371,7 @@ def build_output_txt(channels, mode):
 
             raw_urls = channels[name]
 
-            if len(raw_urls) < 3:
+            if len(raw_urls) < 10:
                 continue
 
             if is_numeric_channel(name):

@@ -11,7 +11,11 @@ on:
       - "sources/local_spider.m3u"   # 只有 spider 源变化才触发
   workflow_dispatch:   # 手动触发
 
+
 jobs:
+  # ============================
+  # 检查自建 Runner 是否在线
+  # ============================
   check-runner:
     runs-on: ubuntu-latest
     outputs:
@@ -25,7 +29,7 @@ jobs:
           RUNNERS=$(curl -s \
             -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
             https://api.github.com/orgs/${{ github.repository_owner }}/actions/runners \
-            | jq '.runners[] | select(.status=="online") | .name')
+            | jq -r '.runners // [] | .[] | select(.status=="online") | .name')
 
           if [[ -n "$RUNNERS" ]]; then
             echo "local_available=true" >> $GITHUB_OUTPUT
@@ -34,7 +38,7 @@ jobs:
           fi
 
   # ============================
-  # 三个构建 Job（使用 build_job.py）
+  # 三个构建 Job
   # ============================
   build:
     needs: check-runner
@@ -66,14 +70,12 @@ jobs:
           mkdir -p output_${{ matrix.name }}
           mv output/* output_${{ matrix.name }}/
 
-      # 上传频道输出（m3u / txt）
       - name: Upload output artifact
         uses: actions/upload-artifact@v4
         with:
           name: output-${{ matrix.name }}
           path: output_${{ matrix.name }}/
 
-      # 上传 raw_results + cache
       - name: Upload state artifact
         uses: actions/upload-artifact@v4
         with:
@@ -88,6 +90,8 @@ jobs:
   merge:
     needs: [check-runner, build]
     runs-on: ${{ needs.check-runner.outputs.local_available == 'true' && 'self-hosted' || 'ubuntu-latest' }}
+    outputs:
+      push_status: ${{ steps.push_step.outputs.push_status }}
 
     steps:
       - uses: actions/checkout@v4
@@ -103,35 +107,18 @@ jobs:
           tree merged || ls -R merged
           echo
 
-      # ============================
-      # 恢复 raw_results + cache
-      # ============================
       - name: Restore state files
         run: |
-          echo "=== 恢复 raw_results_* ==="
           cp merged/state-*/raw_results_*.json sources/state/ || true
-
-          echo "=== 恢复 cache.json（多个） ==="
-          mkdir -p sources/state/
+          mkdir -p merged/cache_list/
           cp merged/state-*/cache.json merged/cache_list/ || true
 
-      # ============================
-      # 合并 cache.json（关键步骤）
-      # ============================
       - name: Merge cache.json
-        run: |
-          python3 scripts/merge_cache.py
+        run: python3 scripts/merge_cache.py
 
-      # ============================
-      # 统一判刑（fail_count / failed_sources / live_urls / README）
-      # ============================
       - name: Merge state files
-        run: |
-          python3 scripts/merge_state_files.py
+        run: python3 scripts/merge_state_files.py
 
-      # ============================
-      # 合并频道输出
-      # ============================
       - name: Merge outputs
         run: |
           mkdir -p output
@@ -139,32 +126,18 @@ jobs:
 
           echo "=== 合并 TXT ==="
           touch output/channels_all.txt
-
-          txt_files=(merged/output-*/channels_*.txt)
-
-          if [ ${#txt_files[@]} -eq 0 ]; then
-            echo "⚠️ 没有任何 TXT 文件可合并" >> output/channels_all.txt
-          else
-            for f in "${txt_files[@]}"; do
-              echo "合并：$f"
-              cat "$f" >> output/channels_all.txt
-              echo "" >> output/channels_all.txt
-            done
-          fi
+          for f in merged/output-*/channels_*.txt; do
+            echo "合并：$f"
+            cat "$f" >> output/channels_all.txt
+            echo "" >> output/channels_all.txt
+          done
 
           echo "=== 合并 M3U ==="
           echo "#EXTM3U" > output/channels_all.m3u
-
-          m3u_files=(merged/output-*/channels_*.m3u)
-
-          if [ ${#m3u_files[@]} -eq 0 ]; then
-            echo "⚠️ 没有任何 M3U 文件可合并"
-          else
-            for f in "${m3u_files[@]}"; do
-              echo "合并：$f"
-              grep -a -h -v "#EXTM3U" "$f" >> output/channels_all.m3u || true
-            done
-          fi
+          for f in merged/output-*/channels_*.m3u; do
+            echo "合并：$f"
+            grep -a -h -v "#EXTM3U" "$f" >> output/channels_all.m3u || true
+          done
 
       - name: Upload final merged output
         uses: actions/upload-artifact@v4
@@ -172,37 +145,84 @@ jobs:
           name: final
           path: output/
 
-      # ============================
-      # 清理 raw_results
-      # ============================
       - name: Cleanup raw_results
         run: |
-          echo "=== 清理 raw结果 ==="
           rm -f sources/state/raw_results_*.json || true
-
-          echo "=== 清理 黑名单过滤  ==="
           rm -f merged/output-*/filtered_*.json || true
 
       # ============================
-      # 最终一次性提交所有文件
+      # 本地尝试 push
       # ============================
-      - name: Commit and push ALL updated files
+      - name: Try local push
+        id: push_step
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
 
-          # 只提交真正需要跨运行保存的状态文件
-          git add sources/state/fail_count.json || true
-          git add sources/state/failed_sources.json || true
-          git add sources/state/source_fail.json || true
+          git add sources/state/*.json || true
           git add sources/live_urls.txt || true
-          git add sources/state/cache.json || true
-
-          # 提交最终输出
           git add output/*.txt output/*.m3u || true
-
-          # 提交 README
           git add README.md || true
 
           git commit -m "IPTV Update" || echo "No changes"
-          git push || true
+
+          echo "🔄 Trying local push..."
+          if git push; then
+            echo "push_status=success" >> $GITHUB_OUTPUT
+            exit 0
+          else
+            echo "push_status=failed" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Upload artifact for cloud push
+        if: steps.push_step.outputs.push_status == 'failed'
+        uses: actions/upload-artifact@v4
+        with:
+          name: iptv-output
+          path: |
+            sources/state/*.json
+            sources/live_urls.txt
+            output/*.txt
+            output/*.m3u
+            README.md
+
+  # ============================
+  # 云端 fallback push
+  # ============================
+  push_fallback:
+    needs: merge
+    if: needs.merge.outputs.push_status == 'failed'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: iptv-output
+          path: iptv-output
+
+      - name: Apply updated files
+        run: |
+          cp -f iptv-output/*.json sources/state/ || true
+          cp -f iptv-output/live_urls.txt sources/ || true
+          cp -f iptv-output/*.txt output/ || true
+          cp -f iptv-output/*.m3u output/ || true
+          cp -f iptv-output/README.md README.md || true
+
+      - name: Commit and push from cloud runner
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add sources/state/*.json || true
+          git add sources/live_urls.txt || true
+          git add output/*.txt output/*.m3u || true
+          git add README.md || true
+
+          git commit -m "IPTV Update (cloud fallback)" || echo "No changes"
+          git push
