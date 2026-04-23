@@ -136,10 +136,17 @@ jobs:
 
           echo "=== 合并 TXT ==="
           touch output/channels_all.txt
+
           for f in merged/output-*/channels_*.txt; do
-            echo "合并：$f"
-            cat "$f" >> output/channels_all.txt
-            echo "" >> output/channels_all.txt
+              echo "合并：$f"
+
+              # 复制单独的 channels_xxx.txt
+              base=$(basename "$f")
+              cp "$f" "output/$base"
+
+              # 合并到 channels_all.txt
+              cat "$f" >> output/channels_all.txt
+              echo "" >> output/channels_all.txt
           done
 
           echo "=== 合并 M3U ==="
