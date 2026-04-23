@@ -28,7 +28,7 @@ jobs:
         run: |
           RUNNERS=$(curl -s \
             -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
-            https://api.github.com/orgs/${{ github.repository_owner }}/actions/runners \
+            https://api.github.com/repos/${{ github.repository_owner }}/${{ github.event.repository.name }}/actions/runners \
             | jq -r '.runners // [] | .[] | select(.status=="online") | .name')
 
           if [[ -n "$RUNNERS" ]]; then
@@ -105,7 +105,7 @@ jobs:
       - name: Export runner type
         run: |
           echo "SELF_RUNNER=${{ needs.check-runner.outputs.local_available }}" >> $GITHUB_ENV
-          
+
       - name: Download all artifacts
         uses: actions/download-artifact@v4
         with:
