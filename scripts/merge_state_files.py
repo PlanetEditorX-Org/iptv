@@ -119,16 +119,17 @@ def build_channel_report(channels, raw):
     report = {}
 
     for name, urls in channels.items():
-        usable = 0
+        usable = 0          # 真实可用源数量（筛选后的）
         best_score = -1
         best_res = "N/A"
 
         for url in urls:
-
-            # 本地源不参与频道评分（避免 100 分污染）
+            # 本地源：永远算可用，但不参与评分
             if is_local_source(url):
+                usable += 1
                 continue
 
+            # 远程源：需要有检测结果，且 score > 0 才算可用
             info = raw.get(url)
             if not info:
                 continue
@@ -138,6 +139,7 @@ def build_channel_report(channels, raw):
             if score > 0:
                 usable += 1
 
+            # 评分只看远程源
             if score > best_score:
                 best_score = score
                 w = info["width"]
