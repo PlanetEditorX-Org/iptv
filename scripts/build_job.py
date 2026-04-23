@@ -596,6 +596,10 @@ def main(mode):
     # 保存 raw_results
     save_all(mode)
 
+    # 保存 URL → 上游源 映射
+    url_source_file = STATE_DIR / "url_source.json"
+    url_source_file.write_text(json.dumps(URL_SOURCE, ensure_ascii=False, indent=2), encoding="utf-8")
+
     # 保存黑名单过滤日志
     filtered_file = OUTPUT_DIR / f"filtered_{mode}.json"
     filtered_file.write_text(json.dumps(FILTERED_LOG, ensure_ascii=False, indent=2), encoding="utf-8")

@@ -25,6 +25,7 @@ FAIL_COUNT_FILE = STATE_DIR / "fail_count.json"
 FAILED_SOURCES_FILE = STATE_DIR / "failed_sources.json"
 LIVE_URLS_FILE = SOURCES_DIR / "live_urls.txt"
 README_FILE = ROOT / "README.md"
+URL_SOURCE_FILE = STATE_DIR / "url_source.json"
 
 # ============================
 # JSON 工具
@@ -40,6 +41,9 @@ def load_json(path):
 
 def save_json(path, data):
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+
+def load_url_source():
+    return load_json(URL_SOURCE_FILE)
 
 # ============================
 # 合并 raw_results
@@ -158,26 +162,36 @@ def build_channel_report(channels, raw):
     return report
 
 # ============================
-# 判刑逻辑（fail_count / failed_sources）
+# 判断逻辑（fail_count / failed_sources）
 # ============================
 
-def recompute_fail(raw):
+def recompute_fail(raw, url_source):
     fail_count = load_json(FAIL_COUNT_FILE)
     failed_sources = load_json(FAILED_SOURCES_FILE)
 
     cst = timezone(timedelta(hours=8))
     today = datetime.now(cst).strftime("%Y-%m-%d")
 
-    for url, info in raw.items():
-        if info["score"] > 0:
-            fail_count[url] = 0
-        else:
-            fail_count[url] = fail_count.get(url, 0) + 1
+    # 先按上游源聚合：上游 → [score1, score2, ...]
+    upstream_scores = {}
 
-        if fail_count[url] >= 10:
-            if url not in failed_sources:
+    for url, info in raw.items():
+        upstream = url_source.get(url)
+        if not upstream:
+            continue
+        upstream_scores.setdefault(upstream, []).append(info["score"])
+
+    for upstream, scores in upstream_scores.items():
+        # 只要这个上游下的所有源都 <= 0，就认为这次是一次失败
+        if all(s <= 0 for s in scores):
+            fail_count[upstream] = fail_count.get(upstream, 0) + 1
+        else:
+            fail_count[upstream] = 0
+
+        if fail_count[upstream] >= 10:
+            if upstream not in failed_sources:
                 remove_date = (datetime.now(cst) + timedelta(days=30)).strftime("%Y-%m-%d")
-                failed_sources[url] = {
+                failed_sources[upstream] = {
                     "fail_time": today,
                     "remove_time": remove_date
                 }
@@ -211,15 +225,6 @@ def build_readme(report, failed_sources):
     cst = timezone(timedelta(hours=8))
     build_time = datetime.now(cst).strftime("%Y-%m-%d %H:%M:%S")
     html.append(f"⏱ **构建时间：{build_time} (CST)**\n\n")
-
-    # 失效上游源
-    if failed_sources:
-        html.append("## ❌ 失效上游源（连续 10 次失败）\n")
-        for url, info in failed_sources.items():
-            html.append(f"- `{url}`")
-            html.append(f"  - 失效时间：{info['fail_time']}")
-            html.append(f"  - 删除时间：{info['remove_time']}\n")
-        html.append("\n")
 
     # 总览统计
     total_channels = len(report)
@@ -277,6 +282,15 @@ def build_readme(report, failed_sources):
             f"</tr>"
         )
 
+    # 失效上游源
+    if failed_sources:
+        html.append("## ❌ 失效上游源（连续 10 次失败）\n")
+        for url, info in failed_sources.items():
+            html.append(f"- `{url}`")
+            html.append(f"  - 失效时间：{info['fail_time']}")
+            html.append(f"  - 删除时间：{info['remove_time']}\n")
+        html.append("\n")
+
     html.append("</table>\n")
 
     README_FILE.write_text("\n".join(html), encoding="utf-8")
@@ -295,8 +309,9 @@ def main():
     print("=== 构建频道报表 ===")
     report = build_channel_report(channels, raw)
 
-    print("=== 判刑 ===")
-    fail_count, failed_sources = recompute_fail(raw)
+    print("=== 判断 ===")
+    url_source = load_url_source()
+    fail_count, failed_sources = recompute_fail(raw, url_source)
 
     save_json(FAIL_COUNT_FILE, fail_count)
     save_json(FAILED_SOURCES_FILE, failed_sources)
