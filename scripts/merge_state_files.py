@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import json
 from pathlib import Path
 from datetime import datetime, timedelta, timezone
@@ -12,7 +9,7 @@ import re
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCES_DIR = ROOT / "sources"
-STATE_DIR = SOURCES_DIR / "state"     # 统一状态目录
+STATE_DIR = SOURCES_DIR / "state"
 OUTPUT_DIR = ROOT / "output"
 
 RAW_FILES = [
@@ -21,8 +18,15 @@ RAW_FILES = [
     STATE_DIR / "raw_results_entertainment.json",
 ]
 
-FAIL_COUNT_FILE = STATE_DIR / "fail_count.json"
-FAILED_SOURCES_FILE = STATE_DIR / "failed_sources.json"
+# 直播源失败（具体 URL）——诊断用，不影响上游
+STREAM_FAIL_FILE = STATE_DIR / "stream_fail.json"
+
+# 上游源失败计数
+UPSTREAM_FAIL_FILE = STATE_DIR / "upstream_fail.json"
+
+# 上游源封禁（连续 10 次失败）
+UPSTREAM_BLOCKLIST_FILE = STATE_DIR / "upstream_blocklist.json"
+
 LIVE_URLS_FILE = SOURCES_DIR / "live_urls.txt"
 README_FILE = ROOT / "README.md"
 URL_SOURCE_FILE = STATE_DIR / "url_source.json"
@@ -60,7 +64,7 @@ def merge_raw():
     return all_raw
 
 # ============================
-# 解析 channels_all.txt → 构建频道 → URL 列表
+# 解析 channels_all.txt
 # ============================
 
 def load_channels():
@@ -80,7 +84,7 @@ def load_channels():
     return channels
 
 # ============================
-# 频道排序（自然排序）
+# 频道排序
 # ============================
 
 def channel_sort_key(name: str):
@@ -90,17 +94,14 @@ def channel_sort_key(name: str):
     return ("ZZZ", name)
 
 # ============================
-# 频道类型划分
+# 频道类型
 # ============================
 
 def get_channel_type(name: str) -> str:
-    # 央视
     if name.startswith("CCTV"):
         return "tv"
-    # 卫视（湖南卫视、东方卫视、北京卫视…）
     if name.endswith("卫视"):
         return "tv"
-    # 其它全部归为媒体频道
     return "entertainment"
 
 def is_local_source(url: str) -> bool:
@@ -114,7 +115,7 @@ def is_local_source(url: str) -> bool:
     )
 
 # ============================
-# 构建频道质量报表（核心）
+# 构建频道报表
 # ============================
 
 def build_channel_report(channels, raw):
@@ -127,8 +128,6 @@ def build_channel_report(channels, raw):
         best_res = "N/A"
 
         for url in urls:
-
-            # README 不统计本地源
             if is_local_source(url):
                 continue
 
@@ -162,17 +161,31 @@ def build_channel_report(channels, raw):
     return report
 
 # ============================
-# 判断逻辑（fail_count / failed_sources）
+# 直播源失败（具体 URL）
 # ============================
 
-def recompute_fail(raw, url_source):
-    fail_count = load_json(FAIL_COUNT_FILE)
-    failed_sources = load_json(FAILED_SOURCES_FILE)
+def recompute_stream_fail(raw):
+    stream_fail = load_json(STREAM_FAIL_FILE)
+
+    for url, info in raw.items():
+        if info["score"] > 0:
+            stream_fail[url] = 0
+        else:
+            stream_fail[url] = stream_fail.get(url, 0) + 1
+
+    return stream_fail
+
+# ============================
+# 上游源失败（live_urls）
+# ============================
+
+def recompute_upstream_fail(raw, url_source):
+    upstream_fail = load_json(UPSTREAM_FAIL_FILE)
+    upstream_blocklist = load_json(UPSTREAM_BLOCKLIST_FILE)
 
     cst = timezone(timedelta(hours=8))
     today = datetime.now(cst).strftime("%Y-%m-%d")
 
-    # 先按上游源聚合：上游 → [score1, score2, ...]
     upstream_scores = {}
 
     for url, info in raw.items():
@@ -182,43 +195,42 @@ def recompute_fail(raw, url_source):
         upstream_scores.setdefault(upstream, []).append(info["score"])
 
     for upstream, scores in upstream_scores.items():
-        # 只要这个上游下的所有源都 <= 0，就认为这次是一次失败
         if all(s <= 0 for s in scores):
-            fail_count[upstream] = fail_count.get(upstream, 0) + 1
+            upstream_fail[upstream] = upstream_fail.get(upstream, 0) + 1
         else:
-            fail_count[upstream] = 0
+            upstream_fail[upstream] = 0
 
-        if fail_count[upstream] >= 10:
-            if upstream not in failed_sources:
+        if upstream_fail[upstream] >= 10:
+            if upstream not in upstream_blocklist:
                 remove_date = (datetime.now(cst) + timedelta(days=30)).strftime("%Y-%m-%d")
-                failed_sources[upstream] = {
+                upstream_blocklist[upstream] = {
                     "fail_time": today,
                     "remove_time": remove_date
                 }
 
-    return fail_count, failed_sources
+    return upstream_fail, upstream_blocklist
 
 # ============================
-# live_urls 清理
+# 清理 live_urls
 # ============================
 
-def rebuild_live_urls(failed_sources):
+def rebuild_live_urls(upstream_blocklist):
     if not LIVE_URLS_FILE.exists():
         return
 
     new_lines = []
     for line in LIVE_URLS_FILE.read_text(encoding="utf-8").splitlines():
         url = line.split("$")[0]
-        if url not in failed_sources:
+        if url not in upstream_blocklist:
             new_lines.append(line)
 
     LIVE_URLS_FILE.write_text("\n".join(new_lines), encoding="utf-8")
 
 # ============================
-# README（频道级报表）
+# README
 # ============================
 
-def build_readme(report, failed_sources):
+def build_readme(report, upstream_blocklist):
     html = []
     html.append("# IPTV 质量报表\n")
 
@@ -226,7 +238,6 @@ def build_readme(report, failed_sources):
     build_time = datetime.now(cst).strftime("%Y-%m-%d %H:%M:%S")
     html.append(f"⏱ **构建时间：{build_time} (CST)**\n\n")
 
-    # 总览统计
     total_channels = len(report)
     removed_channels = sum(1 for x in report.values() if x["removed"])
     kept_channels = total_channels - removed_channels
@@ -237,10 +248,6 @@ def build_readme(report, failed_sources):
     html.append(f"- **保留频道数：** {kept_channels}")
     html.append(f"- **已删除频道数：** {removed_channels}")
     html.append(f"- **总可用源数：** {total_usable}\n\n")
-
-    # ============================
-    # 电视频道（CCTV + 卫视，自然排序）
-    # ============================
 
     html.append("## 📺 电视频道\n\n<table>")
     html.append("<tr><th>频道</th><th>可用源/总源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
@@ -261,10 +268,6 @@ def build_readme(report, failed_sources):
 
     html.append("</table>\n")
 
-    # ============================
-    # 媒体频道
-    # ============================
-
     html.append("## 📡 媒体频道\n\n<table>")
     html.append("<tr><th>频道</th><th>可用源/总源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
 
@@ -282,10 +285,9 @@ def build_readme(report, failed_sources):
             f"</tr>"
         )
 
-    # 失效上游源
-    if failed_sources:
+    if upstream_blocklist:
         html.append("## ❌ 失效上游源（连续 10 次失败）\n")
-        for url, info in failed_sources.items():
+        for url, info in upstream_blocklist.items():
             html.append(f"- `{url}`")
             html.append(f"  - 失效时间：{info['fail_time']}")
             html.append(f"  - 删除时间：{info['remove_time']}\n")
@@ -309,18 +311,22 @@ def main():
     print("=== 构建频道报表 ===")
     report = build_channel_report(channels, raw)
 
-    print("=== 判断 ===")
-    url_source = load_url_source()
-    fail_count, failed_sources = recompute_fail(raw, url_source)
+    print("=== 直播源失败统计 ===")
+    stream_fail = recompute_stream_fail(raw)
+    save_json(STREAM_FAIL_FILE, stream_fail)
 
-    save_json(FAIL_COUNT_FILE, fail_count)
-    save_json(FAILED_SOURCES_FILE, failed_sources)
+    print("=== 上游源失败统计 ===")
+    url_source = load_url_source()
+    upstream_fail, upstream_blocklist = recompute_upstream_fail(raw, url_source)
+
+    save_json(UPSTREAM_FAIL_FILE, upstream_fail)
+    save_json(UPSTREAM_BLOCKLIST_FILE, upstream_blocklist)
 
     print("=== 清理 live_urls ===")
-    rebuild_live_urls(failed_sources)
+    rebuild_live_urls(upstream_blocklist)
 
     print("=== 生成 README ===")
-    build_readme(report, failed_sources)
+    build_readme(report, upstream_blocklist)
 
     print("=== merge_state_files 完成 ===")
 

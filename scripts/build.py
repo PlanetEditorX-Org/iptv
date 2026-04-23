@@ -44,7 +44,7 @@ BLACKLIST = []
 # ============================
 
 FAILED_SOURCES = {}  # {url: {"fail_time": "...", "remove_time": "..."}}
-FAILED_SOURCES_FILE = STATE_DIR / "failed_sources.json"
+FAILED_SOURCES_FILE = STATE_DIR / "upstream_blocklist.json"
 
 def load_failed_sources():
     if FAILED_SOURCES_FILE.exists():
@@ -69,7 +69,7 @@ URL_SOURCE = {}
 SOURCE_OK = {}
 
 # 上游源连续失败计数
-SOURCE_FAIL_FILE = STATE_DIR / "source_fail.json"
+SOURCE_FAIL_FILE = STATE_DIR / "stream_fail.json"
 
 def load_source_fail():
     if SOURCE_FAIL_FILE.exists():

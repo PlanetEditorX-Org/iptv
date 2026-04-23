@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 STATE_DIR = ROOT / "sources/state"
 
 CACHE_FILE = STATE_DIR / "cache.json"
-FAIL_FILE  = STATE_DIR / "fail_count.json"
+FAIL_FILE  = STATE_DIR / "upstream_fail.json"
 
 # ============================
 # 全局缓存 + 失败计数

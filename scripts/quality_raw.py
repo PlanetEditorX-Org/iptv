@@ -16,15 +16,7 @@ import cv2
 ROOT = Path(__file__).resolve().parent.parent
 STATE_DIR = ROOT / "sources/state"
 CACHE_FILE = STATE_DIR / "cache.json"
-
-# ============================
-# 全局缓存 + 原始观测
-# ============================
-
-cache_lock = threading.Lock()
-cache = {}
-RAW_RESULTS = {}
-EXPIRE_SECONDS = 24 * 3600
+STREAM_FAIL_FILE = STATE_DIR / "stream_fail.json"
 
 # ============================
 # JSON 工具
@@ -41,8 +33,17 @@ def load_json(path):
 def save_json(path, data):
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
-# 加载缓存
+# ============================
+# 全局缓存 + 原始观测
+# ============================
+
+cache_lock = threading.Lock()
 cache = load_json(CACHE_FILE)
+RAW_RESULTS = {}
+EXPIRE_SECONDS = 24 * 3600
+
+# 直播源失败计数（具体 URL）
+stream_fail = load_json(STREAM_FAIL_FILE)
 
 # ============================
 # 静默运行子进程
@@ -115,61 +116,31 @@ def snapshot_blur_score(url, timeout=5):
 # ============================
 
 def is_black_or_solid_color(arr, threshold=5):
-    """
-    检测是否为纯黑屏、纯白屏、纯蓝屏等“纯色画面”
-    threshold 越大越宽松
-    """
     mean_val = np.mean(arr)
     std_val = np.std(arr)
-
-    # 纯色画面：亮度变化极低
-    if std_val < threshold:
-        return True
-
-    return False
+    return std_val < threshold
 
 def detect_logo(img, region_ratio=0.2):
-    """
-    检测右上角是否存在台标（亮度 + 对比度 + 边缘密度）
-    img: 灰度图 (numpy array)
-    """
-
     h, w = img.shape
-
-    # 右上角区域
     rh = int(h * region_ratio)
     rw = int(w * region_ratio)
     roi = img[0:rh, w-rw:w]
 
-    # 亮度均值
     mean_val = np.mean(roi)
-
-    # 对比度（标准差）
     std_val = np.std(roi)
-
-    # 边缘密度（Canny）
     edges = cv2.Canny(roi, 80, 150)
     edge_ratio = np.sum(edges > 0) / edges.size
 
-    # 台标判定条件
     if mean_val > 80 and std_val > 20 and edge_ratio > 0.02:
         return True
-
     return False
 
 def is_static_stream(url, timeout=5, checks=3, interval=1):
-    """
-    连续 checks 次静态 → 判定为假台
-    避免加载黑屏误判
-    """
     static_count = 0
-
     for _ in range(checks):
         if _check_static_once(url, timeout):
             static_count += 1
         time.sleep(interval)
-
-    # 连续 3 次静态 → 假台
     return static_count == checks
 
 def _check_static_once(url, timeout=5):
@@ -184,28 +155,20 @@ def _check_static_once(url, timeout=5):
         img1 = np.array(Image.open(tmp1).convert("L"))
         img2 = np.array(Image.open(tmp2).convert("L"))
 
-        # ① 检测纯色画面（黑屏/蓝屏/绿屏）
         if is_black_or_solid_color(img1) and is_black_or_solid_color(img2):
             return True
 
-        # ② 台标检测（有台标 → 绝不可能是假台）
         if detect_logo(img1) or detect_logo(img2):
-            return False  # 有台标 → 不是静态假台
+            return False
 
         diff = cv2.absdiff(img1, img2)
-
-        # ③ 帧差检测
         changed_pixels = np.sum(diff > 10)
         total_pixels = diff.size
         change_ratio = changed_pixels / total_pixels
 
-        # < 0.5% → 静态
         return change_ratio < 0.005
-
     except:
-        # 抓帧失败 → 不判定为静态（避免误杀）
         return False
-
 
 # ============================
 # 正态分布观感映射：raw_score → 0~100
@@ -214,7 +177,6 @@ def _check_static_once(url, timeout=5):
 def map_to_0_100(raw_score):
     if raw_score <= -100:
         return 0.0
-
     x = raw_score / 25.0
     y = math.tanh(x)
     return (y + 1) * 50
@@ -257,13 +219,11 @@ def quality_score(url):
         blur_score = min(blur / 20, 20)
         bitrate_score = 0
         delay_penalty = min(delay, 5) * 15
-
         raw_score = resolution_score + blur_score + bitrate_score - delay_penalty
 
-    # 5. 映射到 0~100
     final_score = map_to_0_100(raw_score)
 
-    # 6. 写入缓存
+    # 5. 写入缓存
     with cache_lock:
         cache[url] = {
             "width": w,
@@ -276,7 +236,7 @@ def quality_score(url):
             "ts": now
         }
 
-    # 7. 上报原始观测
+    # 6. 记录原始观测
     RAW_RESULTS[url] = {
         "ok": not failed,
         "raw_score": raw_score,
@@ -288,10 +248,16 @@ def quality_score(url):
         "blur": blur
     }
 
+    # 7. 更新直播源失败计数
+    if final_score > 0:
+        stream_fail[url] = 0
+    else:
+        stream_fail[url] = stream_fail.get(url, 0) + 1
+
     return final_score, False
 
 # ============================
-# 保存（cache + raw_results）
+# 保存（cache + raw_results + stream_fail）
 # ============================
 
 def cleanup_cache():
@@ -302,13 +268,11 @@ def cleanup_cache():
         ts = info.get("ts", 0)
         score = info.get("score", 0)
 
-        # 失败源：短 TTL（1 小时）
         if score <= 0:
             if now - ts < 3600:
                 new_cache[url] = info
             continue
 
-        # 正常源：标准 TTL（24 小时）
         if now - ts < EXPIRE_SECONDS:
             new_cache[url] = info
 
@@ -317,13 +281,12 @@ def cleanup_cache():
 def save_all(job_name=None):
     global cache
 
-    # 自动清理过期缓存
     cache = cleanup_cache()
-
-    # 保存 cache.json
     save_json(CACHE_FILE, cache)
 
-    # 保存 raw_results
     if job_name:
         raw_file = STATE_DIR / f"raw_results_{job_name}.json"
         save_json(raw_file, RAW_RESULTS)
+
+    # 保存直播源失败计数
+    save_json(STREAM_FAIL_FILE, stream_fail)
