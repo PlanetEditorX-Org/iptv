@@ -1,86 +1,121 @@
 # IPTV 质量报表
 
-⏱ **构建时间：2026-04-23 18:49:40 (CST)**
+⏱ **构建时间：2026-04-23 21:43:30 (CST)**
 
 
 ## 📊 总览统计
 
 - **总频道数：** 436
-- **保留频道数：** 0
-- **已删除频道数：** 436
-- **总可用源数：** 0
+- **保留频道数：** 84
+- **已删除频道数：** 352
+- **总可用源数：** 10136
 
 
 ## 📺 电视频道
 
 <table>
 <tr><th>频道</th><th>可用源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>
-<tr><td>CCTV1</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV2</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV3</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV4</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV5</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV6</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV7</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV8</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV9</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV10</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV11</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV12</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV13</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV14</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV15</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV16</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV17</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>三沙卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>东南卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>东方卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>云南卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>兵团卫视</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>内蒙古卫视</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV1</td><td>521</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV2</td><td>475</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV3</td><td>369</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV4</td><td>512</td><td>3840x2160</td><td>100.0</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV5</td><td>538</td><td>3840x2160</td><td>100.0</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV6</td><td>328</td><td>1920x1080</td><td>96.1</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV7</td><td>304</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV8</td><td>351</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV9</td><td>283</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV10</td><td>393</td><td>3840x2160</td><td>100.0</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV11</td><td>246</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV12</td><td>271</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV13</td><td>336</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV14</td><td>22</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV15</td><td>13</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV16</td><td>22</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV17</td><td>9</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>三沙卫视</td><td>47</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>东南卫视</td><td>7</td><td>1920x1080</td><td>93.1</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>东方卫视</td><td>290</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>云南卫视</td><td>162</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>北京卫视</td><td>194</td><td>3840x2160</td><td>100.0</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>吉林卫视</td><td>189</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>四川卫视</td><td>142</td><td>3840x2160</td><td>100.0</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>大湾区卫视</td><td>52</td><td>1280x720</td><td>86.7</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>天津卫视</td><td>119</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>宁夏卫视</td><td>112</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>安徽卫视</td><td>145</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>山东卫视</td><td>139</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>山西卫视</td><td>90</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>广东卫视</td><td>196</td><td>3840x2160</td><td>100.0</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>广西卫视</td><td>116</td><td>1920x1080</td><td>96.3</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>江苏卫视</td><td>270</td><td>3840x2160</td><td>100.0</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>江西卫视</td><td>132</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>河北卫视</td><td>177</td><td>1920x1080</td><td>93.1</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>河南卫视</td><td>284</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>浙江卫视</td><td>200</td><td>3840x2160</td><td>100.0</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>海南卫视</td><td>58</td><td>1920x1080</td><td>96.1</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>深圳卫视</td><td>218</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>湖北卫视</td><td>157</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>湖南卫视</td><td>284</td><td>3840x2160</td><td>100.0</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>甘肃卫视</td><td>145</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>西藏卫视</td><td>1</td><td>1920x1080</td><td>91.8</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>贵州卫视</td><td>236</td><td>1920x1080</td><td>94.2</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>辽宁卫视</td><td>157</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>重庆卫视</td><td>102</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>陕西卫视</td><td>203</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>青海卫视</td><td>64</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>黑龙江卫视</td><td>111</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>兵团卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>内蒙古卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>凤凰卫视</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>北京卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>吉林卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>四川卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>大湾区卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>天津卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>宁夏卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>安多卫视</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>安徽卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>山东卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>山东教育卫视</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>山西卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>广东卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>广西卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>康巴卫视</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>延边卫视</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>新疆卫视</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>星空卫视</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>江苏卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>江西卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>河北卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>河南卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>浙江卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>海南卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>海峡卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>深圳卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>湖北卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>湖南卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>甘肃卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>西藏卫视</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>贵州卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>辽宁卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>重庆卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>陕西卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>青海卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>香港卫视</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>黑龙江卫视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 </table>
 
 ## 📡 媒体频道
 
 <table>
 <tr><th>频道</th><th>可用源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>
+<tr><td>CHC动作电影</td><td>3</td><td>1920x1080</td><td>97.3</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CHC影迷电影</td><td>1</td><td>1920x1080</td><td>91.5</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>HD</td><td>1</td><td>1920x1080</td><td>95.5</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>之江纪录</td><td>47</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>咪咕视频</td><td>7</td><td>1920x1080</td><td>96.1</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>哈哈炫动</td><td>1</td><td>1920x1080</td><td>12.9</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>四海钓鱼</td><td>1</td><td>1920x1080</td><td>96.1</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>埋堆堆</td><td>9</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>大湾区卫视国际版</td><td>6</td><td>1280x720</td><td>86.7</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>天元围棋</td><td>1</td><td>1920x1080</td><td>9.0</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>天龙八部</td><td>1</td><td>1280x720</td><td>85.1</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>广东珠江</td><td>34</td><td>1280x720</td><td>75.9</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>广州影视</td><td>1</td><td>1920x1080</td><td>6.4</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>广西国际</td><td>53</td><td>1920x1080</td><td>92.8</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>广西影视</td><td>10</td><td>1920x1080</td><td>93.7</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>快乐垂钓</td><td>1</td><td>1920x1080</td><td>6.4</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>梨园频道</td><td>1</td><td>1920x1080</td><td>89.3</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>欢乐集结号</td><td>8</td><td>1280x720</td><td>85.1</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>江苏卫视4K</td><td>2</td><td>3840x2160</td><td>100.0</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>浙江卫视4K</td><td>2</td><td>3840x2160</td><td>100.0</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>浙江国际</td><td>16</td><td>1920x1080</td><td>93.5</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>浙江生活</td><td>1</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>浙江经济</td><td>15</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>浙江经济生活</td><td>1</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>湖北</td><td>25</td><td>1280x720</td><td>86.7</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>湖北影视</td><td>74</td><td>1280x720</td><td>69.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>湖北综合</td><td>3</td><td>1280x720</td><td>86.7</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>湖南卫视4K</td><td>2</td><td>3840x2160</td><td>100.0</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>狂飙</td><td>5</td><td>1920x1080</td><td>89.3</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>福建少儿</td><td>2</td><td>1920x1080</td><td>92.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>福建新闻</td><td>1</td><td>1920x1080</td><td>97.1</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>精品体育</td><td>1</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>辽宁卫视HD</td><td>2</td><td>1920x1080</td><td>91.9</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>雪豹</td><td>3</td><td>1280x720</td><td>1.1</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>鬼吹灯之龙岭迷窟</td><td>3</td><td>1920x726</td><td>73.7</td><td><span style="color:green">保留</span></td></tr>
 <tr><td>1080p</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>1080pNot247</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>241080p</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
@@ -89,15 +124,12 @@
 <tr><td>Andromeda</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>Arirang</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>CHC</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CHC动作电影</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>CHC家庭影院</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CHC影迷电影</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>CNA</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>DAZNCombat</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>DJ</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>Euronews</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>FYtv</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>HD</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>Hktv</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>KCTV</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>KIX</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
@@ -107,7 +139,7 @@
 <tr><td>NewTV惊悚悬疑</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>NewTV超级电影</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>NewTV超级综艺</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>NewTV金牌综艺</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>NewTV金牌综艺</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>Nosey</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>Not247</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>Pdtv</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
@@ -127,7 +159,7 @@
 <tr><td>UFC</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>VIUTV</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>WorldPokerTour</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>cct4</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>cct4</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>ipanda</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>tvbs</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>tvbs4Gtv</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
@@ -152,7 +184,6 @@
 <tr><td>中央新影发现之旅</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>中学生</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>中视</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>之江纪录</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>乐游</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>五星体育</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>优漫卡通</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
@@ -163,7 +194,7 @@
 <tr><td>兵器科技</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>凤凰中文</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>凤凰卫视中文台</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>凤凰资讯</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>凤凰资讯</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>凤凰香港</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>刑事侦缉档案</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>刘德华电影</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
@@ -193,25 +224,18 @@
 <tr><td>名侦探柯南</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>周星驰电影</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>和美乡途轮播台</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>咪咕视频</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>咪咕视频4M1080</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>咪视界2</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>哆啦A梦</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>哈哈炫动</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>哈尔滨新闻综合</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>喜羊羊与灰太狼</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>喜羊羊与灰太狼</td><td>0</td><td>1920x1080</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>四川科教</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>四海钓鱼</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>国内喜剧</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>埋堆堆</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>士兵突击</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>大唐双龙传</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>大时代</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>大湾区卫视国际版</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>天元围棋</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>大唐双龙传</td><td>0</td><td>1920x1080</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>大时代</td><td>0</td><td>1920x1080</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>天映经典</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>天映频道</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>天龙八部</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>央视台球</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>女性时尚</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>妙手仁心</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
@@ -235,21 +259,16 @@
 <tr><td>广东少儿</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>广东新闻</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>广东民生</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>广东珠江</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>广东移动</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>广元</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>广元综合</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>广州影视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>广州新闻</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>广州竞赛</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>广州综合</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>广西国际</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>广西影视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>广西新闻</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>庆余年</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>庆余年</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>康熙王朝</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>强森电影</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>快乐垂钓</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>怀旧剧场</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>恐怖电影</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>惊悚悬疑</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
@@ -271,9 +290,7 @@
 <tr><td>最美的青春</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>李连杰电影</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>林正英影院</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>梨园频道</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>楚汉骄雄</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>欢乐集结号</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>欢笑剧场</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>武乡新闻综合</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>武术世界</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
@@ -287,7 +304,6 @@
 <tr><td>永嘉新闻综合</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>汕头经济</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>汕头综合</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>江苏卫视4K</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>江苏城市</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>江苏影视</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>江苏教育</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
@@ -300,16 +316,11 @@
 <tr><td>河源综合</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>法治天地</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>洗冤录</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>浙江卫视4K</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>浙江国际</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>浙江少儿</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>浙江教科影视</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>浙江新闻</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>浙江民生</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>浙江民生休闲</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>浙江生活</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>浙江经济</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>浙江经济生活</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>浙江钱江</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>浙江钱江都市</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>海南公共</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
@@ -319,15 +330,11 @@
 <tr><td>海南自贸</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>淘电影</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>游戏风云</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>湖北</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>湖北垄上</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>湖北影视</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>湖北教育</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>湖北生活</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>湖北经视</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>湖北综合</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>湖南公共</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>湖南卫视4K</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>湖南国际</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>湖南娱乐</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>湖南教育</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
@@ -342,7 +349,6 @@
 <tr><td>火影忍者</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>炫动卡通</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>爱动漫</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>狂飙</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>猫和老鼠</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>王晶电影</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>甄子丹电影</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
@@ -351,23 +357,20 @@
 <tr><td>石家庄娱乐</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>石家庄新闻综合</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>神探狄仁杰1</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>神探狄仁杰2</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>神雕侠侣</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>福建公共</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>福建少儿</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>神探狄仁杰2</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>神雕侠侣</td><td>0</td><td>1920x1080</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>福建公共</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>福建文体</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>福建新闻</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>福建旅游</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>福建电视剧</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>福建经济</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>福建经视</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>福建综合</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>科幻电影</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>笑傲江湖</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>笑傲江湖</td><td>0</td><td>1920x1080</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>笑看风云</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>第一剧场</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>第一财经</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>精品体育</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>精灵宝可梦</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>纪实人文</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>纪实科教</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
@@ -398,9 +401,8 @@
 <tr><td>象视界</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>财富天下</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>贺岁电影</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>赛事最经典</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>赛事最经典</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>赵本删不删</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>辽宁卫视HD</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>辽宁影视剧</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>辽宁都市</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>连云港新闻综合</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
@@ -418,17 +420,16 @@
 <tr><td>野蛮亲家</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>金川新闻综合</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>金庸武侠</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>金枝欲孽</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>金枝欲孽</td><td>0</td><td>1920x1080</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>金色学堂</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>金鹰卡通</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>金鹰纪实</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>鉴证实录</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>鉴证实录</td><td>0</td><td>1920x1080</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>铁齿铜牙纪晓岚</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>镇江新闻综合</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>陀枪师姐</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>陈情令</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>雍正王朝</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>雪豹</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>靓剑</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>靖天戏剧</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>靖天映画</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
@@ -438,9 +439,8 @@
 <tr><td>飞天小女警</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>高尔夫网球</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>鬼吹灯之云南虫谷</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>鬼吹灯之怒晴湘西</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>鬼吹灯之精绝古城</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>鬼吹灯之龙岭迷窟</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>鬼吹灯之怒晴湘西</td><td>0</td><td>1920x1080</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>鬼吹灯之精绝古城</td><td>0</td><td>1920x1080</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>魅力足球</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>魔法少女</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>鹿鼎记</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
