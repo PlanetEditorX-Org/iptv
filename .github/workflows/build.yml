@@ -105,11 +105,22 @@ jobs:
         run: |
           mkdir -p output
           shopt -s nullglob
+          shopt -s globstar
+
+          echo "=== 查找所有 M3U 文件 ==="
+          find merged -name "channels_*.m3u"
+
+          echo "=== 输出每个 M3U 的前 100 行（用于调试） ==="
+          for f in $(find merged -name "channels_*.m3u"); do
+            echo "----- $f -----"
+            head -n 100 "$f" || true
+            echo
+          done
 
           echo "=== 合并 TXT ==="
           touch output/channels_all.txt
 
-          txt_files=(merged/output-*/channels_*.txt)
+          txt_files=( $(find merged -name "channels_*.txt") )
 
           if [ ${#txt_files[@]} -eq 0 ]; then
             echo "⚠️ 没有任何 TXT 文件可合并" >> output/channels_all.txt
@@ -124,7 +135,7 @@ jobs:
           echo "=== 合并 M3U ==="
           echo "#EXTM3U" > output/channels_all.m3u
 
-          m3u_files=(merged/**/channels_*.m3u)
+          m3u_files=( $(find merged -name "channels_*.m3u") )
 
           if [ ${#m3u_files[@]} -eq 0 ]; then
             echo "⚠️ 没有任何 M3U 文件可合并"
