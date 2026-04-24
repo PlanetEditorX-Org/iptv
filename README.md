@@ -1,33 +1,33 @@
 # IPTV 质量报表
 
-⏱ **构建时间：2026-04-24 20:27:03 (CST)**
+⏱ **构建时间：2026-04-24 20:31:57 (CST)**
 
 
 ## 📊 总览统计
 
 - **总频道数：** 432
-- **保留频道数：** 9
-- **已删除频道数：** 423
-- **总可用源数：** 207
+- **保留频道数：** 0
+- **已删除频道数：** 432
+- **总可用源数：** 0
 
 
 ## 📺 电视频道
 
 <table>
 <tr><th>频道</th><th>可用源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>
-<tr><td>CCTV1</td><td>18</td><td>1920x1080</td><td>13.9</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV3</td><td>36</td><td>1280x720</td><td>75.0</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV4</td><td>36</td><td>1280x720</td><td>86.7</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV5</td><td>34</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV8</td><td>12</td><td>1280x720</td><td>70.0</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV10</td><td>36</td><td>1280x720</td><td>85.7</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV11</td><td>11</td><td>1920x1080</td><td>89.3</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV12</td><td>12</td><td>1280x720</td><td>56.8</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV13</td><td>12</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV2</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV6</td><td>0</td><td>1440x1080</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV7</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>CCTV9</td><td>0</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV1</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV2</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV3</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV4</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV5</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV6</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV7</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV8</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV9</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV10</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV11</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV12</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>CCTV13</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>CCTV14</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>CCTV15</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>CCTV16</td><td>0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
@@ -127,7 +127,7 @@
 <tr><td>UFC</td><td>0 / 0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>VIUTV</td><td>0 / 0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>WorldPokerTour</td><td>0 / 0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
-<tr><td>cct4</td><td>0 / 1</td><td>N/A</td><td>0.0</td><td><span style="color:red">已删除</span></td></tr>
+<tr><td>cct4</td><td>0 / 0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>ipanda</td><td>0 / 0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>tvbs</td><td>0 / 0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>tvbs4Gtv</td><td>0 / 0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
