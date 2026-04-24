@@ -621,6 +621,6 @@ def main(mode):
 
     print("\n[done] 构建完成\n")
 
-if __name__ == "__main__":
-    mode = sys.argv[1] if len(sys.argv) > 1 else "cctv"
-    main(mode)
+# if __name__ == "__main__":
+#     mode = sys.argv[1] if len(sys.argv) > 1 else "cctv"
+#     main(mode)

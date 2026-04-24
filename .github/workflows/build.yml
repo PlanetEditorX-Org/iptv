@@ -73,16 +73,14 @@ jobs:
           echo
 
       # ============================
-      # 恢复 raw_results + cache
+      # 恢复 raw_results
       # ============================
       - name: Restore state files
         run: |
           echo "=== 恢复 raw_results_* ==="
+          mkdir -p sources/state
           cp merged/state-*/raw_results_*.json sources/state/ || true
 
-          echo "=== 恢复 cache.json（多个） ==="
-          mkdir -p sources/state/
-          cp merged/state-*/cache.json merged/cache_list/ || true
 
       # ============================
       # 合并 cache.json（关键步骤）
