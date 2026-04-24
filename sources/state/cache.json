@@ -17438,5 +17438,265 @@
     "raw_score": -33.528,
     "score": 6.402950265046914,
     "ts": 1777006293.3891554
+  },
+  "http://123.113.104.82:85/tsfile/live/0128_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007253.3130379
+  },
+  "http://43.251.226.110:8880/play/770.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007253.3120363
+  },
+  "http://43.251.226.110:8880/play/72.m3u8": {
+    "width": 1280,
+    "height": 720,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 178.93005235464162,
+    "raw_score": 12.378502617732082,
+    "score": 72.91432654030916,
+    "ts": 1777007253.3129177
+  },
+  "http://43.251.226.110:8880/play/525.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 997.6517081392265,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007273.9560304
+  },
+  "http://43.251.226.110:8880/play/762.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007273.9558523
+  },
+  "http://43.251.226.110:8880/play/521.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007288.9739506
+  },
+  "http://43.251.226.110:8880/play/779.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007288.974237
+  },
+  "http://43.251.226.110:8880/play/410.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007288.9746468
+  },
+  "http://43.251.226.110:8880/play/443.m3u8": {
+    "width": 1920,
+    "height": 1080,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -33.528,
+    "score": 6.402950265046914,
+    "ts": 1777007288.9746854
+  },
+  "http://43.251.226.110:8880/play/497.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007325.5682476
+  },
+  "http://43.251.226.110:8880/play/401.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007325.5670316
+  },
+  "http://43.251.226.110:8880/play/356.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007334.3259284
+  },
+  "http://43.251.226.110:8880/play/659.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007325.567291
+  },
+  "http://43.251.226.110:8880/play/760.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007325.5678737
+  },
+  "http://43.251.226.110:8880/play/757.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007340.5855732
+  },
+  "http://43.251.226.110:8880/play/361.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007340.5855086
+  },
+  "http://43.251.226.110:8880/play/518.m3u8": {
+    "width": 1920,
+    "height": 1080,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 669.6980189782581,
+    "raw_score": 46.472,
+    "score": 97.62876209029372,
+    "ts": 1777007340.5859122
+  },
+  "http://43.251.226.110:8880/play/524.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007371.5228221
+  },
+  "http://43.251.226.110:8880/play/764.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007371.5229118
+  },
+  "http://43.251.226.110:8880/play/526.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007386.540635
+  },
+  "http://43.251.226.110:8880/play/763.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007386.5408113
+  },
+  "http://43.251.226.110:8880/play/367.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007386.5404766
+  },
+  "http://43.251.226.110:8880/play/500.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 366.2922972667188,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007401.5640187
+  },
+  "http://43.251.226.110:8880/play/660.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 226.2911939079146,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007401.5626526
+  },
+  "http://43.251.226.110:8880/play/758.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007401.5627856
+  },
+  "http://43.251.226.110:8880/play/399.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777007401.5631728
   }
 }
