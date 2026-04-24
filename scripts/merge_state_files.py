@@ -47,7 +47,13 @@ def save_json(path, data):
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
 def load_url_source():
-    return load_json(URL_SOURCE_FILE)
+    data = {}
+    # 自动合并所有 url_source_xxx.json
+    for f in STATE_DIR.glob("url_source_*.json"):
+        part = load_json(f)
+        data.update(part)
+    return data
+
 
 # ============================
 # 合并 raw_results

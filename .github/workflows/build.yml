@@ -120,6 +120,7 @@ jobs:
       - name: Restore state files
         run: |
           cp merged/state-*/raw_results_*.json sources/state/ || true
+          cp merged/state-*/url_source_*.json sources/state/ || true
           mkdir -p merged/cache_list/
           cp merged/state-*/cache.json merged/cache_list/ || true
 
