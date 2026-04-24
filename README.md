@@ -1,6 +1,6 @@
 # IPTV 质量报表
 
-⏱ **构建时间：2026-04-24 17:09:38 (CST)**
+⏱ **构建时间：2026-04-24 17:24:57 (CST)**
 
 
 ## 📊 总览统计
@@ -8,16 +8,16 @@
 - **总频道数：** 432
 - **保留频道数：** 3
 - **已删除频道数：** 429
-- **总可用源数：** 83
+- **总可用源数：** 158
 
 
 ## 📺 电视频道
 
 <table>
 <tr><th>频道</th><th>可用源/总源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>
-<tr><td>CCTV1</td><td>16 / 352</td><td>1280x720</td><td>77.5</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV2</td><td>34 / 242</td><td>1280x720</td><td>86.7</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV3</td><td>33 / 293</td><td>1920x1080</td><td>96.3</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV1</td><td>18 / 422</td><td>1920x1080</td><td>91.8</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV2</td><td>89 / 297</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV3</td><td>51 / 311</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
 <tr><td>CCTV4</td><td>0 / 0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>CCTV5</td><td>0 / 0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>
 <tr><td>CCTV6</td><td>0 / 0</td><td>N/A</td><td>0</td><td><span style="color:red">已删除</span></td></tr>

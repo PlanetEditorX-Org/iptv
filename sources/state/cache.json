@@ -1,1 +1,1022 @@
-{}
+{
+  "https://zby.130519.xyz/PLTV/11/224/3221225673/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022484.190634
+  },
+  "https://zby.130519.xyz/PLTV/11/224/3221225770/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022484.19043
+  },
+  "http://111.160.17.2:59901/tsfile/live/0001_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022486.3129795
+  },
+  "http://116.9.204.242:9901/tsfile/live/0001_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022484.1909878
+  },
+  "https://zby.130519.xyz/PLTV/11/224/3221225723/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022499.2086759
+  },
+  "https://zby.130519.xyz/PLTV/11/224/3221226163/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022499.9321153
+  },
+  "http://171.118.79.3:9003/hls/1/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022486.3128097
+  },
+  "http://m.061899.xyz/mg/cctv1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022487.2503345
+  },
+  "http://120.202.94.181:9446/tsfile/live/0001_1.m3u8?authid=0&key=txiptv&playlive=0": {
+    "width": 1920,
+    "height": 1080,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022484.1899874
+  },
+  "http://120.76.248.139/live/bfgd/4200000484.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022500.391873
+  },
+  "http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/cctv1hd265/51/20191230/01.m3u8?Channel_ID=0116_2600031500-99000-200300140100004&HlsProfileId=1&HlsSubType=1&ParentNodeID=-99&ProgramID=608807420&SecurityKey=20260307131034&appCode=miguvideo_android&assertID=2201057821&bean=mgspad&client_ip=183.234.97.190&conFee=0&ct=android&encrypt=d997282dfe2ae9307aa33f2abfcd5db7&is_advertise=0&jid=4f89b0f1d885527a227fd4a636419cfe1772860231371V&mcid=500020&msisdn=4f89b0f1d885527a227fd4a636419cfe&mtv_session=81ae3d1812809a342e0a4843ced676d3&mvid=2201057821&netType=4&nphaid=0&pid=2028597139&playUrlSsn=4f89b0f1d885527a227fd4a636419cfe1772860232260&playurlVersion=WX-A1-9.2.2-RELEASE&prlId=4f89b0f1d885527a227fd4a636419cfe1772860232276&sid=2201057821&sjid=subsession_1772860232685&spid=699004&sv=10004&tid=android&timestamp=20260307131034&videocodec=h265": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022515.4083335
+  },
+  "http://123.160.20.172:85/tsfile/live/0001_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022501.3293538
+  },
+  "http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/cctv1hd265/51/20191230/01.m3u8?Channel_ID=0116_2600031500-99000-200300140100004&HlsProfileId=1&HlsSubType=1&ParentNodeID=-99&ProgramID=608807420&SecurityKey=20260307130725&appCode=miguvideo_android&assertID=2201057821&bean=mgspad&client_ip=14.22.116.100&conFee=0&ct=android&encrypt=ddad7eb51ba10f2eb114c2f6dbba790e&is_advertise=0&jid=4f89b0f1d885527a227fd4a636419cfe1772860042145V&mcid=500020&msisdn=4f89b0f1d885527a227fd4a636419cfe&mtv_session=4c1a3ba1615e87255e496081bd468085&mvid=2201057821&netType=4&nphaid=0&pid=2028597139&playUrlSsn=4f89b0f1d885527a227fd4a636419cfe1772860042564&playurlVersion=WX-A1-9.2.2-RELEASE&prlId=4f89b0f1d885527a227fd4a636419cfe1772860042575&sid=2201057821&sjid=subsession_1772860043635&spid=699004&sv=10004&tid=android&timestamp=20260307130725&videocodec=h265": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022516.067818
+  },
+  "http://118.77.205.171:9003/hls/1/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022502.2691073
+  },
+  "http://221.205.207.120:9003/hls/1/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022504.0431495
+  },
+  "http://123.182.60.29:9002/hls/1/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022516.3461587
+  },
+  "http://183.11.239.36:808/hls/19/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 263.5638770304248,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022519.0601895
+  },
+  "http://120.76.248.139/live/bfgd/4200000201.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022516.7307653
+  },
+  "http://go.bkpcp.top/mg/cctv1": {
+    "width": 1280,
+    "height": 720,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022517.2857218
+  },
+  "http://117.161.12.116/live/program/live/cctv1hd8m/8000000/mnf.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022531.3628647
+  },
+  "http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022531.69656
+  },
+  "http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/cctv1hd265/51/20191230/01.m3u8?Channel_ID=0116_2600031500-99000-200300140100004&HlsProfileId=1&HlsSubType=1&ParentNodeID=-99&ProgramID=608807420&SecurityKey=20260307130300&appCode=miguvideo_android&assertID=2201057821&bean=mgspad&client_ip=163.177.185.15&conFee=0&ct=android&encrypt=c8286cd8df90b730dedcdc7c6e1adb0d&is_advertise=0&jid=4f89b0f1d885527a227fd4a636419cfe1772859777435V&mcid=500020&msisdn=4f89b0f1d885527a227fd4a636419cfe&mtv_session=5f0eeb8d86764d1e10addd571b47d7c9&mvid=2201057821&netType=4&nphaid=0&pid=2028597139&playUrlSsn=4f89b0f1d885527a227fd4a636419cfe1772859777846&playurlVersion=WX-A1-9.2.2-RELEASE&prlId=4f89b0f1d885527a227fd4a636419cfe1772859777853&sid=2201057821&sjid=subsession_1772859778175&spid=699004&sv=10004&tid=android&timestamp=20260307130300&videocodec=h265": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022546.3840024
+  },
+  "http://221.7.175.154:8445/tsfile/live/1000_1.m3u8?authid=0%24%C3%A5%C2%B9%C2%BF%C3%A8%C2%A5%C2%BF%C3%A5%C5%92%E2%80%94%C3%A6%C2%B5%C2%B7%C3%A8%EF%BF%BD%E2%80%9D%C3%A9%E2%82%AC%C5%A1&key=txiptv&playlive=1": {
+    "width": 1920,
+    "height": 1080,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 73.7618657745466,
+    "raw_score": 30.16009328872733,
+    "score": 91.77987373140591,
+    "ts": 1777022531.7474108
+  },
+  "http://124.128.73.58:9901/tsfile/live/0001_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022542.9946396
+  },
+  "http://171.15.18.199:8180/TV00000000000000000001@HHZT": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022558.0111575
+  },
+  "http://120.224.178.16:9901/tsfile/live/0001_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022559.0557797
+  },
+  "http://110.241.191.163:808/hls/1/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022546.7170355
+  },
+  "http://120.76.248.139/live/bfgd/4200000488.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022546.8190336
+  },
+  "http://120.76.248.139/live/bfgd/4200000489.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022549.1193905
+  },
+  "http://111.160.17.2:59901/tsfile/live/0001_2.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022564.1373746
+  },
+  "http://171.15.18.199:8180/TV00000000000000000002@HHZT": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022564.1370332
+  },
+  "http://117.161.12.116/live/program/live/cctv2hd8m/8000000/mnf.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022564.1372025
+  },
+  "http://221.205.207.120:9003/hls/2/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022564.1409361
+  },
+  "http://123.160.20.172:85/tsfile/live/0002_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022565.0844839
+  },
+  "http://120.76.248.139/live/bfgd/4200000061.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022565.1995413
+  },
+  "http://120.224.178.16:9901/tsfile/live/0002_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022580.101052
+  },
+  "http://m.061899.xyz/mg/cctv2": {
+    "width": 1280,
+    "height": 720,
+    "bitrate": 1799168,
+    "delay": 1.0,
+    "blur": 640.6397850939668,
+    "raw_score": 23.432000000000002,
+    "score": 86.69850263192966,
+    "ts": 1777022580.997212
+  },
+  "https://zby.130519.xyz/PLTV/11/224/3221226122/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022589.163608
+  },
+  "http://124.128.73.58:9901/tsfile/live/0002_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022580.2159774
+  },
+  "http://221.7.175.154:8445/tsfile/live/1001_1.m3u8?authid=0%24%C3%A5%C2%B9%C2%BF%C3%A8%C2%A5%C2%BF%C3%A5%C5%92%E2%80%94%C3%A6%C2%B5%C2%B7%C3%A8%EF%BF%BD%E2%80%9D%C3%A9%E2%82%AC%C5%A1&key=txiptv&playlive=1": {
+    "width": 1920,
+    "height": 1080,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 249.0875344038598,
+    "raw_score": 38.92637672019299,
+    "score": 95.7471036664537,
+    "ts": 1777022579.155045
+  },
+  "http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/cctv2hd265/54/20200407/01.m3u8?Channel_ID=0116_2600031500-99000-200300140100004&HlsProfileId=1&HlsSubType=1&ParentNodeID=-99&ProgramID=631780532&SecurityKey=20260307131351&appCode=miguvideo_android&assertID=5500346945&bean=mgspad&client_ip=163.125.186.201&conFee=0&ct=android&encrypt=9f91705741e84eef21ed0f7848f7375f&is_advertise=0&jid=4f89b0f1d885527a227fd4a636419cfe1772860428091V&mcid=500020&msisdn=4f89b0f1d885527a227fd4a636419cfe&mtv_session=a5705d5fc93abd70bbc0206caf49f3ce&mvid=5101064231&netType=4&nphaid=0&pid=2028597139&playUrlSsn=4f89b0f1d885527a227fd4a636419cfe1772860428589&playurlVersion=WX-A1-9.2.2-RELEASE&prlId=4f89b0f1d885527a227fd4a636419cfe1772860428676&sid=5500346945&sjid=subsession_1772860535942&spid=699004&sv=10004&tid=android&timestamp=20260307131351&videocodec=h265": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022595.5886576
+  },
+  "http://120.202.94.181:9446/tsfile/live/0002_1.m3u8?authid=0&key=txiptv&playlive=0": {
+    "width": 1920,
+    "height": 1080,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 543.2663628085079,
+    "raw_score": 46.472,
+    "score": 97.62876209029372,
+    "ts": 1777022579.1567514
+  },
+  "http://116.9.204.242:9901/tsfile/live/0002_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022590.173184
+  },
+  "http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv2": {
+    "width": 1280,
+    "height": 720,
+    "bitrate": 1799168,
+    "delay": 1.0,
+    "blur": 2039.2123242173886,
+    "raw_score": 23.432000000000002,
+    "score": 86.69850263192966,
+    "ts": 1777022595.931942
+  },
+  "http://pull-hls-f11.douyincdn.com/media/stream-118899562654991020.m3u8?arch_hrchy=w1&exp_hrchy=w1&expire=1773218365&major_anchor_level=common&t_id=037-20260304163924497A73460AD8D5D628AF-n87Lsu": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022605.1896102
+  },
+  "http://110.241.191.163:808/hls/2/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022595.232266
+  },
+  "http://118.77.205.171:9003/hls/2/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022596.0689235
+  },
+  "http://go.bkpcp.top/mg/cctv2": {
+    "width": 1280,
+    "height": 720,
+    "bitrate": 1799168,
+    "delay": 1.0,
+    "blur": 1353.7659873932967,
+    "raw_score": 23.432000000000002,
+    "score": 86.69850263192966,
+    "ts": 1777022607.3917556
+  },
+  "http://183.11.239.36:808/hls/20/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022605.7134626
+  },
+  "http://123.182.60.29:9002/hls/2/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022610.2492316
+  },
+  "https://zby.130519.xyz/PLTV/11/224/3221225766/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022625.2665532
+  },
+  "http://38.75.136.137:98/gslb/dsdqpub/cctv3hd.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022626.2784257
+  },
+  "http://124.128.73.58:9901/tsfile/live/0003_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022625.2666757
+  },
+  "http://120.76.248.139/live/bfgd/4200000062.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022625.267849
+  },
+  "http://116.9.204.242:9901/tsfile/live/0003_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022625.2668402
+  },
+  "http://221.7.175.154:8445/tsfile/live/1002_1.m3u8?authid=0%24%C3%A5%C2%B9%C2%BF%C3%A8%C2%A5%C2%BF%C3%A5%C5%92%E2%80%94%C3%A6%C2%B5%C2%B7%C3%A8%EF%BF%BD%E2%80%9D%C3%A9%E2%82%AC%C5%A1&key=txiptv&playlive=1": {
+    "width": 1920,
+    "height": 1080,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 171.89178239753815,
+    "raw_score": 35.06658911987691,
+    "score": 94.29630142128073,
+    "ts": 1777022626.8751476
+  },
+  "http://m.061899.xyz/mg/cctv3": {
+    "width": 1280,
+    "height": 720,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 418.96297205878363,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022640.2823176
+  },
+  "http://go.bkpcp.top/mg/cctv3": {
+    "width": 1280,
+    "height": 720,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 293.1909043170505,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022640.2827222
+  },
+  "http://171.15.18.199:8180/TV00000000000000000003@HHZT": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022650.8206606
+  },
+  "http://120.224.178.16:9901/tsfile/live/0003_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022651.862331
+  },
+  "http://221.205.207.120:9003/hls/3/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022640.2848728
+  },
+  "http://117.161.12.116/live/program/live/cctv38m/8000000/mnf.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022643.2044134
+  },
+  "http://123.182.60.29:9002/hls/3/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022652.654441
+  },
+  "http://hlsztemgsplive.miguvideo.com:8080/wd_r2/2018/ocn/cctv3hd/2000/01.m3u8?Channel_ID=0116_2600031500-99000-200300140100004&HlsProfileId=1&HlsSubType=1&ParentNodeID=-99&ProgramID=624878271&SecurityKey=20260307131615&appCode=miguvideo_android&assertID=5500212864&bean=mgspad&client_ip=183.61.241.48&conFee=0&ct=android&encrypt=f8c3defb27699cac5bfefb18a871ead6&is_advertise=0&jid=4f89b0f1d885527a227fd4a636419cfe1772860572273V&mcid=500020&msisdn=4f89b0f1d885527a227fd4a636419cfe&mtv_session=ce7bae661462e96ee9eb618e13ad0c71&mvid=5100001683&netType=4&nphaid=0&pid=2028597139&playUrlSsn=4f89b0f1d885527a227fd4a636419cfe1772860572747&playurlVersion=WX-A1-9.2.2-RELEASE&prlId=4f89b0f1d885527a227fd4a636419cfe1772860572758&sid=5500212864&sjid=subsession_1772860680979&spid=699004&sv=10004&tid=android&timestamp=20260307131615&videocodec=h264": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022667.6707873
+  },
+  "https://zby.130519.xyz/PLTV/11/224/3221226165/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022667.9811456
+  },
+  "http://120.202.94.181:9446/tsfile/live/0003_1.m3u8?authid=0&key=txiptv&playlive=0": {
+    "width": 1920,
+    "height": 1080,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 411.8658190167342,
+    "raw_score": 46.472,
+    "score": 97.62876209029372,
+    "ts": 1777022651.8272831
+  },
+  "http://110.241.191.163:808/hls/3/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022655.2967155
+  },
+  "http://111.160.17.2:59901/tsfile/live/0001_3.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022669.763892
+  },
+  "http://183.11.239.36:808/hls/91/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022658.2207224
+  },
+  "http://118.77.205.171:9003/hls/3/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022668.9630637
+  },
+  "http://123.160.20.172:85/tsfile/live/0003_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022670.3129818
+  },
+  "http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv3": {
+    "width": 1280,
+    "height": 720,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 408.6162699489829,
+    "raw_score": 23.432000000000002,
+    "score": 86.69850263192966,
+    "ts": 1777022670.691567
+  },
+  "http://118.77.205.171:9003/hls/17/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022480.163918
+  },
+  "http://123.160.20.172:85/tsfile/live/1008_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022480.1636188
+  },
+  "http://110.241.191.163:808/hls/21/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022480.163238
+  },
+  "http://110.241.191.163:808/hls/26/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022495.1819592
+  },
+  "http://123.160.20.172:85/tsfile/live/1009_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022495.1822307
+  },
+  "http://118.77.205.171:9003/hls/42/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022495.1818206
+  },
+  "http://118.77.205.171:9003/hls/33/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022510.200944
+  },
+  "http://110.241.191.163:808/hls/19/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022510.200656
+  },
+  "http://123.160.20.172:85/tsfile/live/1012_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022510.200522
+  },
+  "http://118.77.205.171:9003/hls/22/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022487.2432404
+  },
+  "http://110.241.191.163:808/hls/22/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022487.2437289
+  },
+  "http://123.160.20.172:85/tsfile/live/0135_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022487.2435021
+  },
+  "http://110.241.191.163:808/hls/24/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022502.26228
+  },
+  "http://123.160.20.172:85/tsfile/live/0131_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022502.2625196
+  },
+  "http://118.77.205.171:9003/hls/18/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022502.2624016
+  },
+  "http://123.160.20.172:85/tsfile/live/1006_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022517.2791245
+  },
+  "http://118.77.205.171:9003/hls/28/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022517.2789936
+  },
+  "http://110.241.191.163:808/hls/25/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022517.278849
+  },
+  "http://110.241.191.163:808/hls/23/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022532.2977366
+  },
+  "http://118.77.205.171:9003/hls/37/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022532.2980921
+  },
+  "http://123.160.20.172:85/tsfile/live/0126_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022532.2978659
+  },
+  "http://123.160.20.172:85/tsfile/live/0132_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022547.316846
+  },
+  "http://110.241.191.163:808/hls/30/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022547.3169677
+  },
+  "http://118.77.205.171:9003/hls/32/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022547.3167403
+  },
+  "http://123.160.20.172:85/tsfile/live/0120_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022562.3356154
+  },
+  "http://118.77.205.171:9003/hls/30/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022562.335485
+  },
+  "http://110.241.191.163:808/hls/49/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022562.3357613
+  },
+  "http://110.241.191.163:808/hls/33/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022577.354301
+  },
+  "http://123.160.20.172:85/tsfile/live/0142_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022577.3545732
+  },
+  "http://118.77.205.171:9003/hls/24/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777022577.3544288
+  }
+}
