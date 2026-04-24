@@ -34,6 +34,7 @@ jobs:
       - name: Build ${{ matrix.name }}
         run: |
           python3 scripts/build_job.py ${{ matrix.name }}
+          ls -l output
 
       # 上传频道输出（m3u / txt）
       - name: Upload output artifact
