@@ -92,7 +92,7 @@ jobs:
           python3 scripts/merge_cache.py
 
       # ============================
-      # 统一判刑（stream_fail / upstream_blocklist / live_urls / README）
+      # 统一判断（stream_fail / upstream_blocklist / live_urls / README）
       # ============================
       - name: Merge state files
         run: |

@@ -47,12 +47,38 @@ def save_json(path, data):
 
 def merge_raw():
     all_raw = {}
+
+    print("=== merge_raw: 开始合并 raw_results_* ===")
+
     for f in RAW_FILES:
+        print(f"--- 读取 {f} ---")
         if not f.exists():
+            print("  文件不存在，跳过")
             continue
+
         data = load_json(f)
+        print(f"  加载到 {len(data)} 条记录")
+
         for url, info in data.items():
             all_raw[url] = info
+
+    print(f"=== merge_raw: 合并完成，总计 {len(all_raw)} 条 ===")
+
+    # ====== 输出前 100 条详细内容 ======
+    print("=== merge_raw: 前 100 条记录（URL + info） ===")
+    count = 0
+    for url, info in all_raw.items():
+        print(f"{url} -> {info}")
+        count += 1
+        if count >= 100:
+            break
+
+    # ====== 输出前 100 行 JSON（更直观） ======
+    print("=== merge_raw: 前 100 行 JSON ===")
+    raw_json = json.dumps(all_raw, ensure_ascii=False, indent=2).splitlines()
+    for line in raw_json[:100]:
+        print(line)
+
     return all_raw
 
 # ============================
@@ -160,7 +186,7 @@ def build_channel_report(channels, raw):
     return report
 
 # ============================
-# 判刑逻辑（stream_fail / upstream_blocklist）
+# 判断逻辑（stream_fail / upstream_blocklist）
 # ============================
 
 def recompute_fail(raw):
@@ -294,7 +320,7 @@ def main():
     print("=== 构建频道报表 ===")
     report = build_channel_report(channels, raw)
 
-    print("=== 判刑 ===")
+    print("=== 判断 ===")
     stream_fail, upstream_blocklist = recompute_fail(raw)
 
     save_json(STREAM_FAIL_FILE, stream_fail)
