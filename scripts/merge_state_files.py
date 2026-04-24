@@ -162,7 +162,7 @@ def build_channel_report(channels, raw):
     return report
 
 # ============================
-# 上游源失败统计（必须包含本地源）
+# 上游源失败统计
 # ============================
 
 def recompute_upstream_fail(raw, url_source):
@@ -172,20 +172,35 @@ def recompute_upstream_fail(raw, url_source):
     cst = timezone(timedelta(hours=8))
     today = datetime.now(cst).strftime("%Y-%m-%d")
 
-    upstream_scores = {}
+    # 反向映射：upstream → [urls]
+    upstream_children = {}
+    for url, upstream in url_source.items():
+        upstream_children.setdefault(upstream, []).append(url)
 
-    for url, info in raw.items():
-        upstream = url_source.get(url)
-        if not upstream:
-            continue
-        upstream_scores.setdefault(upstream, []).append(info["score"])
+    for upstream, urls in upstream_children.items():
+        scores = []
 
-    for upstream, scores in upstream_scores.items():
+        for url in urls:
+            # 本地源永远可用
+            if is_local_source(url):
+                scores.append(1)
+                continue
+
+            info = raw.get(url)
+
+            if not info:
+                # 远程源但 raw 没记录 → 视为失败
+                scores.append(-1)
+            else:
+                scores.append(info["score"])
+
+        # 全部失败
         if all(s <= 0 for s in scores):
             upstream_fail[upstream] = upstream_fail.get(upstream, 0) + 1
         else:
             upstream_fail[upstream] = 0
 
+        # 达到 10 次 → 加入 blocklist
         if upstream_fail[upstream] >= 10:
             if upstream not in upstream_blocklist:
                 remove_date = (datetime.now(cst) + timedelta(days=30)).strftime("%Y-%m-%d")
