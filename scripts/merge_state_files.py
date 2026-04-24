@@ -317,16 +317,23 @@ def build_readme(report, upstream_blocklist):
 def main():
     print("=== 合并 raw_results ===")
     raw = merge_raw()
+    print(f"raw size = {len(raw)}")
 
     print("=== 加载频道（channels_xxx.txt） ===")
     channels = load_channels()
+    print(f"channels size = {len(channels)}")
 
     print("=== 构建频道报表 ===")
     report = build_channel_report(channels, raw)
 
     print("=== 上游源失败统计 ===")
     url_source = load_url_source()
+    print(f"url_source size = {len(url_source)}")
+
     upstream_fail, upstream_blocklist = recompute_upstream_fail(raw, url_source)
+    print(f"upstream_fail size after recompute = {len(upstream_fail)}")
+    print(f"upstream_blocklist size after recompute = {len(upstream_blocklist)}")
+    print(f"url_source = {url_source}")
 
     save_json(UPSTREAM_FAIL_FILE, upstream_fail)
     save_json(UPSTREAM_BLOCKLIST_FILE, upstream_blocklist)
