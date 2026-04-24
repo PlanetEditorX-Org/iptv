@@ -124,7 +124,7 @@ jobs:
           echo "=== 合并 M3U ==="
           echo "#EXTM3U" > output/channels_all.m3u
 
-          m3u_files=(merged/output-*/channels_*.m3u)
+          m3u_files=(merged/**/channels_*.m3u)
 
           if [ ${#m3u_files[@]} -eq 0 ]; then
             echo "⚠️ 没有任何 M3U 文件可合并"
