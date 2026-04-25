@@ -329,8 +329,8 @@ def main():
     print("=== 清理 live_urls ===")
     rebuild_live_urls(upstream_blocklist)
 
-    print("=== 生成 README ===")
-    build_readme(report, upstream_blocklist)
+    # print("=== 生成 README ===")
+    # build_readme(report, upstream_blocklist)
 
     print("=== merge_state_files 完成 ===")
 

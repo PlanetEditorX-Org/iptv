@@ -146,6 +146,10 @@ jobs:
             done
           fi
 
+      - name: Generate final report
+        run: |
+          python3 scripts/generate_readme.py
+
       - name: Upload final merged output
         uses: actions/upload-artifact@v4
         with:
