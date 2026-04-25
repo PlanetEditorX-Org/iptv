@@ -6,25 +6,17 @@ from pathlib import Path
 from datetime import datetime, timedelta, timezone
 import re
 
-# ============================
-# 全局路径
-# ============================
-
 ROOT = Path(__file__).resolve().parent.parent
 SOURCES_DIR = ROOT / "sources"
-STATE_DIR = SOURCES_DIR / "state"     # 统一状态目录
+STATE_DIR = SOURCES_DIR / "state"
 OUTPUT_DIR = ROOT / "output"
 
-RAW_FILES = [
-    STATE_DIR / "raw_results_cctv.json",
-    STATE_DIR / "raw_results_satellite.json",
-    STATE_DIR / "raw_results_entertainment.json",
-]
+M3U_FILE = OUTPUT_DIR / "channels_all.m3u"
+README_FILE = ROOT / "README.md"
 
 STREAM_FAIL_FILE = STATE_DIR / "stream_fail.json"
 UPSTREAM_BLOCKLIST_FILE = STATE_DIR / "upstream_blocklist.json"
 LIVE_URLS_FILE = SOURCES_DIR / "live_urls.txt"
-README_FILE = ROOT / "README.md"
 
 # ============================
 # JSON 工具
@@ -42,135 +34,73 @@ def save_json(path, data):
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
 # ============================
-# 合并 raw_results
+# 解析最终 M3U（带 score / resolution / rank）
 # ============================
 
-def merge_raw():
-    all_raw = {}
-
-    print("=== merge_raw: 开始合并 raw_results_* ===")
-
-    for f in RAW_FILES:
-        print(f"--- 读取 {f} ---")
-        if not f.exists():
-            print("  文件不存在，跳过")
-            continue
-
-        data = load_json(f)
-        print(f"  加载到 {len(data)} 条记录")
-
-        for url, info in data.items():
-            all_raw[url] = info
-
-    print(f"=== merge_raw: 合并完成，总计 {len(all_raw)} 条 ===")
-
-    # ====== 输出前 100 条详细内容 ======
-    print("=== merge_raw: 前 100 条记录（URL + info） ===")
-    count = 0
-    for url, info in all_raw.items():
-        print(f"{url} -> {info}")
-        count += 1
-        if count >= 100:
-            break
-
-    # ====== 输出前 100 行 JSON（更直观） ======
-    print("=== merge_raw: 前 100 行 JSON ===")
-    raw_json = json.dumps(all_raw, ensure_ascii=False, indent=2).splitlines()
-    for line in raw_json[:100]:
-        print(line)
-
-    return all_raw
-
-# ============================
-# 解析 channels_all.txt → 构建频道 → URL 列表
-# ============================
-
-def load_channels():
-    txt_file = OUTPUT_DIR / "channels_all.txt"
+def parse_m3u():
     channels = {}
+    last_name = None
+    last_info = {}
 
-    if not txt_file.exists():
+    if not M3U_FILE.exists():
+        print("❌ channels_all.m3u 不存在")
         return channels
 
-    for line in txt_file.read_text(encoding="utf-8").splitlines():
+    for line in M3U_FILE.read_text(encoding="utf-8").splitlines():
         line = line.strip()
-        if not line or "," not in line:
-            continue
-        name, url = line.split(",", 1)
-        channels.setdefault(name, []).append(url)
+
+        if line.startswith("#EXTINF"):
+            # 频道名
+            if "," in line:
+                last_name = line.split(",", 1)[1].strip()
+
+            # 提取 score / resolution / rank
+            m_score = re.search(r'score="([\d\.]+)"', line)
+            m_res   = re.search(r'resolution="([^"]+)"', line)
+            m_rank  = re.search(r'rank="(\d+)"', line)
+
+            last_info = {
+                "score": float(m_score.group(1)) if m_score else 0,
+                "resolution": m_res.group(1) if m_res else "N/A",
+                "rank": int(m_rank.group(1)) if m_rank else 0,
+            }
+
+        elif line and not line.startswith("#") and last_name:
+            channels.setdefault(last_name, []).append({
+                "url": line,
+                **last_info
+            })
+            last_name = None
 
     return channels
 
 # ============================
-# 频道排序（自然排序）
-# ============================
-
-def channel_sort_key(name: str):
-    m = re.match(r"(CCTV|CETV)(\d+)", name)
-    if m:
-        return (m.group(1), int(m.group(2)))
-    return ("ZZZ", name)
-
-# ============================
-# 频道类型划分
+# 频道类型
 # ============================
 
 def get_channel_type(name: str) -> str:
-    # 央视
     if name.startswith("CCTV"):
         return "tv"
-    # 卫视（湖南卫视、东方卫视、北京卫视…）
     if name.endswith("卫视"):
         return "tv"
-    # 其它全部归为媒体频道
     return "entertainment"
 
-def is_local_source(url: str) -> bool:
-    u = url.lower()
-    return (
-        u.startswith("rtp://")
-        or u.startswith("udp://")
-        or "://239." in u
-        or "://224." in u
-        or "/rtp/" in u
-    )
-
 # ============================
-# 构建频道质量报表（核心）
+# 构建频道报表（基于 M3U）
 # ============================
 
-def build_channel_report(channels, raw):
+def build_channel_report(channels):
     report = {}
 
-    for name, urls in channels.items():
-        if name == '电视频道':
-            continue
-        total = 0
-        usable = 0
-        best_score = -1
-        best_res = "N/A"
+    for name, items in channels.items():
+        usable = sum(1 for x in items if x["score"] > 0)
+        total = len(items)
 
-        for url in urls:
+        # 最佳源（rank=1）
+        best = next((x for x in items if x["rank"] == 1), None)
 
-            # README 不统计本地源
-            if is_local_source(url):
-                continue
-
-            info = raw.get(url)
-            if not info:
-                continue
-
-            total += 1
-            score = info["score"]
-
-            if score > 0:
-                usable += 1
-
-            if score > best_score:
-                best_score = score
-                w = info["width"]
-                h = info["height"]
-                best_res = f"{w}x{h}" if w and h else "N/A"
+        best_res = best["resolution"] if best else "N/A"
+        best_score = best["score"] if best else 0
 
         removed = usable == 0
 
@@ -179,38 +109,34 @@ def build_channel_report(channels, raw):
             "usable": usable,
             "removed": removed,
             "best_res": best_res,
-            "best_score": round(best_score, 1) if best_score >= 0 else 0,
+            "best_score": best_score,
             "type": get_channel_type(name),
         }
 
     return report
 
 # ============================
-# 判断逻辑（stream_fail / upstream_blocklist）
+# stream_fail / upstream_blocklist
 # ============================
 
-def recompute_fail(raw):
-    # 失败直播源
+def recompute_fail(channels):
     stream_fail = load_json(STREAM_FAIL_FILE)
-    # 上游源黑名单
     upstream_blocklist = load_json(UPSTREAM_BLOCKLIST_FILE)
 
-    cst = timezone(timedelta(hours=8))
-    today = datetime.now(cst).strftime("%Y-%m-%d")
+    for name, items in channels.items():
+        for x in items:
+            url = x["url"]
+            score = x["score"]
 
-    for url, info in raw.items():
-        # 当测试通过失败次数归零
-        if info["score"] > 0:
-            stream_fail[url] = 0
-        else:
-            # 测试失败后次数+1
-            stream_fail[url] = stream_fail.get(url, 0) + 1
-
+            if score > 0:
+                stream_fail[url] = 0
+            else:
+                stream_fail[url] = stream_fail.get(url, 0) + 1
 
     return stream_fail, upstream_blocklist
 
 # ============================
-# live_urls 清理
+# 清理 live_urls
 # ============================
 
 def rebuild_live_urls(upstream_blocklist):
@@ -226,18 +152,17 @@ def rebuild_live_urls(upstream_blocklist):
     LIVE_URLS_FILE.write_text("\n".join(new_lines), encoding="utf-8")
 
 # ============================
-# README（频道级报表）
+# 生成 README（基于 M3U）
 # ============================
 
-def build_readme(report, upstream_blocklist):
+def build_readme(report):
     html = []
-    html.append("# IPTV 质量报表\n")
+    html.append("# IPTV 质量报表（基于最终 M3U）\n")
 
     cst = timezone(timedelta(hours=8))
     build_time = datetime.now(cst).strftime("%Y-%m-%d %H:%M:%S")
     html.append(f"⏱ **构建时间：{build_time} (CST)**\n\n")
 
-    # 总览统计
     total_channels = len(report)
     removed_channels = sum(1 for x in report.values() if x["removed"])
     kept_channels = total_channels - removed_channels
@@ -249,57 +174,32 @@ def build_readme(report, upstream_blocklist):
     html.append(f"- **已删除频道数：** {removed_channels}")
     html.append(f"- **总可用源数：** {total_usable}\n\n")
 
-    # ============================
-    # 电视频道（CCTV + 卫视，自然排序）
-    # ============================
-
+    # 电视频道
     html.append("## 📺 电视频道\n\n<table>")
     html.append("<tr><th>频道</th><th>可用源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
 
     tv_items = [(name, info) for name, info in report.items() if info["type"] == "tv"]
 
-    for name, info in sorted(tv_items, key=lambda x: (x[1]["removed"], channel_sort_key(x[0]))):
+    for name, info in sorted(tv_items):
         status = '<span style="color:red">已删除</span>' if info["removed"] else '<span style="color:green">保留</span>'
         html.append(
-            f"<tr>"
-            f"<td>{name}</td>"
-            f"<td>{info['usable']}</td>"
-            f"<td>{info['best_res']}</td>"
-            f"<td>{info['best_score']}</td>"
-            f"<td>{status}</td>"
-            f"</tr>"
+            f"<tr><td>{name}</td><td>{info['usable']}</td>"
+            f"<td>{info['best_res']}</td><td>{info['best_score']}</td><td>{status}</td></tr>"
         )
-
-    # 失效上游源
-    if upstream_blocklist:
-        html.append("## ❌ 失效上游源（连续 10 次失败）\n")
-        for url, info in upstream_blocklist.items():
-            html.append(f"- `{url}`")
-            html.append(f"  - 失效时间：{info['fail_time']}")
-            html.append(f"  - 删除时间：{info['remove_time']}\n")
-        html.append("\n")
 
     html.append("</table>\n")
 
-    # ============================
     # 媒体频道
-    # ============================
-
     html.append("## 📡 媒体频道\n\n<table>")
     html.append("<tr><th>频道</th><th>可用源/总源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
 
     ent_items = [(name, info) for name, info in report.items() if info["type"] == "entertainment"]
 
-    for name, info in sorted(ent_items, key=lambda x: (x[1]["removed"], x[0])):
+    for name, info in sorted(ent_items):
         status = '<span style="color:red">已删除</span>' if info["removed"] else '<span style="color:green">保留</span>'
         html.append(
-            f"<tr>"
-            f"<td>{name}</td>"
-            f"<td>{info['usable']} / {info['total']}</td>"
-            f"<td>{info['best_res']}</td>"
-            f"<td>{info['best_score']}</td>"
-            f"<td>{status}</td>"
-            f"</tr>"
+            f"<tr><td>{name}</td><td>{info['usable']} / {info['total']}</td>"
+            f"<td>{info['best_res']}</td><td>{info['best_score']}</td><td>{status}</td></tr>"
         )
 
     html.append("</table>\n")
@@ -311,26 +211,22 @@ def build_readme(report, upstream_blocklist):
 # ============================
 
 def main():
-    print("=== 合并 raw_results ===")
-    raw = merge_raw()
-
-    print("=== 加载频道 ===")
-    channels = load_channels()
+    print("=== 解析最终 M3U ===")
+    channels = parse_m3u()
 
     print("=== 构建频道报表 ===")
-    report = build_channel_report(channels, raw)
+    report = build_channel_report(channels)
 
-    print("=== 判断 ===")
-    stream_fail, upstream_blocklist = recompute_fail(raw)
-
+    print("=== 更新失败统计 ===")
+    stream_fail, upstream_blocklist = recompute_fail(channels)
     save_json(STREAM_FAIL_FILE, stream_fail)
     save_json(UPSTREAM_BLOCKLIST_FILE, upstream_blocklist)
 
     print("=== 清理 live_urls ===")
     rebuild_live_urls(upstream_blocklist)
 
-    # print("=== 生成 README ===")
-    # build_readme(report, upstream_blocklist)
+    print("=== 生成 README ===")
+    build_readme(report)
 
     print("=== merge_state_files 完成 ===")
 

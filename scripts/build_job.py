@@ -432,10 +432,32 @@ def build_output_m3u(channels, mode):
             logo = get_logo(name)
             group = get_group(name)
 
-            for url in urls:
+            # urls 已经按 score 排序（detect_and_sort_urls 返回的）
+            for idx, url in enumerate(urls, start=1):
+                norm_url = normalize_url(url)
+                info = cache.get(norm_url, {})
+
+                score = info.get("score", 0)
+                w = info.get("width", 0)
+                h = info.get("height", 0)
+                bitrate = info.get("bitrate", 0)
+                delay = info.get("delay", 0)
+                blur = info.get("blur", 0)
+
+                res = f"{w}x{h}" if w and h else "N/A"
+
+                # 自动标注最佳源
+                best_flag = "yes" if idx == 1 else "no"
+
+                # 自动标注排名
+                rank = idx
+
                 lines.append(
                     f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{name}" '
-                    f'tvg-logo="{logo}" group-title="{group}",{name}'
+                    f'tvg-logo="{logo}" group-title="{group}" '
+                    f'score="{score:.1f}" resolution="{res}" '
+                    f'bitrate="{bitrate}" delay="{delay}" blur="{blur:.2f}" '
+                    f'best="{best_flag}" rank="{rank}",{name}'
                 )
                 lines.append(url)
 
