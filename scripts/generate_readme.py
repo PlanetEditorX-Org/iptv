@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 from datetime import datetime, timedelta, timezone
 import re
-
+from urllib.parse import urlparse, parse_qsl, urlencode, urlunparse
 ROOT = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = ROOT / "output"
 STATE_DIR = ROOT / "sources" / "state"
@@ -17,6 +17,36 @@ RAW_FILES = [
 ]
 
 UPSTREAM_BLOCKLIST_FILE = STATE_DIR / "upstream_blocklist.json"
+
+
+def normalize_url(url: str) -> str:
+    if not url.startswith("http"):
+        return url
+
+    parsed = urlparse(url)
+    query = dict(parse_qsl(parsed.query))
+
+    drop_keys = {
+        "token", "auth", "ts", "sign", "expires", "expiry",
+        "e", "_t", "_ts", "uuid", "session", "sessionid",
+        "v", "ver", "random", "r", "t"
+    }
+
+    query = {k: v for k, v in query.items() if k.lower() not in drop_keys}
+    sorted_query = urlencode(sorted(query.items()))
+
+    path = parsed.path.rstrip("/")
+    path = re.sub(r"\.m3u8.*$", ".m3u8", path)
+    path = re.sub(r"\.flv.*$", ".flv", path)
+
+    return urlunparse((
+        parsed.scheme,
+        parsed.netloc,
+        path,
+        parsed.params,
+        sorted_query,
+        parsed.fragment
+    ))
 
 def load_json(path):
     if path.exists():
@@ -42,7 +72,8 @@ def parse_m3u():
             if "," in line:
                 last_name = line.split(",", 1)[1].strip()
         elif line and not line.startswith("#") and last_name:
-            channels.setdefault(last_name, []).append(line)
+            url = normalize_url(line)   # 和测速用同一套 URL 规范化
+            channels.setdefault(last_name, []).append(url)
             last_name = None
     return channels
 
