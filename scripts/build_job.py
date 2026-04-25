@@ -346,7 +346,14 @@ def build_output_txt(channels, mode):
             # 远程源按质量排序
             sorted_remote = detect_and_sort_urls(name, remote_urls)
 
-            urls = sorted_remote + local_urls
+            # 高质量远程源（score ≥ 80）
+            high_remote = [u for u in sorted_remote if cache.get(normalize_url(u), {}).get("score", 0) >= 80]
+
+            # 低质量远程源（score < 80）
+            low_remote = [u for u in sorted_remote if cache.get(normalize_url(u), {}).get("score", 0) < 80]
+
+            # 最终顺序：高质量远程 → 本地源 → 低质量远程
+            urls = high_remote + local_urls + low_remote
 
             for url in urls:
                 lines.append(f"{name},{url}")
@@ -445,8 +452,14 @@ def build_output_m3u(channels, mode):
             # 远程源按质量排序
             sorted_remote = detect_and_sort_urls(name, remote_urls)
 
-            # 本地源追加在后面
-            urls = sorted_remote + local_urls
+            # 高质量远程源（score ≥ 80）
+            high_remote = [u for u in sorted_remote if cache.get(normalize_url(u), {}).get("score", 0) >= 80]
+
+            # 低质量远程源（score < 80）
+            low_remote = [u for u in sorted_remote if cache.get(normalize_url(u), {}).get("score", 0) < 80]
+
+            # 最终顺序：高质量远程 → 本地源 → 低质量远程
+            urls = high_remote + local_urls + low_remote
 
             tvg_id = name
             logo = get_logo(name)
