@@ -92,13 +92,6 @@ jobs:
           python3 scripts/merge_cache.py
 
       # ============================
-      # 统一判断（stream_fail / upstream_blocklist / live_urls / README）
-      # ============================
-      - name: Merge state files
-        run: |
-          python3 scripts/merge_state_files.py
-
-      # ============================
       # 合并频道输出
       # ============================
       - name: Merge outputs
@@ -146,9 +139,12 @@ jobs:
             done
           fi
 
-      - name: Generate final report
+      # ============================
+      # 统一判断（stream_fail / upstream_blocklist / live_urls / README）
+      # ============================
+      - name: Merge state files
         run: |
-          python3 scripts/generate_readme.py
+          python3 scripts/merge_state_files.py
 
       - name: Upload final merged output
         uses: actions/upload-artifact@v4
