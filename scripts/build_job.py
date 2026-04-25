@@ -172,7 +172,8 @@ def add_channel(channels, name, url, source_url=None):
                 })
                 return
 
-    if not is_good_url(url):
+    # 本地源也要加入 channels
+    if not is_good_url(url) and not is_local_source(url):
         return
 
     if source_url == "local_spider":
@@ -336,7 +337,17 @@ def build_output_txt(channels, mode):
             if mode == "satellite" and name.startswith("CCTV"):
                 continue
 
-            urls = detect_and_sort_urls(name, channels[name])
+            raw_urls = channels[name]
+
+            # 分离本地源和远程源
+            local_urls = [u for u in raw_urls if is_local_source(u)]
+            remote_urls = [u for u in raw_urls if not is_local_source(u)]
+
+            # 远程源按质量排序
+            sorted_remote = detect_and_sort_urls(name, remote_urls)
+
+            # 本地源永远排在最前面
+            urls = local_urls + sorted_remote
 
             for url in urls:
                 lines.append(f"{name},{url}")
@@ -426,7 +437,17 @@ def build_output_m3u(channels, mode):
             if mode == "satellite" and name.startswith("CCTV"):
                 continue
 
-            urls = detect_and_sort_urls(name, channels[name])
+            raw_urls = channels[name]
+
+            # 分离本地源和远程源
+            local_urls = [u for u in raw_urls if is_local_source(u)]
+            remote_urls = [u for u in raw_urls if not is_local_source(u)]
+
+            # 远程源按质量排序
+            sorted_remote = detect_and_sort_urls(name, remote_urls)
+
+            # 本地源永远排在最前面
+            urls = local_urls + sorted_remote
 
             tvg_id = name
             logo = get_logo(name)
@@ -452,12 +473,15 @@ def build_output_m3u(channels, mode):
                 # 自动标注排名
                 rank = idx
 
+                # 本地标识
+                local_flag = "yes" if is_local_source(url) else "no"
+
                 lines.append(
                     f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{name}" '
                     f'tvg-logo="{logo}" group-title="{group}" '
                     f'score="{score:.1f}" resolution="{res}" '
                     f'bitrate="{bitrate}" delay="{delay}" blur="{blur:.2f}" '
-                    f'best="{best_flag}" rank="{rank}",{name}'
+                    f'best="{best_flag}" rank="{rank}" local="{local_flag}",{name}'
                 )
                 lines.append(url)
 
