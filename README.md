@@ -61,7 +61,7 @@
 ## 🎬 媒体频道（远程源统计）
 
 <table>
-<tr><th>频道</th><th>可用源/总源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>
+<tr><th>频道</th><th>可用源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>
 <tr><td>埋堆堆</td><td>4</td><td>N/A</td><td>0</td><td><span style="color:red">过滤</span></td></tr>
 <tr><td>广东珠江</td><td>4</td><td>N/A</td><td>0</td><td><span style="color:red">过滤</span></td></tr>
 <tr><td>广西国际</td><td>3</td><td>N/A</td><td>0</td><td><span style="color:red">过滤</span></td></tr>

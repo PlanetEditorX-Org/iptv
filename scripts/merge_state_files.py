@@ -213,7 +213,7 @@ def build_readme(report):
 
     # 媒体频道
     html.append("## 🎬 媒体频道（远程源统计）\n\n<table>")
-    html.append("<tr><th>频道</th><th>可用源/总源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
+    html.append("<tr><th>频道</th><th>可用源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
 
     ent_items = [(name, info) for name, info in report.items() if info["type"] == "entertainment"]
 

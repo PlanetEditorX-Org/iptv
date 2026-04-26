@@ -650,7 +650,7 @@ def build_readme():
     # ============================
 
     html.append("## 📺 电视频道\n\n<table>")
-    html.append("<tr><th>频道</th><th>可用源/总源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
+    html.append("<tr><th>频道</th><th>可用源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
 
     for name, info in sorted(CHANNEL_REPORT.items(), key=lambda x: (x[1]["removed"], x[0])):
         if info["type"] != "tv":
@@ -676,7 +676,7 @@ def build_readme():
     # ============================
 
     html.append("## 📡 媒体频道\n\n<table>")
-    html.append("<tr><th>频道</th><th>可用源/总源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
+    html.append("<tr><th>频道</th><th>可用源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
 
     for name, info in sorted(CHANNEL_REPORT.items(), key=lambda x: (x[1]["removed"], x[0])):
         if info["type"] != "entertainment":
