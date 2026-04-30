@@ -9,7 +9,19 @@ on:
   push:
     paths:
       - "sources/local_spider.m3u"   # 只有 spider 源变化才触发
-  workflow_dispatch:   # 手动触发
+  workflow_dispatch:
+    inputs:
+      sort_mode:
+        description: "请选择频道排序方式"
+        required: true
+        type: choice
+        default: "本地源 → 高质量"
+        options:
+          - 本地源 → 高质量
+          - 高质量 → 本地源
+          - 本地源 → 高质量 → 中质量
+          - 高质量 → 本地源 → 中质量
+          - 高质量 → 中质量 → 本地源
 
 jobs:
 
@@ -33,7 +45,7 @@ jobs:
 
       - name: Build ${{ matrix.name }}
         run: |
-          python3 scripts/build_job.py ${{ matrix.name }}
+          python3 scripts/build_job.py ${{ matrix.name }} "${{ github.event.inputs.sort_mode }}"
           ls -l output
           rm -rf output/channels_all.* || true
 
