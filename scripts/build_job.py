@@ -367,13 +367,38 @@ def build_output_txt(channels, mode):
             def get_score(u):
                 return cache.get(normalize_url(u), {}).get("score", 0)
 
+            # 分级
             high_remote = [u for u in sorted_remote if get_score(u) > 90]
             mid_remote  = [u for u in sorted_remote if 80 <= get_score(u) <= 90]
             low_remote  = [u for u in sorted_remote if get_score(u) < 80]
 
+            # ============================
+            # 根据排序模式自动启用质量档
+            # ============================
+
+            if SORT_MODE in ("local_high", "high_local"):
+                ENABLE_HIGH = True
+                ENABLE_MID  = False
+                ENABLE_LOW  = False
+
+            elif SORT_MODE in ("local_high_mid", "high_local_mid", "high_mid_local"):
+                ENABLE_HIGH = True
+                ENABLE_MID  = True
+                ENABLE_LOW  = False
+
+            else:
+                ENABLE_HIGH = True
+                ENABLE_MID  = False
+                ENABLE_LOW  = False
+
+            # 根据启用情况选择远程源
             use_high = high_remote if ENABLE_HIGH else []
             use_mid  = mid_remote  if ENABLE_MID  else []
             use_low  = low_remote  if ENABLE_LOW  else []
+
+            # ============================
+            # 排序逻辑（内部变量）
+            # ============================
 
             if SORT_MODE == "local_high":
                 urls = local_urls + use_high
@@ -393,6 +418,7 @@ def build_output_txt(channels, mode):
             else:
                 urls = local_urls + use_high
 
+            # 输出
             for url in urls:
                 lines.append(f"{name},{url}")
             lines.append("")
@@ -493,13 +519,38 @@ def build_output_m3u(channels, mode):
             def get_score(u):
                 return cache.get(normalize_url(u), {}).get("score", 0)
 
+            # 分级
             high_remote = [u for u in sorted_remote if get_score(u) > 90]
             mid_remote  = [u for u in sorted_remote if 80 <= get_score(u) <= 90]
             low_remote  = [u for u in sorted_remote if get_score(u) < 80]
 
+            # ============================
+            # 根据排序模式自动启用质量档
+            # ============================
+
+            if SORT_MODE in ("local_high", "high_local"):
+                ENABLE_HIGH = True
+                ENABLE_MID  = False
+                ENABLE_LOW  = False
+
+            elif SORT_MODE in ("local_high_mid", "high_local_mid", "high_mid_local"):
+                ENABLE_HIGH = True
+                ENABLE_MID  = True
+                ENABLE_LOW  = False
+
+            else:
+                ENABLE_HIGH = True
+                ENABLE_MID  = False
+                ENABLE_LOW  = False
+
+            # 根据启用情况选择远程源
             use_high = high_remote if ENABLE_HIGH else []
             use_mid  = mid_remote  if ENABLE_MID  else []
             use_low  = low_remote  if ENABLE_LOW  else []
+
+            # ============================
+            # 排序逻辑（内部变量）
+            # ============================
 
             if SORT_MODE == "local_high":
                 urls = local_urls + use_high
@@ -518,6 +569,11 @@ def build_output_m3u(channels, mode):
 
             else:
                 urls = local_urls + use_high
+
+            # 输出
+            for url in urls:
+                lines.append(f"{name},{url}")
+            lines.append("")
 
             tvg_id = name
             logo = get_logo(name)
