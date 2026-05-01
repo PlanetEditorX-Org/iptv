@@ -59,9 +59,6 @@ SOURCES_DIR.mkdir(parents=True, exist_ok=True)
 STATE_DIR.mkdir(parents=True, exist_ok=True)
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-# 接受排序
-raw_sort_mode = sys.argv[2] if len(sys.argv) > 2 else "本地源 → 高质量"
-
 # 显示文案 → 内部变量
 SORT_MODE_MAP = {
     "本地源 → 高质量":           "local_high",
@@ -77,7 +74,6 @@ SORT_MODE_MAP = {
     "high_mid_local": "high_mid_local",
 }
 
-SORT_MODE = SORT_MODE_MAP.get(raw_sort_mode, "local_high")
 
 # ============================
 # 工具函数
@@ -599,6 +595,12 @@ def build_output_m3u(channels, mode):
             logo = get_logo(name)
             group = get_group(name)
 
+            # 根据 SET_GROUP 决定是否输出 group-title
+            if SET_GROUP == "true":
+                group_field = f'group-title="{group}" '
+            else:
+                group_field = ""
+
             for idx, url in enumerate(urls, start=1):
                 norm_url = normalize_url(url)
                 info = cache.get(norm_url, {})
@@ -612,18 +614,26 @@ def build_output_m3u(channels, mode):
 
                 res = f"{w}x{h}" if w and h else "N/A"
 
-                # 正确的最佳源标记（不是 idx==1）
                 best_flag = "yes" if url == best_remote else "no"
-
                 local_flag = "yes" if is_local_source(url) else "no"
 
-                lines.append(
-                    f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{name}" '
-                    f'tvg-logo="{logo}" group-title="{group}" '
-                    f'score="{score:.1f}" resolution="{res}" '
-                    f'bitrate="{bitrate}" delay="{delay}" blur="{blur:.2f}" '
-                    f'best="{best_flag}" rank="{idx}" local="{local_flag}",{name}'
+                extinf = (
+                    f'#EXTINF:-1 '
+                    f'tvg-id="{tvg_id}" '
+                    f'tvg-name="{name}" '
+                    f'tvg-logo="{logo}" '
+                    f'{group_field}'
+                    f'score="{score:.1f}" '
+                    f'resolution="{res}" '
+                    f'bitrate="{bitrate}" '
+                    f'delay="{delay}" '
+                    f'blur="{blur:.2f}" '
+                    f'best="{best_flag}" '
+                    f'rank="{idx}" '
+                    f'local="{local_flag}",{name}'
                 )
+
+                lines.append(extinf)
                 lines.append(url)
 
     return "\n".join(lines)
@@ -782,5 +792,12 @@ def main(mode):
     print("\n[done] 构建完成\n")
 
 if __name__ == "__main__":
+    global SORT_MODE,SET_GROUP
+    # 类型
     mode = sys.argv[1] if len(sys.argv) > 1 else "cctv"
+    # 排序
+    raw_sort_mode = sys.argv[2] if len(sys.argv) > 2 else "本地源 → 高质量"
+    SORT_MODE = SORT_MODE_MAP.get(raw_sort_mode, "local_high")
+    # 分类
+    SET_GROUP = sys.argv[3] if len(sys.argv) > 3 else "false"
     main(mode)
