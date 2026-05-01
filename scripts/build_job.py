@@ -69,6 +69,12 @@ SORT_MODE_MAP = {
     "本地源 → 高质量 → 中质量":   "local_high_mid",
     "高质量 → 本地源 → 中质量":   "high_local_mid",
     "高质量 → 中质量 → 本地源":   "high_mid_local",
+
+    "high_local": "high_local",
+    "local_high": "local_high",
+    "local_high_mid": "local_high_mid",
+    "high_local_mid": "high_local_mid",
+    "high_mid_local": "high_mid_local",
 }
 
 SORT_MODE = SORT_MODE_MAP.get(raw_sort_mode, "local_high")
@@ -342,8 +348,30 @@ def channel_sort_key(name: str):
 def build_output_txt(channels, mode):
     lines = []
 
+    # ============================
+    # 排序模式 → 启用哪些质量档
+    # ============================
+    if SORT_MODE in ("local_high", "high_local"):
+        ENABLE_HIGH = True
+        ENABLE_MID  = False
+        ENABLE_LOW  = False
+
+    elif SORT_MODE in ("local_high_mid", "high_local_mid", "high_mid_local"):
+        ENABLE_HIGH = True
+        ENABLE_MID  = True
+        ENABLE_LOW  = False
+
+    else:
+        ENABLE_HIGH = True
+        ENABLE_MID  = False
+        ENABLE_LOW  = False
+
+    # ============================
+    # 电视台部分
+    # ============================
     if mode in ("all", "cctv", "satellite"):
         lines.append("电视频道,#genre#")
+
         for name in sorted(channels.keys(), key=channel_sort_key):
 
             if name not in WHITELIST:
@@ -361,35 +389,17 @@ def build_output_txt(channels, mode):
             local_urls = [u for u in raw_urls if is_local_source(u)]
             remote_urls = [u for u in raw_urls if not is_local_source(u)]
 
-            # 远程源按质量排序
+            # 远程源按质量排序（只检测一次）
             sorted_remote = detect_and_sort_urls(name, remote_urls)
 
-            def get_score(u):
+            # 直接从缓存读取（不会触发检测）
+            def score_of(u):
                 return cache.get(normalize_url(u), {}).get("score", 0)
 
-            # 分级
-            high_remote = [u for u in sorted_remote if get_score(u) > 90]
-            mid_remote  = [u for u in sorted_remote if 80 <= get_score(u) <= 90]
-            low_remote  = [u for u in sorted_remote if get_score(u) < 80]
-
-            # ============================
-            # 根据排序模式自动启用质量档
-            # ============================
-
-            if SORT_MODE in ("local_high", "high_local"):
-                ENABLE_HIGH = True
-                ENABLE_MID  = False
-                ENABLE_LOW  = False
-
-            elif SORT_MODE in ("local_high_mid", "high_local_mid", "high_mid_local"):
-                ENABLE_HIGH = True
-                ENABLE_MID  = True
-                ENABLE_LOW  = False
-
-            else:
-                ENABLE_HIGH = True
-                ENABLE_MID  = False
-                ENABLE_LOW  = False
+            # 分级（只执行一次）
+            high_remote = [u for u in sorted_remote if score_of(u) > 90]
+            mid_remote  = [u for u in sorted_remote if 80 <= score_of(u) <= 90]
+            low_remote  = [u for u in sorted_remote if score_of(u) < 80]
 
             # 根据启用情况选择远程源
             use_high = high_remote if ENABLE_HIGH else []
@@ -397,9 +407,8 @@ def build_output_txt(channels, mode):
             use_low  = low_remote  if ENABLE_LOW  else []
 
             # ============================
-            # 排序逻辑（内部变量）
+            # 排序逻辑（只执行一次）
             # ============================
-
             if SORT_MODE == "local_high":
                 urls = local_urls + use_high
 
@@ -423,6 +432,9 @@ def build_output_txt(channels, mode):
                 lines.append(f"{name},{url}")
             lines.append("")
 
+    # ============================
+    # 媒体频道部分（保持原样）
+    # ============================
     if mode in ("all", "entertainment"):
         lines.append("媒体频道,#genre#")
         for name in sorted(channels.keys()):
@@ -495,6 +507,27 @@ def build_output_m3u(channels, mode):
             return "📺 电视频道"
         return "🎬 媒体频道"
 
+    # ============================
+    # 排序模式 → 启用哪些质量档（只执行一次）
+    # ============================
+    if SORT_MODE in ("local_high", "high_local"):
+        ENABLE_HIGH = True
+        ENABLE_MID  = False
+        ENABLE_LOW  = False
+
+    elif SORT_MODE in ("local_high_mid", "high_local_mid", "high_mid_local"):
+        ENABLE_HIGH = True
+        ENABLE_MID  = True
+        ENABLE_LOW  = False
+
+    else:
+        ENABLE_HIGH = True
+        ENABLE_MID  = False
+        ENABLE_LOW  = False
+
+    # ============================
+    # 电视台部分
+    # ============================
     if mode in ("all", "cctv", "satellite"):
         for name in sorted(channels.keys(), key=channel_sort_key):
 
@@ -513,35 +546,17 @@ def build_output_m3u(channels, mode):
             local_urls = [u for u in raw_urls if is_local_source(u)]
             remote_urls = [u for u in raw_urls if not is_local_source(u)]
 
-            # 远程源按质量排序
+            # 远程源按质量排序（只检测一次）
             sorted_remote = detect_and_sort_urls(name, remote_urls)
 
-            def get_score(u):
+            # 直接从缓存读取（不会触发检测）
+            def score_of(u):
                 return cache.get(normalize_url(u), {}).get("score", 0)
 
-            # 分级
-            high_remote = [u for u in sorted_remote if get_score(u) > 90]
-            mid_remote  = [u for u in sorted_remote if 80 <= get_score(u) <= 90]
-            low_remote  = [u for u in sorted_remote if get_score(u) < 80]
-
-            # ============================
-            # 根据排序模式自动启用质量档
-            # ============================
-
-            if SORT_MODE in ("local_high", "high_local"):
-                ENABLE_HIGH = True
-                ENABLE_MID  = False
-                ENABLE_LOW  = False
-
-            elif SORT_MODE in ("local_high_mid", "high_local_mid", "high_mid_local"):
-                ENABLE_HIGH = True
-                ENABLE_MID  = True
-                ENABLE_LOW  = False
-
-            else:
-                ENABLE_HIGH = True
-                ENABLE_MID  = False
-                ENABLE_LOW  = False
+            # 分级（只执行一次）
+            high_remote = [u for u in sorted_remote if score_of(u) > 90]
+            mid_remote  = [u for u in sorted_remote if 80 <= score_of(u) <= 90]
+            low_remote  = [u for u in sorted_remote if score_of(u) < 80]
 
             # 根据启用情况选择远程源
             use_high = high_remote if ENABLE_HIGH else []
@@ -549,9 +564,8 @@ def build_output_m3u(channels, mode):
             use_low  = low_remote  if ENABLE_LOW  else []
 
             # ============================
-            # 排序逻辑（内部变量）
+            # 排序逻辑（只执行一次）
             # ============================
-
             if SORT_MODE == "local_high":
                 urls = local_urls + use_high
 
@@ -570,16 +584,21 @@ def build_output_m3u(channels, mode):
             else:
                 urls = local_urls + use_high
 
-            # 输出
-            for url in urls:
-                lines.append(f"{name},{url}")
-            lines.append("")
+            # ============================
+            # 找到最佳远程源（第一个 score>0 的远程源）
+            # ============================
+            best_remote = next(
+                (u for u in urls if not is_local_source(u) and score_of(u) > 0),
+                None
+            )
 
+            # ============================
+            # 输出 M3U
+            # ============================
             tvg_id = name
             logo = get_logo(name)
             group = get_group(name)
 
-            # urls 已经按 score 排序（detect_and_sort_urls 返回的）
             for idx, url in enumerate(urls, start=1):
                 norm_url = normalize_url(url)
                 info = cache.get(norm_url, {})
@@ -593,13 +612,9 @@ def build_output_m3u(channels, mode):
 
                 res = f"{w}x{h}" if w and h else "N/A"
 
-                # 自动标注最佳源
-                best_flag = "yes" if idx == 1 else "no"
+                # 正确的最佳源标记（不是 idx==1）
+                best_flag = "yes" if url == best_remote else "no"
 
-                # 自动标注排名
-                rank = idx
-
-                # 本地标识
                 local_flag = "yes" if is_local_source(url) else "no"
 
                 lines.append(
@@ -607,34 +622,7 @@ def build_output_m3u(channels, mode):
                     f'tvg-logo="{logo}" group-title="{group}" '
                     f'score="{score:.1f}" resolution="{res}" '
                     f'bitrate="{bitrate}" delay="{delay}" blur="{blur:.2f}" '
-                    f'best="{best_flag}" rank="{rank}" local="{local_flag}",{name}'
-                )
-                lines.append(url)
-
-    if mode in ("all", "entertainment"):
-        for name in sorted(channels.keys()):
-
-            if name in WHITELIST:
-                continue
-
-            raw_urls = channels[name]
-
-            if len(raw_urls) < MINI_RAW_URLS:
-                continue
-
-            if is_numeric_channel(name):
-                continue
-
-            urls = detect_and_sort_urls(name, raw_urls, is_entertainment=True)
-
-            tvg_id = name
-            logo = get_logo(name)
-            group = get_group(name)
-
-            for url in urls:
-                lines.append(
-                    f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{name}" '
-                    f'tvg-logo="{logo}" group-title="{group}",{name}'
+                    f'best="{best_flag}" rank="{idx}" local="{local_flag}",{name}'
                 )
                 lines.append(url)
 

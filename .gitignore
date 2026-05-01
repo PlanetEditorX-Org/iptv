@@ -1,2 +1,6 @@
 scripts/__pycache__/
 sources/state/raw_results_*.json
+output/channels_cctv.*
+output/channels_satellite.*
+output/filtered_cctv.json
+output/filtered_satellite.json
