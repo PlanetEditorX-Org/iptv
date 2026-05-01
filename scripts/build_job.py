@@ -209,7 +209,7 @@ def add_channel(channels, name, url, source_url=None, from_local_spider=False):
 # 解析 TXT / M3U / JSON
 # ============================
 
-def parse_txt_like(content, channels, source_url=None):
+def parse_txt_like(content, channels, source_url=None, from_local_spider=False):
     for line in content.splitlines():
         line = line.strip()
         if not line or line.startswith("#"):
@@ -220,9 +220,9 @@ def parse_txt_like(content, channels, source_url=None):
             name, url = line.split("#", 1)
         else:
             continue
-        add_channel(channels, name, url, source_url, from_local_spider=False)
+        add_channel(channels, name, url, source_url, from_local_spider)
 
-def parse_m3u(content, channels, source_url=None):
+def parse_m3u(content, channels, source_url=None, from_local_spider=False):
     last_name = None
     for line in content.splitlines():
         line = line.strip()
@@ -230,7 +230,7 @@ def parse_m3u(content, channels, source_url=None):
             if "," in line:
                 last_name = line.split(",", 1)[1].strip()
         elif line and not line.startswith("#") and last_name:
-            add_channel(channels, last_name, line, source_url)
+            add_channel(channels, last_name, line, source_url, from_local_spider)
             last_name = None
 
 def parse_tvbox_json(content, channels, source_url=None):
