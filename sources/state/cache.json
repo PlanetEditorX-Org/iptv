@@ -5828,5 +5828,49 @@
     "score": 0.0,
     "ts": 1777614987.9276862,
     "source": "https://live.zbds.top/tv/iptv4.txt"
+  },
+  "http://1.194.112.165:9003/hls/1/index.m3u8": {
+    "width": 1920,
+    "height": 1080,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 222.0168286030101,
+    "raw_score": 37.572841430150504,
+    "score": 95.28366922182167,
+    "ts": 1777615489.6637883,
+    "source": "local_spider"
+  },
+  "http://1.194.112.165:9003/hls/2/index.m3u8": {
+    "width": 1920,
+    "height": 1080,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 68.35717259368897,
+    "raw_score": 29.889858629684447,
+    "score": 91.61529246070737,
+    "ts": 1777615505.541113,
+    "source": "local_spider"
+  },
+  "http://1.194.112.165:9003/hls/19/index.m3u8": {
+    "width": 1920,
+    "height": 1080,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 44.28847124409593,
+    "raw_score": 28.686423562204794,
+    "score": 90.84549322398121,
+    "ts": 1777615481.9878917,
+    "source": "local_spider"
+  },
+  "http://1.194.112.165:9003/hls/27/index.m3u8": {
+    "width": 1920,
+    "height": 1080,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": 26.472,
+    "score": 89.26174107504268,
+    "ts": 1777615497.8762543,
+    "source": "local_spider"
   }
 }
