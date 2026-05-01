@@ -4,3 +4,4 @@ output/channels_cctv.*
 output/channels_satellite.*
 output/filtered_cctv.json
 output/filtered_satellite.json
+venv/

@@ -5,23 +5,27 @@ set -e
 echo "=== IPTV 本地构建开始 ==="
 
 # -----------------------------
-# 1. 安装依赖（如果已安装会自动跳过）
+# 0. 自动创建虚拟环境（如果不存在）
 # -----------------------------
-echo "=== 检查并安装依赖 ==="
-
-if ! command -v ffmpeg >/dev/null 2>&1; then
-    echo "安装 ffmpeg..."
-    sudo apt update
-    sudo apt install -y ffmpeg
+if [ ! -d "venv" ]; then
+    echo "=== 创建虚拟环境 venv ==="
+    python3 -m venv venv
 fi
 
-pip3 install pillow numpy opencv-python-headless --quiet
+echo "=== 激活虚拟环境 ==="
+source venv/bin/activate
 
 # -----------------------------
-# 2. 选择排序方式（中文）
+# 1. 安装依赖（仅安装到 venv，不污染系统）
+# -----------------------------
+echo "=== 安装依赖（虚拟环境） ==="
+pip install --upgrade pip
+pip install pillow numpy opencv-python-headless requests
+
+# -----------------------------
+# 2. 排序方式
 # -----------------------------
 SORT_MODE="高质量 → 本地源"
-
 echo "使用排序方式：$SORT_MODE"
 
 # -----------------------------
@@ -43,51 +47,30 @@ echo "=== 合并 cache.json ==="
 python3 scripts/merge_cache.py
 
 # -----------------------------
-# 6. 合并最终输出（channels_all.m3u / txt / README）
+# 6. 合并最终输出
 # -----------------------------
 echo "=== 合并最终输出 ==="
+
 mkdir -p output
-shopt -s nullglob
-shopt -s globstar
-
-echo "=== 查找所有 M3U 文件 ==="
-find merged -name "channels_*.m3u"
-
-echo "=== 输出每个 M3U 的前 100 行（用于调试） ==="
-for f in $(find merged -name "channels_*.m3u"); do
-	echo "----- $f -----"
-	head -n 100 "$f" || true
-	echo
-done
 
 echo "=== 合并 TXT ==="
-touch output/channels_all.txt
-
-txt_files=( $(find merged -name "channels_*.txt") )
-
-if [ ${#txt_files[@]} -eq 0 ]; then
-	echo "⚠️ 没有任何 TXT 文件可合并" >> output/channels_all.txt
-else
-	for f in "${txt_files[@]}"; do
-		echo "合并：$f"
-		cat "$f" >> output/channels_all.txt
-		echo "" >> output/channels_all.txt
-	done
-fi
+echo "#EXTM3U" > output/channels_all.txt
+for f in output/channels_*.txt; do
+    echo "合并：$f"
+    cat "$f" >> output/channels_all.txt
+    echo "" >> output/channels_all.txt
+done
 
 echo "=== 合并 M3U ==="
 echo "#EXTM3U" > output/channels_all.m3u
+for f in output/channels_*.m3u; do
+    echo "合并：$f"
+    grep -a -h -v "#EXTM3U" "$f" >> output/channels_all.m3u
+done
 
-m3u_files=( $(find merged -name "channels_*.m3u") )
-
-if [ ${#m3u_files[@]} -eq 0 ]; then
-	echo "⚠️ 没有任何 M3U 文件可合并"
-else
-	for f in "${m3u_files[@]}"; do
-		echo "合并：$f"
-		grep -a -h -v "#EXTM3U" "$f" >> output/channels_all.m3u || true
-	done
-fi
+# -----------------------------
+# 7. 生成 README
+# -----------------------------
 python3 scripts/merge_state_files.py
 
 echo "=== IPTV 本地构建完成 ==="
