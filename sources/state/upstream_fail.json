@@ -1,8 +1,9 @@
 {
-  "https://d.kstore.dev/download/12441/ds9.txt": 1,
-  "https://orange-band-8374.lovereallyworld.workers.dev": 1,
-  "https://iptv-org.github.io/iptv/index.m3u": 1,
-  "https://t.freetv.fun/m3u/playlist.m3u": 1,
-  "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u": 0,
-  "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.m3u": 1
+  "https://d.kstore.dev/download/12441/ds9.txt": 2,
+  "https://orange-band-8374.lovereallyworld.workers.dev": 2,
+  "https://iptv-org.github.io/iptv/index.m3u": 2,
+  "https://t.freetv.fun/m3u/playlist.m3u": 2,
+  "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u": 2,
+  "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.m3u": 2,
+  "https://live.zbds.top/tv/iptv4.txt": 0
 }

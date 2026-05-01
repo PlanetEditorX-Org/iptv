@@ -129,15 +129,17 @@ def is_good_url(u: str) -> bool:
     bad = ["udp/", "rtp/", "://239.", "://224."]
     return not any(k in u for k in bad)
 
-def is_local_source(url: str) -> bool:
+def is_local_source(url: str, from_local_spider=False) -> bool:
     u = url.lower()
-    return (
-        u.startswith("rtp://")
-        or u.startswith("udp://")
-        or "://239." in u
-        or "://224." in u
-        or "/rtp/" in u
-    )
+    if from_local_spider:
+        return (
+            u.startswith("rtp://")
+            or u.startswith("udp://")
+            or "://239." in u
+            or "://224." in u
+            or "/rtp/" in u
+        )
+    return False  # 默认情况下不认为是本地源
 
 from urllib.parse import urlparse, parse_qsl, urlencode, urlunparse
 
@@ -174,7 +176,7 @@ def normalize_url(url: str) -> str:
 # 添加频道源
 # ============================
 
-def add_channel(channels, name, url, source_url=None):
+def add_channel(channels, name, url, source_url=None, from_local_spider=False):
     name = normalize_name(name)
     url = normalize_url(url.strip())
 
@@ -192,7 +194,7 @@ def add_channel(channels, name, url, source_url=None):
                 return
 
     # 本地源也要加入 channels
-    if not is_good_url(url) and not is_local_source(url):
+    if not is_good_url(url) and not is_local_source(url, from_local_spider):
         return
 
     if source_url == "local_spider":
@@ -218,7 +220,7 @@ def parse_txt_like(content, channels, source_url=None):
             name, url = line.split("#", 1)
         else:
             continue
-        add_channel(channels, name, url, source_url)
+        add_channel(channels, name, url, source_url, from_local_spider=False)
 
 def parse_m3u(content, channels, source_url=None):
     last_name = None
@@ -758,7 +760,7 @@ def main(mode):
     if local_file.exists():
         print("[local spider] 加载本地 spider 源")
         content = local_file.read_text(encoding="utf-8")
-        detect_and_parse(content, channels, source_url="local_spider")
+        detect_and_parse(content, channels, source_url="local_spider", from_local_spider=True)
 
     # ============================
     # 输出 TXT / M3U（永远生成文件）
