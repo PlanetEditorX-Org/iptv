@@ -246,14 +246,14 @@ def parse_tvbox_json(content, channels, source_url=None):
             for url in urls:
                 add_channel(channels, name, url, source_url)
 
-def detect_and_parse(content, channels, source_url=None):
+def detect_and_parse(content, channels, source_url=None, from_local_spider=False):
     text = content.lstrip()
     if text.startswith("{") and '"lives"' in text:
-        parse_tvbox_json(text, channels, source_url)
+        parse_tvbox_json(text, channels, source_url, from_local_spider)
     elif "#EXTM3U" in text or "#EXTINF" in text:
-        parse_m3u(text, channels, source_url)
+        parse_m3u(text, channels, source_url, from_local_spider)
     else:
-        parse_txt_like(text, channels, source_url)
+        parse_txt_like(text, channels, source_url, from_local_spider)
 
 # ============================
 # 并发测速 + 上游源统计
