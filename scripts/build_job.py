@@ -799,5 +799,5 @@ if __name__ == "__main__":
     raw_sort_mode = sys.argv[2] if len(sys.argv) > 2 else "本地源 → 高质量"
     SORT_MODE = SORT_MODE_MAP.get(raw_sort_mode, "local_high")
     # 分类
-    SET_GROUP = sys.argv[3] if len(sys.argv) > 3 else "false"
+    SET_GROUP = sys.argv[3] if len(sys.argv) > 3 else "true"
     main(mode)
