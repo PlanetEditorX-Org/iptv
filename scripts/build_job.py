@@ -750,7 +750,6 @@ def main(mode):
 
     # 解析所有上游源
     for src, label in live_sources:
-        print(f"[fetch] {src}")
         content = fetch_text(src)
         detect_and_parse(content, channels, source_url=src)
 

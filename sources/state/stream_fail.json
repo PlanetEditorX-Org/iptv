@@ -10732,5 +10732,6 @@
   "http://14.109.231.193:8181/rtp/235.254.198.17:1344": 0,
   "http://14.109.231.193:8181/rtp/235.254.198.62:1524": 0,
   "http://1.194.112.165:9003/hls/1/index.m3u8": 0,
-  "http://1.194.112.165:9003/hls/2/index.m3u8": 0
+  "http://1.194.112.165:9003/hls/2/index.m3u8": 0,
+  "http://1.194.112.165:9003/hls/2/index.m3u8#EXTINF:-1 tvg-id=\"北京卫视\" tvg-name=\"北京卫视\" tvg-logo=\"https://www.xn--rgv465a.top/tvlogo/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png\" group-title=\"📺 电视频道\" score=\"90.8\" resolution=\"1920x1080\" bitrate=\"0\" delay=\"1.0\" blur=\"44.29\" best=\"yes\" rank=\"1\" local=\"no\",北京卫视": 0
 }
