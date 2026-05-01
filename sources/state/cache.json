@@ -680,5 +680,93 @@
     "score": 0.0,
     "ts": 1777609699.030036,
     "source": "https://live.zbds.top/tv/iptv4.txt"
+  },
+  "http://182.150.23.74:808/hls/1/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777612723.1338627,
+    "source": "https://live.zbds.top/tv/iptv4.txt"
+  },
+  "http://124.116.183.146:9901/tsfile/live/0001_1.m3u8": {
+    "width": 720,
+    "height": 576,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 199.14805085170417,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777612723.1343598,
+    "source": "https://live.zbds.top/tv/iptv4.txt"
+  },
+  "http://183.223.157.33:9901/tsfile/live/0001_1.m3u8?authid=0&key=txiptv&playlive=1": {
+    "width": 1920,
+    "height": 1080,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777612723.1337008,
+    "source": "https://live.zbds.top/tv/iptv4.txt"
+  },
+  "http://182.150.23.74:808/hls/2/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777612741.649688,
+    "source": "https://live.zbds.top/tv/iptv4.txt"
+  },
+  "http://222.169.85.8:9901/tsfile/live/0002_1.m3u8": {
+    "width": 1920,
+    "height": 1080,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777612741.6491284,
+    "source": "https://live.zbds.top/tv/iptv4.txt"
+  },
+  "http://182.150.23.74:808/hls/17/index.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 999,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777612719.1840646,
+    "source": "https://live.zbds.top/tv/iptv4.txt"
+  },
+  "http://124.116.183.146:9901/tsfile/live/0122_1.m3u8": {
+    "width": 720,
+    "height": 576,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 1226.436770982915,
+    "raw_score": 13.2944,
+    "score": 74.33687517655166,
+    "ts": 1777612719.1843562,
+    "source": "https://live.zbds.top/tv/iptv4.txt"
+  },
+  "http://218.13.170.98:9901/tsfile/live/1001_1.m3u8": {
+    "width": 0,
+    "height": 0,
+    "bitrate": 0,
+    "delay": 1.0,
+    "blur": 0,
+    "raw_score": -100,
+    "score": 0.0,
+    "ts": 1777612737.661344,
+    "source": "https://live.zbds.top/tv/iptv4.txt"
   }
 }
