@@ -113,8 +113,11 @@ def build_channel_report(channels):
         total = len(remote_items)
         usable = sum(1 for x in remote_items if x["score"] > 0)
 
-        # 最佳远程源（rank=1）
-        best = next((x for x in remote_items if x["rank"] == 1), None)
+        # 最佳远程源：从上往下找第一个有分辨率、有分数的远程源
+        best = next(
+            (x for x in remote_items if x["score"] > 0 and x["resolution"] != "N/A"),
+            None
+        )
 
         best_res = best["resolution"] if best else "N/A"
         best_score = best["score"] if best else 0
