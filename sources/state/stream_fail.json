@@ -10745,5 +10745,8 @@
   "https://tv1288.xyz/hntv.php": 0,
   "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=a01c30989c5dfe8f479c5b15adf2e696&wsTime=1777629502": 0,
   "http://27.188.8.27:9901/tsfile/live/0132_1.m3u8": 0,
-  "http://1.194.112.165:9003/hls/61/index.m3u8": 0
+  "http://1.194.112.165:9003/hls/61/index.m3u8": 0,
+  "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1777690800-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-ac9aa881a7d26281cc0c0e87b6f73a49&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0,
+  "http://1.194.112.165:9003/hls/56/index.m3u8": 0,
+  "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=bb687091c9bbaf442cd147fd38ab1f2a&wsTime=1777651179": 0
 }

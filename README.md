@@ -1,6 +1,6 @@
 # IPTV 质量报表（仅统计远程源）
 
-⏱ **构建时间：2026-05-01 17:28:56 (CST)**
+⏱ **构建时间：2026-05-01 22:05:34 (CST)**
 
 
 ## 📊 总览统计
@@ -8,7 +8,7 @@
 - **总频道数：** 38
 - **保留频道数：** 38
 - **已过滤频道数：** 0
-- **总可用远程源数：** 183
+- **总可用远程源数：** 195
 
 
 ## 📺 电视频道（远程源统计）
@@ -21,24 +21,24 @@
 <tr><td>CCTV12</td><td>6</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
 <tr><td>CCTV13</td><td>7</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
 <tr><td>CCTV2</td><td>6</td><td>1920x1080</td><td>97.1</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV3</td><td>9</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV4</td><td>13</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV3</td><td>14</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>CCTV4</td><td>13</td><td>1920x1080</td><td>97.5</td><td><span style="color:green">保留</span></td></tr>
 <tr><td>CCTV5</td><td>19</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
 <tr><td>CCTV6</td><td>5</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
 <tr><td>CCTV7</td><td>4</td><td>1920x1080</td><td>97.3</td><td><span style="color:green">保留</span></td></tr>
 <tr><td>CCTV8</td><td>6</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
 <tr><td>CCTV9</td><td>5</td><td>1920x1080</td><td>96.5</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>东方卫视</td><td>10</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>东方卫视</td><td>11</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
 <tr><td>云南卫视</td><td>4</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
 <tr><td>北京卫视</td><td>3</td><td>1920x1080</td><td>95.9</td><td><span style="color:green">保留</span></td></tr>
 <tr><td>吉林卫视</td><td>1</td><td>1920x1080</td><td>90.7</td><td><span style="color:green">保留</span></td></tr>
 <tr><td>四川卫视</td><td>7</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>天津卫视</td><td>2</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>安徽卫视</td><td>4</td><td>1920x1080</td><td>95.2</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>天津卫视</td><td>3</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>安徽卫视</td><td>5</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
 <tr><td>山东卫视</td><td>3</td><td>1920x1080</td><td>95.6</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>山西卫视</td><td>1</td><td>1920x1080</td><td>92.9</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>山西卫视</td><td>2</td><td>1920x1080</td><td>93.0</td><td><span style="color:green">保留</span></td></tr>
 <tr><td>广东卫视</td><td>1</td><td>1920x1080</td><td>92.8</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>广西卫视</td><td>2</td><td>1920x1080</td><td>92.1</td><td><span style="color:green">保留</span></td></tr>
+<tr><td>广西卫视</td><td>5</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
 <tr><td>江苏卫视</td><td>6</td><td>1920x1080</td><td>93.0</td><td><span style="color:green">保留</span></td></tr>
 <tr><td>江西卫视</td><td>2</td><td>1920x1080</td><td>95.6</td><td><span style="color:green">保留</span></td></tr>
 <tr><td>河北卫视</td><td>2</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
