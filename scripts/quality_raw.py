@@ -114,37 +114,67 @@ def snapshot_blur_score(url, timeout=5):
 # ffmpeg：检测静态画面（帧差）
 # ============================
 
-def is_static_stream(url, timeout=5):
+def is_static_stream(url, timeout=8, frames=5, interval=1.0, threshold=20):
+    """
+    通过连续采样多帧判断是否为静态画面
+    :param url: 流地址
+    :param timeout: 总超时
+    :param frames: 采样帧数（至少3）
+    :param interval: 每帧间隔秒数（至少0.5）
+    :param threshold: 相邻帧平均像素差的阈值（越大越宽松）
+    :return: True 表示静态画面
+    """
     try:
-        # 抓取两帧
-        tmp1 = tempfile.NamedTemporaryFile(suffix=".jpg", delete=False).name
-        tmp2 = tempfile.NamedTemporaryFile(suffix=".jpg", delete=False).name
+        import cv2
+        import numpy as np
+        import tempfile
+        import time
+        import subprocess
 
-        cmd1 = ["ffmpeg", "-v", "quiet", "-y", "-i", url, "-vframes", "1", tmp1]
-        run_silent(cmd1, timeout=timeout)
+        # 临时文件列表
+        tmp_files = []
+        for i in range(frames):
+            tmp = tempfile.NamedTemporaryFile(suffix=".jpg", delete=False).name
+            tmp_files.append(tmp)
 
-        time.sleep(1)
+        # 抓取 frames 帧，每帧间隔 interval 秒
+        for i, tmp in enumerate(tmp_files):
+            cmd = ["ffmpeg", "-v", "quiet", "-y", "-i", url, "-vframes", "1", tmp]
+            subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=timeout / frames)
+            if i < frames - 1:
+                time.sleep(interval)
 
-        cmd2 = ["ffmpeg", "-v", "quiet", "-y", "-i", url, "-vframes", "1", tmp2]
-        run_silent(cmd2, timeout=timeout)
+        # 读取所有帧为灰度图
+        imgs = []
+        for tmp in tmp_files:
+            img = Image.open(tmp).convert("L")
+            imgs.append(np.array(img))
+            # 删除临时文件
+            Path(tmp).unlink(missing_ok=True)
 
-        # 读取两帧
-        img1 = Image.open(tmp1).convert("L")
-        img2 = Image.open(tmp2).convert("L")
+        if len(imgs) < 2:
+            return False
 
-        arr1 = np.array(img1)
-        arr2 = np.array(img2)
+        # 计算相邻帧之间的像素差绝对值均值
+        diffs = []
+        for i in range(len(imgs) - 1):
+            diff = cv2.absdiff(imgs[i], imgs[i+1])
+            mean_diff = np.mean(diff)
+            diffs.append(mean_diff)
 
-        # 帧差
-        diff = cv2.absdiff(arr1, arr2)
-        score = np.mean(diff)
+        # 取平均差值和差异性（标准差）
+        avg_diff = np.mean(diffs)
+        std_diff = np.std(diffs)
 
-        # 阈值：< 2 基本就是静态画面
-        return score < 2
+        # 判断：平均差异小于阈值 并且 差异变化很小（稳定静态）
+        if avg_diff < threshold and std_diff < (threshold * 0.5):
+            return True
+        else:
+            return False
 
-    except:
-        # 读取失败 → 当作静态
-        return True
+    except Exception as e:
+        # 出错时保守认为不是静态（避免误杀）
+        return False
 
 # ============================
 # 正态分布观感映射：raw_score → 0~100
