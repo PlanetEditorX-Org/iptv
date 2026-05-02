@@ -1,6 +1,10 @@
 @echo off
 chcp 65001 >nul
 
+set SCRIPT_DIR=%~dp0
+set ROOT_DIR=%SCRIPT_DIR%..
+cd %ROOT_DIR%
+
 echo === IPTV Local Build Start ===
 
 REM Install Python dependencies
