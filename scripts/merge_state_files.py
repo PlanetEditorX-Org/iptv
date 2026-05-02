@@ -200,7 +200,7 @@ def build_readme(report):
     html.append(f"- **总可用远程源数：** {total_usable}\n\n")
 
     # 电视频道
-    html.append("## 📺 电视频道（远程源统计）\n\n<table>")
+    html.append("## 电视频道（远程源统计）\n\n<table>")
     html.append("<tr><th>频道</th><th>可用源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
 
     tv_items = [(name, info) for name, info in report.items() if info["type"] == "tv"]
@@ -218,7 +218,7 @@ def build_readme(report):
     ent_items = [(name, info) for name, info in report.items() if info["type"] == "entertainment"]
 
     if ent_items:  # 只有在存在媒体频道时才生成
-        html.append("## 🎬 媒体频道（远程源统计）\n\n<table>")
+        html.append("## 媒体频道（远程源统计）\n\n<table>")
         html.append("<tr><th>频道</th><th>可用源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
 
         for name, info in sorted(ent_items):

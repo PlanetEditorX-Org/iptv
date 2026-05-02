@@ -1,391 +1,391 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="506.85" best="yes" rank="1" local="no",CCTV1
+#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="506.85" best="yes" rank="1" local="no",CCTV1
 http://222.214.208.34:59901/tsfile/live/0001_1.m3u8
-#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1.png" group-title="📺 电视频道" score="95.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="236.00" best="no" rank="2" local="no",CCTV1
+#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1.png" group-title="电视频道" score="95.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="236.00" best="no" rank="2" local="no",CCTV1
 http://221.7.175.154:8445/tsfile/live/1000_1.m3u8?authid=0%24%C3%A5%C2%B9%C2%BF%C3%A8%C2%A5%C2%BF%C3%A5%C5%92%E2%80%94%C3%A6%C2%B5%C2%B7%C3%A8%EF%BF%BD%E2%80%9D%C3%A9%E2%82%AC%C5%A1&key=txiptv&playlive=1
-#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1.png" group-title="📺 电视频道" score="95.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="234.14" best="no" rank="3" local="no",CCTV1
+#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1.png" group-title="电视频道" score="95.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="234.14" best="no" rank="3" local="no",CCTV1
 http://120.76.248.139/live/bfgd/4200000489.m3u8
-#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1.png" group-title="📺 电视频道" score="93.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="146.00" best="no" rank="4" local="no",CCTV1
+#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1.png" group-title="电视频道" score="93.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="146.00" best="no" rank="4" local="no",CCTV1
 http://60.10.139.113:8801/hls/1/index.m3u8
-#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1.png" group-title="📺 电视频道" score="92.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="112.99" best="no" rank="5" local="no",CCTV1
+#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1.png" group-title="电视频道" score="92.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="112.99" best="no" rank="5" local="no",CCTV1
 http://120.202.94.181:9446/tsfile/live/0001_1.m3u8?authid=0&key=txiptv&playlive=0
-#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1.png" group-title="📺 电视频道" score="92.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="107.24" best="no" rank="6" local="no",CCTV1
+#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1.png" group-title="电视频道" score="92.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="107.24" best="no" rank="6" local="no",CCTV1
 http://39.165.39.49:85/tsfile/live/1001_1.m3u8?authid=0%24%C3%A6%C2%B2%C2%B3%C3%A5%EF%BF%BD%E2%80%94%C3%A7%C2%A7%C2%BB%C3%A5%C5%A0%C2%A8%C3%A9%E2%80%A6%E2%80%99%C3%A5%C2%BA%E2%80%94&key=txiptv&playlive=0
-#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1.png" group-title="📺 电视频道" score="92.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="90.89" best="no" rank="7" local="no",CCTV1
+#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1.png" group-title="电视频道" score="92.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="90.89" best="no" rank="7" local="no",CCTV1
 https://live.264788.xyz/channel/cctv1?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=cccb6b9cad34d95eaf06a39fcf6acd9e
-#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1.png" group-title="📺 电视频道" score="91.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="71.57" best="no" rank="8" local="no",CCTV1
+#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1.png" group-title="电视频道" score="91.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="71.57" best="no" rank="8" local="no",CCTV1
 http://69.30.245.50/live/cctv1.m3u8
-#EXTINF:-1 tvg-id="CCTV2" tvg-name="CCTV2" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-2.png" group-title="📺 电视频道" score="97.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="345.53" best="yes" rank="1" local="no",CCTV2
+#EXTINF:-1 tvg-id="CCTV2" tvg-name="CCTV2" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-2.png" group-title="电视频道" score="97.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="345.53" best="yes" rank="1" local="no",CCTV2
 http://120.202.94.181:9446/tsfile/live/0002_1.m3u8?authid=0&key=txiptv&playlive=0
-#EXTINF:-1 tvg-id="CCTV2" tvg-name="CCTV2" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-2.png" group-title="📺 电视频道" score="96.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="289.76" best="no" rank="2" local="no",CCTV2
+#EXTINF:-1 tvg-id="CCTV2" tvg-name="CCTV2" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-2.png" group-title="电视频道" score="96.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="289.76" best="no" rank="2" local="no",CCTV2
 http://112.27.235.94:8000/hls/2/index.m3u8
-#EXTINF:-1 tvg-id="CCTV2" tvg-name="CCTV2" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-2.png" group-title="📺 电视频道" score="93.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="148.57" best="no" rank="3" local="no",CCTV2
+#EXTINF:-1 tvg-id="CCTV2" tvg-name="CCTV2" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-2.png" group-title="电视频道" score="93.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="148.57" best="no" rank="3" local="no",CCTV2
 http://107.150.60.122/live/cctv2hd.m3u8
-#EXTINF:-1 tvg-id="CCTV2" tvg-name="CCTV2" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-2.png" group-title="📺 电视频道" score="92.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="107.29" best="no" rank="4" local="no",CCTV2
+#EXTINF:-1 tvg-id="CCTV2" tvg-name="CCTV2" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-2.png" group-title="电视频道" score="92.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="107.29" best="no" rank="4" local="no",CCTV2
 http://1.194.112.165:9003/hls/2/index.m3u8
-#EXTINF:-1 tvg-id="CCTV2" tvg-name="CCTV2" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-2.png" group-title="📺 电视频道" score="92.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="99.01" best="no" rank="5" local="no",CCTV2
+#EXTINF:-1 tvg-id="CCTV2" tvg-name="CCTV2" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-2.png" group-title="电视频道" score="92.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="99.01" best="no" rank="5" local="no",CCTV2
 http://221.7.175.154:8445/tsfile/live/1001_1.m3u8?authid=0%24%C3%A5%C2%B9%C2%BF%C3%A8%C2%A5%C2%BF%C3%A5%C5%92%E2%80%94%C3%A6%C2%B5%C2%B7%C3%A8%EF%BF%BD%E2%80%9D%C3%A9%E2%82%AC%C5%A1&key=txiptv&playlive=1
-#EXTINF:-1 tvg-id="CCTV2" tvg-name="CCTV2" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-2.png" group-title="📺 电视频道" score="92.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="82.39" best="no" rank="6" local="no",CCTV2
+#EXTINF:-1 tvg-id="CCTV2" tvg-name="CCTV2" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-2.png" group-title="电视频道" score="92.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="82.39" best="no" rank="6" local="no",CCTV2
 http://112.92.129.96:9898/hls/19/index.m3u8
-#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="695.96" best="yes" rank="1" local="no",CCTV3
+#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="695.96" best="yes" rank="1" local="no",CCTV3
 http://112.92.129.96:9898/hls/20/index.m3u8
-#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="4328.37" best="no" rank="2" local="no",CCTV3
+#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="4328.37" best="no" rank="2" local="no",CCTV3
 http://113.241.133.180:85/tsfile/live/0003_1.m3u8?authid=0&key=txiptv&playlive=1
-#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="4173.85" best="no" rank="3" local="no",CCTV3
+#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="4173.85" best="no" rank="3" local="no",CCTV3
 http://1.69.112.16:9901/tsfile/live/0003_1.m3u8
-#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="2383.67" best="no" rank="4" local="no",CCTV3
+#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="2383.67" best="no" rank="4" local="no",CCTV3
 http://1.31.14.70:54321/hls/6/index.m3u8
-#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1630.09" best="no" rank="5" local="no",CCTV3
+#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1630.09" best="no" rank="5" local="no",CCTV3
 http://120.202.94.181:9446/tsfile/live/0003_1.m3u8?authid=0&key=txiptv&playlive=0
-#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="2471.39" best="no" rank="6" local="no",CCTV3
+#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="2471.39" best="no" rank="6" local="no",CCTV3
 http://39.165.39.49:85/tsfile/live/1003_1.m3u8?authid=0%24%C3%A6%C2%B2%C2%B3%C3%A5%EF%BF%BD%E2%80%94%C3%A7%C2%A7%C2%BB%C3%A5%C5%A0%C2%A8%C3%A9%E2%80%A6%E2%80%99%C3%A5%C2%BA%E2%80%94&key=txiptv&playlive=0
-#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="📺 电视频道" score="96.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="302.58" best="no" rank="7" local="no",CCTV3
+#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="电视频道" score="96.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="302.58" best="no" rank="7" local="no",CCTV3
 http://221.7.175.154:8445/tsfile/live/1002_1.m3u8?authid=0%24%C3%A5%C2%B9%C2%BF%C3%A8%C2%A5%C2%BF%C3%A5%C5%92%E2%80%94%C3%A6%C2%B5%C2%B7%C3%A8%EF%BF%BD%E2%80%9D%C3%A9%E2%82%AC%C5%A1&key=txiptv&playlive=1
-#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="📺 电视频道" score="95.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="237.71" best="no" rank="8" local="no",CCTV3
+#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="电视频道" score="95.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="237.71" best="no" rank="8" local="no",CCTV3
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv3
-#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="📺 电视频道" score="93.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="142.19" best="no" rank="9" local="no",CCTV3
+#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="电视频道" score="93.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="142.19" best="no" rank="9" local="no",CCTV3
 http://t.061899.xyz/tl/tl.php?id=cctv3
-#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="📺 电视频道" score="93.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="141.09" best="no" rank="10" local="no",CCTV3
+#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="电视频道" score="93.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="141.09" best="no" rank="10" local="no",CCTV3
 http://iptv.4666888.xyz/iptv2A.php?id=9
-#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="📺 电视频道" score="93.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="138.49" best="no" rank="11" local="no",CCTV3
+#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="电视频道" score="93.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="138.49" best="no" rank="11" local="no",CCTV3
 http://j.s.bkpcp.top/jj/cctv3
-#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="📺 电视频道" score="93.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="135.79" best="no" rank="12" local="no",CCTV3
+#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="电视频道" score="93.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="135.79" best="no" rank="12" local="no",CCTV3
 http://go.bkpcp.top/mg/cctv3
-#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="📺 电视频道" score="93.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="127.91" best="no" rank="13" local="no",CCTV3
+#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="电视频道" score="93.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="127.91" best="no" rank="13" local="no",CCTV3
 http://z.b.bkpcp.top/m.php?id=cctv3
-#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="📺 电视频道" score="92.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="97.21" best="no" rank="14" local="no",CCTV3
+#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-3.png" group-title="电视频道" score="92.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="97.21" best="no" rank="14" local="no",CCTV3
 http://m.061899.xyz/mg/cctv3
-#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="📺 电视频道" score="97.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="386.63" best="yes" rank="1" local="no",CCTV4
+#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="电视频道" score="97.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="386.63" best="yes" rank="1" local="no",CCTV4
 http://k.061899.xyz/k.php?id=cctv4o
-#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="📺 电视频道" score="97.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="384.17" best="no" rank="2" local="no",CCTV4
+#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="电视频道" score="97.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="384.17" best="no" rank="2" local="no",CCTV4
 https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1777690800-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-ac9aa881a7d26281cc0c0e87b6f73a49&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c
-#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="📺 电视频道" score="94.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="201.43" best="no" rank="3" local="no",CCTV4
+#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="电视频道" score="94.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="201.43" best="no" rank="3" local="no",CCTV4
 http://k.061899.xyz/k.php?id=cctv4m
-#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="📺 电视频道" score="94.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="178.84" best="no" rank="4" local="no",CCTV4
+#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="电视频道" score="94.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="178.84" best="no" rank="4" local="no",CCTV4
 http://j.s.bkpcp.top/jj/cctv4m
-#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="📺 电视频道" score="94.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="174.29" best="no" rank="5" local="no",CCTV4
+#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="电视频道" score="94.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="174.29" best="no" rank="5" local="no",CCTV4
 http://120.202.94.181:9446/tsfile/live/0004_1.m3u8?authid=0&key=txiptv&playlive=0
-#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="📺 电视频道" score="93.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="138.43" best="no" rank="6" local="no",CCTV4
+#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="电视频道" score="93.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="138.43" best="no" rank="6" local="no",CCTV4
 http://m.061899.xyz/mg/cctv4
-#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="📺 电视频道" score="93.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="135.75" best="no" rank="7" local="no",CCTV4
+#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="电视频道" score="93.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="135.75" best="no" rank="7" local="no",CCTV4
 http://112.92.129.96:9898/hls/21/index.m3u8
-#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="📺 电视频道" score="93.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="129.09" best="no" rank="8" local="no",CCTV4
+#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="电视频道" score="93.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="129.09" best="no" rank="8" local="no",CCTV4
 http://112.27.235.94:8000/hls/4/index.m3u8
-#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="📺 电视频道" score="93.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="128.94" best="no" rank="9" local="no",CCTV4
+#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="电视频道" score="93.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="128.94" best="no" rank="9" local="no",CCTV4
 http://1.194.112.165:9003/hls/3/index.m3u8
-#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="📺 电视频道" score="93.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="121.74" best="no" rank="10" local="no",CCTV4
+#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="电视频道" score="93.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="121.74" best="no" rank="10" local="no",CCTV4
 http://j.s.bkpcp.top/jj/cctv4o
-#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="📺 电视频道" score="93.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="121.27" best="no" rank="11" local="no",CCTV4
+#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="电视频道" score="93.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="121.27" best="no" rank="11" local="no",CCTV4
 http://go.bkpcp.top/mg/cctv4m
-#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="📺 电视频道" score="92.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="114.96" best="no" rank="12" local="no",CCTV4
+#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="电视频道" score="92.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="114.96" best="no" rank="12" local="no",CCTV4
 http://z.b.bkpcp.top/m.php?id=cctv4
-#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="📺 电视频道" score="90.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="41.64" best="no" rank="13" local="no",CCTV4
+#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="电视频道" score="90.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="41.64" best="no" rank="13" local="no",CCTV4
 https://global.cgtn.cicc.media.caton.cloud/master/cgtn-america.m3u8
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="907.43" best="yes" rank="1" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="907.43" best="yes" rank="1" local="no",CCTV5
 http://112.92.129.96:9898/hls/23/index.m3u8
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="568.50" best="no" rank="2" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="568.50" best="no" rank="2" local="no",CCTV5
 http://t.061899.xyz/tl/tl.php?id=cctv5
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="517.07" best="no" rank="3" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="517.07" best="no" rank="3" local="no",CCTV5
 http://27.188.8.27:9901/tsfile/live/0005_1.m3u8
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1135.32" best="no" rank="4" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1135.32" best="no" rank="4" local="no",CCTV5
 http://j.s.bkpcp.top/jj/cctv5
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="704.46" best="no" rank="5" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="704.46" best="no" rank="5" local="no",CCTV5
 http://112.27.235.94:8000/hls/6/index.m3u8
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="484.15" best="no" rank="6" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="484.15" best="no" rank="6" local="no",CCTV5
 http://39.165.39.49:85/tsfile/live/1005_1.m3u8?authid=0%24%C3%A6%C2%B2%C2%B3%C3%A5%EF%BF%BD%E2%80%94%C3%A7%C2%A7%C2%BB%C3%A5%C5%A0%C2%A8%C3%A9%E2%80%A6%E2%80%99%C3%A5%C2%BA%E2%80%94&key=txiptv&playlive=0
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="📺 电视频道" score="95.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="212.60" best="no" rank="7" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="95.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="212.60" best="no" rank="7" local="no",CCTV5
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv5p
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="📺 电视频道" score="95.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="209.22" best="no" rank="8" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="95.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="209.22" best="no" rank="8" local="no",CCTV5
 http://z.b.bkpcp.top/m.php?id=cctv5
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="📺 电视频道" score="94.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="196.84" best="no" rank="9" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="94.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="196.84" best="no" rank="9" local="no",CCTV5
 http://221.7.175.154:8445/tsfile/live/0113_1.m3u8?authid=0%24%C3%A5%C2%B9%C2%BF%C3%A8%C2%A5%C2%BF%C3%A5%C5%92%E2%80%94%C3%A6%C2%B5%C2%B7%C3%A8%EF%BF%BD%E2%80%9D%C3%A9%E2%82%AC%C5%A1&key=txiptv&playlive=1
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="📺 电视频道" score="94.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="185.07" best="no" rank="10" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="94.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="185.07" best="no" rank="10" local="no",CCTV5
 http://112.27.235.94:8000/hls/5/index.m3u8
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="📺 电视频道" score="94.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="172.97" best="no" rank="11" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="94.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="172.97" best="no" rank="11" local="no",CCTV5
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv5
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="📺 电视频道" score="94.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="170.62" best="no" rank="12" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="94.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="170.62" best="no" rank="12" local="no",CCTV5
 http://221.7.175.154:8445/tsfile/live/1018_1.m3u8?authid=0%24%C3%A5%C2%B9%C2%BF%C3%A8%C2%A5%C2%BF%C3%A5%C5%92%E2%80%94%C3%A6%C2%B5%C2%B7%C3%A8%EF%BF%BD%E2%80%9D%C3%A9%E2%82%AC%C5%A1&key=txiptv&playlive=1
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="📺 电视频道" score="93.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="151.93" best="no" rank="13" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="93.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="151.93" best="no" rank="13" local="no",CCTV5
 http://j.s.bkpcp.top/jj/cctv5p
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="📺 电视频道" score="93.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="148.28" best="no" rank="14" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="93.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="148.28" best="no" rank="14" local="no",CCTV5
 http://60.10.139.113:8801/hls/15/index.m3u8
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="📺 电视频道" score="93.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="147.07" best="no" rank="15" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="93.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="147.07" best="no" rank="15" local="no",CCTV5
 http://z.b.bkpcp.top/m.php?id=cctv5p
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="📺 电视频道" score="93.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="133.70" best="no" rank="16" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="93.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="133.70" best="no" rank="16" local="no",CCTV5
 http://m.061899.xyz/mg/cctv5p
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="📺 电视频道" score="93.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="128.18" best="no" rank="17" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="93.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="128.18" best="no" rank="17" local="no",CCTV5
 http://k.061899.xyz/k.php?id=cctv5p
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="📺 电视频道" score="92.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="111.36" best="no" rank="18" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="92.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="111.36" best="no" rank="18" local="no",CCTV5
 http://k.061899.xyz/k.php?id=cctv5
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="📺 电视频道" score="92.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="96.54" best="no" rank="19" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="92.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="96.54" best="no" rank="19" local="no",CCTV5
 http://39.165.39.49:85/tsfile/live/1089_1.m3u8?authid=0%24%C3%A6%C2%B2%C2%B3%C3%A5%EF%BF%BD%E2%80%94%C3%A7%C2%A7%C2%BB%C3%A5%C5%A0%C2%A8%C3%A9%E2%80%A6%E2%80%99%C3%A5%C2%BA%E2%80%94&key=txiptv&playlive=0
-#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-6.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="450.24" best="yes" rank="1" local="no",CCTV6
+#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-6.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="450.24" best="yes" rank="1" local="no",CCTV6
 http://120.202.94.181:9446/tsfile/live/0006_1.m3u8?authid=0&key=txiptv&playlive=0
-#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-6.png" group-title="📺 电视频道" score="96.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="335.18" best="no" rank="2" local="no",CCTV6
+#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-6.png" group-title="电视频道" score="96.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="335.18" best="no" rank="2" local="no",CCTV6
 http://192.151.150.154/live/cctv6hd.m3u8
-#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-6.png" group-title="📺 电视频道" score="94.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="195.52" best="no" rank="3" local="no",CCTV6
+#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-6.png" group-title="电视频道" score="94.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="195.52" best="no" rank="3" local="no",CCTV6
 http://112.92.129.96:9898/hls/24/index.m3u8
-#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-6.png" group-title="📺 电视频道" score="94.7" resolution="1440x1080" bitrate="4500000" delay="1.0" blur="597.75" best="no" rank="4" local="no",CCTV6
+#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-6.png" group-title="电视频道" score="94.7" resolution="1440x1080" bitrate="4500000" delay="1.0" blur="597.75" best="no" rank="4" local="no",CCTV6
 http://k.061899.xyz/k.php?id=cctv6
-#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-6.png" group-title="📺 电视频道" score="92.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="104.73" best="no" rank="5" local="no",CCTV6
+#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-6.png" group-title="电视频道" score="92.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="104.73" best="no" rank="5" local="no",CCTV6
 http://1.194.112.165:9003/hls/5/index.m3u8
-#EXTINF:-1 tvg-id="CCTV7" tvg-name="CCTV7" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-7.png" group-title="📺 电视频道" score="97.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="366.76" best="yes" rank="1" local="no",CCTV7
+#EXTINF:-1 tvg-id="CCTV7" tvg-name="CCTV7" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-7.png" group-title="电视频道" score="97.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="366.76" best="yes" rank="1" local="no",CCTV7
 http://221.7.175.154:8445/tsfile/live/1005_1.m3u8?authid=0%24%C3%A5%C2%B9%C2%BF%C3%A8%C2%A5%C2%BF%C3%A5%C5%92%E2%80%94%C3%A6%C2%B5%C2%B7%C3%A8%EF%BF%BD%E2%80%9D%C3%A9%E2%82%AC%C5%A1&key=txiptv&playlive=1
-#EXTINF:-1 tvg-id="CCTV7" tvg-name="CCTV7" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-7.png" group-title="📺 电视频道" score="95.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="222.87" best="no" rank="2" local="no",CCTV7
+#EXTINF:-1 tvg-id="CCTV7" tvg-name="CCTV7" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-7.png" group-title="电视频道" score="95.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="222.87" best="no" rank="2" local="no",CCTV7
 http://112.92.129.96:9898/hls/25/index.m3u8
-#EXTINF:-1 tvg-id="CCTV7" tvg-name="CCTV7" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-7.png" group-title="📺 电视频道" score="95.2" resolution="1920x1080" bitrate="0" delay="1.0" blur="216.06" best="no" rank="3" local="no",CCTV7
+#EXTINF:-1 tvg-id="CCTV7" tvg-name="CCTV7" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-7.png" group-title="电视频道" score="95.2" resolution="1920x1080" bitrate="0" delay="1.0" blur="216.06" best="no" rank="3" local="no",CCTV7
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv7hd
-#EXTINF:-1 tvg-id="CCTV7" tvg-name="CCTV7" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-7.png" group-title="📺 电视频道" score="93.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="153.15" best="no" rank="4" local="no",CCTV7
+#EXTINF:-1 tvg-id="CCTV7" tvg-name="CCTV7" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-7.png" group-title="电视频道" score="93.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="153.15" best="no" rank="4" local="no",CCTV7
 http://60.10.139.113:8801/hls/7/index.m3u8
-#EXTINF:-1 tvg-id="CCTV8" tvg-name="CCTV8" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-8.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="624.46" best="yes" rank="1" local="no",CCTV8
+#EXTINF:-1 tvg-id="CCTV8" tvg-name="CCTV8" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-8.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="624.46" best="yes" rank="1" local="no",CCTV8
 http://198.204.228.26/live/cctv8hd.m3u8
-#EXTINF:-1 tvg-id="CCTV8" tvg-name="CCTV8" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-8.png" group-title="📺 电视频道" score="97.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="381.08" best="no" rank="2" local="no",CCTV8
+#EXTINF:-1 tvg-id="CCTV8" tvg-name="CCTV8" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-8.png" group-title="电视频道" score="97.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="381.08" best="no" rank="2" local="no",CCTV8
 http://m.061899.xyz/mg/cctv8
-#EXTINF:-1 tvg-id="CCTV8" tvg-name="CCTV8" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-8.png" group-title="📺 电视频道" score="93.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="152.92" best="no" rank="3" local="no",CCTV8
+#EXTINF:-1 tvg-id="CCTV8" tvg-name="CCTV8" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-8.png" group-title="电视频道" score="93.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="152.92" best="no" rank="3" local="no",CCTV8
 http://1.31.14.70:54321/hls/14/index.m3u8
-#EXTINF:-1 tvg-id="CCTV8" tvg-name="CCTV8" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-8.png" group-title="📺 电视频道" score="93.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="120.49" best="no" rank="4" local="no",CCTV8
+#EXTINF:-1 tvg-id="CCTV8" tvg-name="CCTV8" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-8.png" group-title="电视频道" score="93.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="120.49" best="no" rank="4" local="no",CCTV8
 http://221.7.175.154:8445/tsfile/live/1006_1.m3u8?authid=0%24%C3%A5%C2%B9%C2%BF%C3%A8%C2%A5%C2%BF%C3%A5%C5%92%E2%80%94%C3%A6%C2%B5%C2%B7%C3%A8%EF%BF%BD%E2%80%9D%C3%A9%E2%82%AC%C5%A1&key=txiptv&playlive=1
-#EXTINF:-1 tvg-id="CCTV8" tvg-name="CCTV8" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-8.png" group-title="📺 电视频道" score="91.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="69.65" best="no" rank="5" local="no",CCTV8
+#EXTINF:-1 tvg-id="CCTV8" tvg-name="CCTV8" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-8.png" group-title="电视频道" score="91.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="69.65" best="no" rank="5" local="no",CCTV8
 http://39.165.39.49:85/tsfile/live/1008_1.m3u8?authid=0%24%C3%A6%C2%B2%C2%B3%C3%A5%EF%BF%BD%E2%80%94%C3%A7%C2%A7%C2%BB%C3%A5%C5%A0%C2%A8%C3%A9%E2%80%A6%E2%80%99%C3%A5%C2%BA%E2%80%94&key=txiptv&playlive=0
-#EXTINF:-1 tvg-id="CCTV8" tvg-name="CCTV8" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-8.png" group-title="📺 电视频道" score="90.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="31.71" best="no" rank="6" local="no",CCTV8
+#EXTINF:-1 tvg-id="CCTV8" tvg-name="CCTV8" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-8.png" group-title="电视频道" score="90.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="31.71" best="no" rank="6" local="no",CCTV8
 http://112.92.129.96:9898/hls/26/index.m3u8
-#EXTINF:-1 tvg-id="CCTV9" tvg-name="CCTV9" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-9.png" group-title="📺 电视频道" score="96.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="301.38" best="yes" rank="1" local="no",CCTV9
+#EXTINF:-1 tvg-id="CCTV9" tvg-name="CCTV9" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-9.png" group-title="电视频道" score="96.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="301.38" best="yes" rank="1" local="no",CCTV9
 http://go.bkpcp.top/mg/cctv9
-#EXTINF:-1 tvg-id="CCTV9" tvg-name="CCTV9" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-9.png" group-title="📺 电视频道" score="95.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="229.02" best="no" rank="2" local="no",CCTV9
+#EXTINF:-1 tvg-id="CCTV9" tvg-name="CCTV9" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-9.png" group-title="电视频道" score="95.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="229.02" best="no" rank="2" local="no",CCTV9
 http://t.061899.xyz/tl/tl.php?id=cctv9
-#EXTINF:-1 tvg-id="CCTV9" tvg-name="CCTV9" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-9.png" group-title="📺 电视频道" score="94.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="186.26" best="no" rank="3" local="no",CCTV9
+#EXTINF:-1 tvg-id="CCTV9" tvg-name="CCTV9" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-9.png" group-title="电视频道" score="94.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="186.26" best="no" rank="3" local="no",CCTV9
 http://27.188.8.27:9901/tsfile/live/0009_1.m3u8
-#EXTINF:-1 tvg-id="CCTV9" tvg-name="CCTV9" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-9.png" group-title="📺 电视频道" score="93.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="122.97" best="no" rank="4" local="no",CCTV9
+#EXTINF:-1 tvg-id="CCTV9" tvg-name="CCTV9" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-9.png" group-title="电视频道" score="93.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="122.97" best="no" rank="4" local="no",CCTV9
 http://60.10.139.113:8801/hls/9/index.m3u8
-#EXTINF:-1 tvg-id="CCTV9" tvg-name="CCTV9" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-9.png" group-title="📺 电视频道" score="92.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="83.91" best="no" rank="5" local="no",CCTV9
+#EXTINF:-1 tvg-id="CCTV9" tvg-name="CCTV9" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-9.png" group-title="电视频道" score="92.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="83.91" best="no" rank="5" local="no",CCTV9
 http://j.s.bkpcp.top/jj/cctv9
-#EXTINF:-1 tvg-id="CCTV10" tvg-name="CCTV10" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-10.png" group-title="📺 电视频道" score="96.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="322.76" best="yes" rank="1" local="no",CCTV10
+#EXTINF:-1 tvg-id="CCTV10" tvg-name="CCTV10" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-10.png" group-title="电视频道" score="96.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="322.76" best="yes" rank="1" local="no",CCTV10
 http://60.10.139.113:8801/hls/10/index.m3u8
-#EXTINF:-1 tvg-id="CCTV10" tvg-name="CCTV10" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-10.png" group-title="📺 电视频道" score="95.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="246.63" best="no" rank="2" local="no",CCTV10
+#EXTINF:-1 tvg-id="CCTV10" tvg-name="CCTV10" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-10.png" group-title="电视频道" score="95.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="246.63" best="no" rank="2" local="no",CCTV10
 http://112.92.129.96:9898/hls/28/index.m3u8
-#EXTINF:-1 tvg-id="CCTV10" tvg-name="CCTV10" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-10.png" group-title="📺 电视频道" score="95.2" resolution="1920x1080" bitrate="0" delay="1.0" blur="217.12" best="no" rank="3" local="no",CCTV10
+#EXTINF:-1 tvg-id="CCTV10" tvg-name="CCTV10" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-10.png" group-title="电视频道" score="95.2" resolution="1920x1080" bitrate="0" delay="1.0" blur="217.12" best="no" rank="3" local="no",CCTV10
 http://222.214.208.34:59901/tsfile/live/0010_1.m3u8
-#EXTINF:-1 tvg-id="CCTV10" tvg-name="CCTV10" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-10.png" group-title="📺 电视频道" score="93.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="129.93" best="no" rank="4" local="no",CCTV10
+#EXTINF:-1 tvg-id="CCTV10" tvg-name="CCTV10" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-10.png" group-title="电视频道" score="93.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="129.93" best="no" rank="4" local="no",CCTV10
 http://112.27.235.94:8000/hls/11/index.m3u8
-#EXTINF:-1 tvg-id="CCTV10" tvg-name="CCTV10" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-10.png" group-title="📺 电视频道" score="92.2" resolution="1920x1080" bitrate="0" delay="1.0" blur="88.81" best="no" rank="5" local="no",CCTV10
+#EXTINF:-1 tvg-id="CCTV10" tvg-name="CCTV10" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-10.png" group-title="电视频道" score="92.2" resolution="1920x1080" bitrate="0" delay="1.0" blur="88.81" best="no" rank="5" local="no",CCTV10
 http://z.b.bkpcp.top/m.php?id=cctv10
-#EXTINF:-1 tvg-id="CCTV11" tvg-name="CCTV11" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-11.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="576.29" best="yes" rank="1" local="no",CCTV11
+#EXTINF:-1 tvg-id="CCTV11" tvg-name="CCTV11" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-11.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="576.29" best="yes" rank="1" local="no",CCTV11
 http://39.165.39.49:85/tsfile/live/1011_1.m3u8?authid=0%24%C3%A6%C2%B2%C2%B3%C3%A5%EF%BF%BD%E2%80%94%C3%A7%C2%A7%C2%BB%C3%A5%C5%A0%C2%A8%C3%A9%E2%80%A6%E2%80%99%C3%A5%C2%BA%E2%80%94&key=txiptv&playlive=0
-#EXTINF:-1 tvg-id="CCTV11" tvg-name="CCTV11" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-11.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="694.32" best="no" rank="2" local="no",CCTV11
+#EXTINF:-1 tvg-id="CCTV11" tvg-name="CCTV11" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-11.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="694.32" best="no" rank="2" local="no",CCTV11
 http://1.194.112.165:9003/hls/10/index.m3u8
-#EXTINF:-1 tvg-id="CCTV11" tvg-name="CCTV11" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-11.png" group-title="📺 电视频道" score="96.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="267.91" best="no" rank="3" local="no",CCTV11
+#EXTINF:-1 tvg-id="CCTV11" tvg-name="CCTV11" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-11.png" group-title="电视频道" score="96.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="267.91" best="no" rank="3" local="no",CCTV11
 http://z.b.bkpcp.top/m.php?id=cctv11
-#EXTINF:-1 tvg-id="CCTV11" tvg-name="CCTV11" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-11.png" group-title="📺 电视频道" score="95.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="255.50" best="no" rank="4" local="no",CCTV11
+#EXTINF:-1 tvg-id="CCTV11" tvg-name="CCTV11" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-11.png" group-title="电视频道" score="95.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="255.50" best="no" rank="4" local="no",CCTV11
 http://60.10.139.113:8801/hls/96/index.m3u8
-#EXTINF:-1 tvg-id="CCTV11" tvg-name="CCTV11" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-11.png" group-title="📺 电视频道" score="93.2" resolution="1920x1080" bitrate="0" delay="1.0" blur="123.41" best="no" rank="5" local="no",CCTV11
+#EXTINF:-1 tvg-id="CCTV11" tvg-name="CCTV11" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-11.png" group-title="电视频道" score="93.2" resolution="1920x1080" bitrate="0" delay="1.0" blur="123.41" best="no" rank="5" local="no",CCTV11
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv11
-#EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV12" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-12.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="695.61" best="yes" rank="1" local="no",CCTV12
+#EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV12" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-12.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="695.61" best="yes" rank="1" local="no",CCTV12
 http://j.s.bkpcp.top/jj/cctv12
-#EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV12" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-12.png" group-title="📺 电视频道" score="96.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="264.89" best="no" rank="2" local="no",CCTV12
+#EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV12" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-12.png" group-title="电视频道" score="96.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="264.89" best="no" rank="2" local="no",CCTV12
 http://221.7.175.154:8445/tsfile/live/1010_1.m3u8?authid=0%24%C3%A5%C2%B9%C2%BF%C3%A8%C2%A5%C2%BF%C3%A5%C5%92%E2%80%94%C3%A6%C2%B5%C2%B7%C3%A8%EF%BF%BD%E2%80%9D%C3%A9%E2%82%AC%C5%A1&key=txiptv&playlive=1
-#EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV12" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-12.png" group-title="📺 电视频道" score="94.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="186.16" best="no" rank="3" local="no",CCTV12
+#EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV12" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-12.png" group-title="电视频道" score="94.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="186.16" best="no" rank="3" local="no",CCTV12
 http://60.10.139.113:8801/hls/11/index.m3u8
-#EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV12" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-12.png" group-title="📺 电视频道" score="93.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="146.39" best="no" rank="4" local="no",CCTV12
+#EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV12" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-12.png" group-title="电视频道" score="93.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="146.39" best="no" rank="4" local="no",CCTV12
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv12hd
-#EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV12" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-12.png" group-title="📺 电视频道" score="92.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="114.33" best="no" rank="5" local="no",CCTV12
+#EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV12" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-12.png" group-title="电视频道" score="92.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="114.33" best="no" rank="5" local="no",CCTV12
 http://1.194.112.165:9003/hls/11/index.m3u8
-#EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV12" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-12.png" group-title="📺 电视频道" score="92.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="95.40" best="no" rank="6" local="no",CCTV12
+#EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV12" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-12.png" group-title="电视频道" score="92.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="95.40" best="no" rank="6" local="no",CCTV12
 http://k.061899.xyz/k.php?id=cctv12
-#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-13.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="3599360" delay="1.0" blur="1224.33" best="yes" rank="1" local="no",CCTV13
+#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-13.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="3599360" delay="1.0" blur="1224.33" best="yes" rank="1" local="no",CCTV13
 http://z.b.bkpcp.top/m.php?id=cctv13
-#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-13.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="3599360" delay="1.0" blur="1244.75" best="no" rank="2" local="no",CCTV13
+#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-13.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="3599360" delay="1.0" blur="1244.75" best="no" rank="2" local="no",CCTV13
 http://go.bkpcp.top/mg/cctv13
-#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-13.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="3599360" delay="1.0" blur="1845.10" best="no" rank="3" local="no",CCTV13
+#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-13.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="3599360" delay="1.0" blur="1845.10" best="no" rank="3" local="no",CCTV13
 http://j.s.bkpcp.top/jj/cctv13
-#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-13.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="3599360" delay="1.0" blur="753.61" best="no" rank="4" local="no",CCTV13
+#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-13.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="3599360" delay="1.0" blur="753.61" best="no" rank="4" local="no",CCTV13
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv13
-#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-13.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="3599360" delay="1.0" blur="2001.81" best="no" rank="5" local="no",CCTV13
+#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-13.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="3599360" delay="1.0" blur="2001.81" best="no" rank="5" local="no",CCTV13
 http://k.061899.xyz/k.php?id=cctv13
-#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-13.png" group-title="📺 电视频道" score="94.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="161.91" best="no" rank="6" local="no",CCTV13
+#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-13.png" group-title="电视频道" score="94.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="161.91" best="no" rank="6" local="no",CCTV13
 http://60.10.139.113:8801/hls/12/index.m3u8
-#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-13.png" group-title="📺 电视频道" score="93.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="154.90" best="no" rank="7" local="no",CCTV13
+#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-13.png" group-title="电视频道" score="93.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="154.90" best="no" rank="7" local="no",CCTV13
 http://221.7.175.154:8445/tsfile/live/1011_1.m3u8?authid=0%24%C3%A5%C2%B9%C2%BF%C3%A8%C2%A5%C2%BF%C3%A5%C5%92%E2%80%94%C3%A6%C2%B5%C2%B7%C3%A8%EF%BF%BD%E2%80%9D%C3%A9%E2%82%AC%C5%A1&key=txiptv&playlive=1
-#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="751.91" best="yes" rank="1" local="no",东方卫视
+#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="751.91" best="yes" rank="1" local="no",东方卫视
 http://112.27.235.94:8000/hls/28/index.m3u8
-#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="631.90" best="no" rank="2" local="no",东方卫视
+#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="631.90" best="no" rank="2" local="no",东方卫视
 http://bp-resource-dfl.bestv.cn/148/3/video.m3u8
-#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="574.15" best="no" rank="3" local="no",东方卫视
+#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="574.15" best="no" rank="3" local="no",东方卫视
 http://120.76.248.139/live/bfgd/4200000093.m3u8
-#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1163.03" best="no" rank="4" local="no",东方卫视
+#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1163.03" best="no" rank="4" local="no",东方卫视
 http://60.10.139.113:8801/hls/22/index.m3u8
-#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="96.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="326.13" best="no" rank="5" local="no",东方卫视
+#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="96.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="326.13" best="no" rank="5" local="no",东方卫视
 http://bp-resource-dfl.bestv.cn/155/3/video.m3u8
-#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="96.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="311.02" best="no" rank="6" local="no",东方卫视
+#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="96.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="311.02" best="no" rank="6" local="no",东方卫视
 http://111.61.236.247:9081/hls/40/index.m3u8
-#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="95.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="248.18" best="no" rank="7" local="no",东方卫视
+#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="95.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="248.18" best="no" rank="7" local="no",东方卫视
 https://bp-resource-dfl.bestv.cn/148/3/video.m3u8
-#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="94.2" resolution="1920x1080" bitrate="0" delay="1.0" blur="166.52" best="no" rank="8" local="no",东方卫视
+#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="94.2" resolution="1920x1080" bitrate="0" delay="1.0" blur="166.52" best="no" rank="8" local="no",东方卫视
 http://1.194.112.165:9003/hls/17/index.m3u8
-#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="93.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="141.70" best="no" rank="9" local="no",东方卫视
+#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="93.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="141.70" best="no" rank="9" local="no",东方卫视
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=dfws
-#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="91.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="57.86" best="no" rank="10" local="no",东方卫视
+#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="91.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="57.86" best="no" rank="10" local="no",东方卫视
 http://k.061899.xyz/k.php?id=dfws
-#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="90.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="45.28" best="no" rank="11" local="no",东方卫视
+#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="90.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="45.28" best="no" rank="11" local="no",东方卫视
 http://107.150.60.122/live/dfwshd.m3u8
-#EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="537.08" best="yes" rank="1" local="no",云南卫视
+#EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="537.08" best="yes" rank="1" local="no",云南卫视
 http://120.76.248.139/live/bfgd/4200000482.m3u8
-#EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1047.38" best="no" rank="2" local="no",云南卫视
+#EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1047.38" best="no" rank="2" local="no",云南卫视
 http://107.150.60.122/live/ynwshd.m3u8
-#EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="459.98" best="no" rank="3" local="no",云南卫视
+#EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="459.98" best="no" rank="3" local="no",云南卫视
 http://112.27.235.94:8000/hls/40/index.m3u8
-#EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="393.49" best="no" rank="4" local="no",云南卫视
+#EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="393.49" best="no" rank="4" local="no",云南卫视
 http://1.194.112.165:9003/hls/32/index.m3u8
-#EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="95.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="258.83" best="yes" rank="1" local="no",北京卫视
+#EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="95.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="258.83" best="yes" rank="1" local="no",北京卫视
 http://60.10.139.113:8801/hls/20/index.m3u8
-#EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="93.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="137.16" best="no" rank="2" local="no",北京卫视
+#EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="93.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="137.16" best="no" rank="2" local="no",北京卫视
 http://j.s.bkpcp.top/jj/bjws
-#EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="91.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="61.10" best="no" rank="3" local="no",北京卫视
+#EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="91.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="61.10" best="no" rank="3" local="no",北京卫视
 http://192.151.150.154/live/bjwshd.m3u8
-#EXTINF:-1 tvg-id="吉林卫视" tvg-name="吉林卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="90.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="39.34" best="yes" rank="1" local="no",吉林卫视
+#EXTINF:-1 tvg-id="吉林卫视" tvg-name="吉林卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="90.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="39.34" best="yes" rank="1" local="no",吉林卫视
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=jlwshd
-#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1594.61" best="yes" rank="1" local="no",四川卫视
+#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1594.61" best="yes" rank="1" local="no",四川卫视
 http://27.188.8.27:9901/tsfile/live/0123_1.m3u8
-#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="2139.26" best="no" rank="2" local="no",四川卫视
+#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="2139.26" best="no" rank="2" local="no",四川卫视
 http://107.150.60.122/live/scwshd.m3u8
-#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1014.97" best="no" rank="3" local="no",四川卫视
+#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1014.97" best="no" rank="3" local="no",四川卫视
 http://198.204.228.26/live/scwshd.m3u8
-#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="2544.51" best="no" rank="4" local="no",四川卫视
+#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="2544.51" best="no" rank="4" local="no",四川卫视
 http://120.76.248.139/live/bfgd/4200000103.m3u8
-#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1386.77" best="no" rank="5" local="no",四川卫视
+#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1386.77" best="no" rank="5" local="no",四川卫视
 https://t.freetv.fun/live/si-chuan-wei-shi-7.m3u8
-#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1275.04" best="no" rank="6" local="no",四川卫视
+#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1275.04" best="no" rank="6" local="no",四川卫视
 https://t.freetv.fun/live/si-chuan-wei-shi-10.php
-#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="979.77" best="no" rank="7" local="no",四川卫视
+#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="979.77" best="no" rank="7" local="no",四川卫视
 https://live.264788.xyz/channel/sichuanweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=5386c588d4bbd34f863c7366b934f9d0
-#EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="527.87" best="yes" rank="1" local="no",天津卫视
+#EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="527.87" best="yes" rank="1" local="no",天津卫视
 http://60.10.139.113:8801/hls/23/index.m3u8
-#EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="366.51" best="no" rank="2" local="no",天津卫视
+#EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="366.51" best="no" rank="2" local="no",天津卫视
 http://1.194.112.165:9003/hls/31/index.m3u8
-#EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="92.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="94.26" best="no" rank="3" local="no",天津卫视
+#EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="92.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="94.26" best="no" rank="3" local="no",天津卫视
 http://1.31.14.70:54321/hls/26/index.m3u8
-#EXTINF:-1 tvg-id="安徽卫视" tvg-name="安徽卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="722.79" best="yes" rank="1" local="no",安徽卫视
+#EXTINF:-1 tvg-id="安徽卫视" tvg-name="安徽卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="722.79" best="yes" rank="1" local="no",安徽卫视
 http://107.150.60.122/live/ahwshd.m3u8
-#EXTINF:-1 tvg-id="安徽卫视" tvg-name="安徽卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="95.2" resolution="1920x1080" bitrate="0" delay="1.0" blur="215.50" best="no" rank="2" local="no",安徽卫视
+#EXTINF:-1 tvg-id="安徽卫视" tvg-name="安徽卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="95.2" resolution="1920x1080" bitrate="0" delay="1.0" blur="215.50" best="no" rank="2" local="no",安徽卫视
 https://live.264788.xyz/channel/anhuiweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=fb8fe141f6787a1c084cd093425acf4d
-#EXTINF:-1 tvg-id="安徽卫视" tvg-name="安徽卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="94.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="159.75" best="no" rank="3" local="no",安徽卫视
+#EXTINF:-1 tvg-id="安徽卫视" tvg-name="安徽卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="94.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="159.75" best="no" rank="3" local="no",安徽卫视
 http://111.61.236.247:9081/hls/27/index.m3u8
-#EXTINF:-1 tvg-id="安徽卫视" tvg-name="安徽卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="93.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="137.51" best="no" rank="4" local="no",安徽卫视
+#EXTINF:-1 tvg-id="安徽卫视" tvg-name="安徽卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="93.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="137.51" best="no" rank="4" local="no",安徽卫视
 http://60.10.139.113:8801/hls/99/index.m3u8
-#EXTINF:-1 tvg-id="安徽卫视" tvg-name="安徽卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="92.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="114.16" best="no" rank="5" local="no",安徽卫视
+#EXTINF:-1 tvg-id="安徽卫视" tvg-name="安徽卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="92.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="114.16" best="no" rank="5" local="no",安徽卫视
 http://112.27.235.94:8000/hls/26/index.m3u8
-#EXTINF:-1 tvg-id="山东卫视" tvg-name="山东卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="95.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="242.91" best="yes" rank="1" local="no",山东卫视
+#EXTINF:-1 tvg-id="山东卫视" tvg-name="山东卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="95.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="242.91" best="yes" rank="1" local="no",山东卫视
 http://1.194.112.165:9003/hls/21/index.m3u8
-#EXTINF:-1 tvg-id="山东卫视" tvg-name="山东卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="93.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="145.61" best="no" rank="2" local="no",山东卫视
+#EXTINF:-1 tvg-id="山东卫视" tvg-name="山东卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="93.7" resolution="1920x1080" bitrate="0" delay="1.0" blur="145.61" best="no" rank="2" local="no",山东卫视
 http://107.150.60.122/live/sdwshd.m3u8
-#EXTINF:-1 tvg-id="山东卫视" tvg-name="山东卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="93.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="122.55" best="no" rank="3" local="no",山东卫视
+#EXTINF:-1 tvg-id="山东卫视" tvg-name="山东卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="93.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="122.55" best="no" rank="3" local="no",山东卫视
 https://t.freetv.fun/live/shan-dong-wei-shi-8.m3u8
-#EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="93.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="117.29" best="yes" rank="1" local="no",山西卫视
+#EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="93.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="117.29" best="yes" rank="1" local="no",山西卫视
 http://119.39.9.8:9901/tsfile/live/0118_1.m3u8
-#EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="92.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="114.19" best="no" rank="2" local="no",山西卫视
+#EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="92.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="114.19" best="no" rank="2" local="no",山西卫视
 https://t.freetv.fun/live/shan-xi-wei-shi-3-2.m3u8
-#EXTINF:-1 tvg-id="广东卫视" tvg-name="广东卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B9%BF%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="92.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="111.45" best="yes" rank="1" local="no",广东卫视
+#EXTINF:-1 tvg-id="广东卫视" tvg-name="广东卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B9%BF%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="92.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="111.45" best="yes" rank="1" local="no",广东卫视
 http://113.88.74.1:8086/hls/44/index.m3u8
-#EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B9%BF%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="765.76" best="yes" rank="1" local="no",广西卫视
+#EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B9%BF%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="765.76" best="yes" rank="1" local="no",广西卫视
 http://111.61.236.247:9081/hls/44/index.m3u8
-#EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B9%BF%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="96.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="265.55" best="no" rank="2" local="no",广西卫视
+#EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B9%BF%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="96.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="265.55" best="no" rank="2" local="no",广西卫视
 https://live.264788.xyz/channel/guangxiweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=b3bc55706bd074b608a3b955fbffea4b
-#EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B9%BF%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="95.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="235.71" best="no" rank="3" local="no",广西卫视
+#EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B9%BF%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="95.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="235.71" best="no" rank="3" local="no",广西卫视
 http://1.194.112.165:9003/hls/56/index.m3u8
-#EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B9%BF%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="92.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="83.71" best="no" rank="4" local="no",广西卫视
+#EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B9%BF%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="92.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="83.71" best="no" rank="4" local="no",广西卫视
 http://60.10.139.113:8801/hls/52/index.m3u8
-#EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B9%BF%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="91.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="57.72" best="no" rank="5" local="no",广西卫视
+#EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%B9%BF%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="91.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="57.72" best="no" rank="5" local="no",广西卫视
 http://192.151.150.154/live/gxwshd.m3u8
-#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="93.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="117.17" best="yes" rank="1" local="no",江苏卫视
+#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="93.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="117.17" best="yes" rank="1" local="no",江苏卫视
 http://t.061899.xyz/tl/tl.php?id=jsws
-#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="92.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="99.61" best="no" rank="2" local="no",江苏卫视
+#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="92.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="99.61" best="no" rank="2" local="no",江苏卫视
 http://60.10.139.113:8801/hls/19/index.m3u8
-#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="92.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="89.83" best="no" rank="3" local="no",江苏卫视
+#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="92.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="89.83" best="no" rank="3" local="no",江苏卫视
 http://go.bkpcp.top/mg/jsws
-#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="91.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="53.04" best="no" rank="4" local="no",江苏卫视
+#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="91.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="53.04" best="no" rank="4" local="no",江苏卫视
 http://m.061899.xyz/mg/jsws
-#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="91.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="51.25" best="no" rank="5" local="no",江苏卫视
+#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="91.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="51.25" best="no" rank="5" local="no",江苏卫视
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=jsws
-#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="90.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="46.66" best="no" rank="6" local="no",江苏卫视
+#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="90.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="46.66" best="no" rank="6" local="no",江苏卫视
 http://k.061899.xyz/k.php?id=jsws
-#EXTINF:-1 tvg-id="江西卫视" tvg-name="江西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B1%9F%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="95.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="242.73" best="yes" rank="1" local="no",江西卫视
+#EXTINF:-1 tvg-id="江西卫视" tvg-name="江西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B1%9F%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="95.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="242.73" best="yes" rank="1" local="no",江西卫视
 http://k.061899.xyz/k.php?id=jxws
-#EXTINF:-1 tvg-id="江西卫视" tvg-name="江西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B1%9F%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="95.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="220.99" best="no" rank="2" local="no",江西卫视
+#EXTINF:-1 tvg-id="江西卫视" tvg-name="江西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B1%9F%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="95.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="220.99" best="no" rank="2" local="no",江西卫视
 http://60.10.139.113:8801/hls/37/index.m3u8
-#EXTINF:-1 tvg-id="河北卫视" tvg-name="河北卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="454.32" best="yes" rank="1" local="no",河北卫视
+#EXTINF:-1 tvg-id="河北卫视" tvg-name="河北卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="454.32" best="yes" rank="1" local="no",河北卫视
 http://1.194.112.165:9003/hls/51/index.m3u8
-#EXTINF:-1 tvg-id="河北卫视" tvg-name="河北卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="95.2" resolution="1920x1080" bitrate="0" delay="1.0" blur="216.14" best="no" rank="2" local="no",河北卫视
+#EXTINF:-1 tvg-id="河北卫视" tvg-name="河北卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="95.2" resolution="1920x1080" bitrate="0" delay="1.0" blur="216.14" best="no" rank="2" local="no",河北卫视
 http://60.10.139.113:8801/hls/16/index.m3u8
-#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="483.76" best="yes" rank="1" local="no",河南卫视
+#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="483.76" best="yes" rank="1" local="no",河南卫视
 https://tv1288.xyz/hntv.php
-#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="483.76" best="no" rank="2" local="no",河南卫视
+#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="483.76" best="no" rank="2" local="no",河南卫视
 http://1.94.31.214/php/hntv.php?id=hnws
-#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="760.73" best="no" rank="3" local="no",河南卫视
+#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="760.73" best="no" rank="3" local="no",河南卫视
 http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=bb687091c9bbaf442cd147fd38ab1f2a&wsTime=1777651179
-#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="488.93" best="no" rank="4" local="no",河南卫视
+#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="488.93" best="no" rank="4" local="no",河南卫视
 http://k.061899.xyz/k.php?id=hnws
-#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.2" resolution="1920x1080" bitrate="0" delay="1.0" blur="355.41" best="no" rank="5" local="no",河南卫视
+#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.2" resolution="1920x1080" bitrate="0" delay="1.0" blur="355.41" best="no" rank="5" local="no",河南卫视
 http://1.69.112.16:9901/tsfile/live/0139_1.m3u8
-#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.2" resolution="1920x1080" bitrate="0" delay="1.0" blur="353.27" best="no" rank="6" local="no",河南卫视
+#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.2" resolution="1920x1080" bitrate="0" delay="1.0" blur="353.27" best="no" rank="6" local="no",河南卫视
 https://t.freetv.fun/live/he-nan-wei-shi-13.php
-#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="352.77" best="no" rank="7" local="no",河南卫视
+#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="352.77" best="no" rank="7" local="no",河南卫视
 http://1.94.31.214/php/hntv.php?id=hnws#http://lxajh.top/tv/hn.php?id=hnws
-#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="338.63" best="no" rank="8" local="no",河南卫视
+#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="338.63" best="no" rank="8" local="no",河南卫视
 http://120.211.62.180:8000/hls/40/index.m3u8
-#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="96.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="309.90" best="no" rank="9" local="no",河南卫视
+#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="96.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="309.90" best="no" rank="9" local="no",河南卫视
 http://60.10.139.113:8801/hls/32/index.m3u8
-#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="95.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="256.04" best="no" rank="10" local="no",河南卫视
+#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="95.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="256.04" best="no" rank="10" local="no",河南卫视
 https://t.freetv.fun/live/he-nan-wei-shi-13.php$LR•14•IPV4『线路4』
-#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="95.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="254.67" best="no" rank="11" local="no",河南卫视
+#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="95.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="254.67" best="no" rank="11" local="no",河南卫视
 http://go.bkpcp.top/mg/hnws
-#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="95.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="205.19" best="no" rank="12" local="no",河南卫视
+#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="95.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="205.19" best="no" rank="12" local="no",河南卫视
 http://j.s.bkpcp.top/jj/hnws
-#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="377.59" best="yes" rank="1" local="no",浙江卫视
+#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="377.59" best="yes" rank="1" local="no",浙江卫视
 https://play-qukan.cztv.com/live/1746687519046362.m3u8
-#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="94.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="198.67" best="no" rank="2" local="no",浙江卫视
+#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="94.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="198.67" best="no" rank="2" local="no",浙江卫视
 http://111.61.236.247:9081/hls/25/index.m3u8
-#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="94.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="178.45" best="no" rank="3" local="no",浙江卫视
+#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="94.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="178.45" best="no" rank="3" local="no",浙江卫视
 https://live.264788.xyz/channel/zhejiangweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=f48e0bb7d67c931727ebb8fcd97bdfd3
-#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="94.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="175.75" best="no" rank="4" local="no",浙江卫视
+#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="94.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="175.75" best="no" rank="4" local="no",浙江卫视
 http://60.10.139.113:8801/hls/18/index.m3u8
-#EXTINF:-1 tvg-id="海南卫视" tvg-name="海南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="835.08" best="yes" rank="1" local="no",海南卫视
+#EXTINF:-1 tvg-id="海南卫视" tvg-name="海南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="835.08" best="yes" rank="1" local="no",海南卫视
 https://live.264788.xyz/channel/hainanweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=d80f78b33df0a139d4d22b44e645b9e8
-#EXTINF:-1 tvg-id="湖北卫视" tvg-name="湖北卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="990.18" best="yes" rank="1" local="no",湖北卫视
+#EXTINF:-1 tvg-id="湖北卫视" tvg-name="湖北卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="990.18" best="yes" rank="1" local="no",湖北卫视
 http://1.194.112.165:9003/hls/30/index.m3u8
-#EXTINF:-1 tvg-id="湖北卫视" tvg-name="湖北卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1025.65" best="no" rank="2" local="no",湖北卫视
+#EXTINF:-1 tvg-id="湖北卫视" tvg-name="湖北卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1025.65" best="no" rank="2" local="no",湖北卫视
 http://27.188.8.27:9901/tsfile/live/0132_1.m3u8
-#EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="100.0" resolution="3840x2160" bitrate="0" delay="1.0" blur="27.97" best="yes" rank="1" local="no",湖南卫视
+#EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="100.0" resolution="3840x2160" bitrate="0" delay="1.0" blur="27.97" best="yes" rank="1" local="no",湖南卫视
 http://t.061899.xyz/tl/tl.php?id=hunws
-#EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="100.0" resolution="3840x2160" bitrate="0" delay="1.0" blur="23.68" best="no" rank="2" local="no",湖南卫视
+#EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="100.0" resolution="3840x2160" bitrate="0" delay="1.0" blur="23.68" best="no" rank="2" local="no",湖南卫视
 http://8.138.7.223/tv/api.php?id=hnws4k
-#EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="100.0" resolution="3840x2160" bitrate="0" delay="1.0" blur="14.96" best="no" rank="3" local="no",湖南卫视
+#EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="100.0" resolution="3840x2160" bitrate="0" delay="1.0" blur="14.96" best="no" rank="3" local="no",湖南卫视
 http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8
-#EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="100.0" resolution="3840x2160" bitrate="0" delay="1.0" blur="14.96" best="no" rank="4" local="no",湖南卫视
+#EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="100.0" resolution="3840x2160" bitrate="0" delay="1.0" blur="14.96" best="no" rank="4" local="no",湖南卫视
 http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/dWlwPTEyNy4wLjAuMSZ1aWQ9cWluZy1jbXMmbm5fdGltZXpvbmU9OCZjZG5leF9pZD1hbF9obHNfbGR2dCZ1dWlkPTliODY4NmU5ZTM2YzYwMmMmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8
-#EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="93.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="141.89" best="no" rank="5" local="no",湖南卫视
+#EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="93.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="141.89" best="no" rank="5" local="no",湖南卫视
 http://60.10.139.113:8801/hls/17/index.m3u8
-#EXTINF:-1 tvg-id="甘肃卫视" tvg-name="甘肃卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E7%94%98%E8%82%83%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="94.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="161.87" best="yes" rank="1" local="no",甘肃卫视
+#EXTINF:-1 tvg-id="甘肃卫视" tvg-name="甘肃卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E7%94%98%E8%82%83%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="94.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="161.87" best="yes" rank="1" local="no",甘肃卫视
 http://1.194.112.165:9003/hls/61/index.m3u8
-#EXTINF:-1 tvg-id="甘肃卫视" tvg-name="甘肃卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E7%94%98%E8%82%83%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="92.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="83.01" best="no" rank="2" local="no",甘肃卫视
+#EXTINF:-1 tvg-id="甘肃卫视" tvg-name="甘肃卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E7%94%98%E8%82%83%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="92.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="83.01" best="no" rank="2" local="no",甘肃卫视
 http://192.151.150.154/live/gswshd.m3u8
-#EXTINF:-1 tvg-id="贵州卫视" tvg-name="贵州卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="94.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="200.37" best="yes" rank="1" local="no",贵州卫视
+#EXTINF:-1 tvg-id="贵州卫视" tvg-name="贵州卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="94.9" resolution="1920x1080" bitrate="0" delay="1.0" blur="200.37" best="yes" rank="1" local="no",贵州卫视
 http://107.150.60.122/live/gzwshd.m3u8
-#EXTINF:-1 tvg-id="贵州卫视" tvg-name="贵州卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="92.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="82.58" best="no" rank="2" local="no",贵州卫视
+#EXTINF:-1 tvg-id="贵州卫视" tvg-name="贵州卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="92.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="82.58" best="no" rank="2" local="no",贵州卫视
 http://198.204.228.26/live/gzwshd.m3u8
-#EXTINF:-1 tvg-id="辽宁卫视" tvg-name="辽宁卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="96.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="297.88" best="yes" rank="1" local="no",辽宁卫视
+#EXTINF:-1 tvg-id="辽宁卫视" tvg-name="辽宁卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="96.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="297.88" best="yes" rank="1" local="no",辽宁卫视
 http://60.10.139.113:8801/hls/28/index.m3u8
-#EXTINF:-1 tvg-id="辽宁卫视" tvg-name="辽宁卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="95.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="211.24" best="no" rank="2" local="no",辽宁卫视
+#EXTINF:-1 tvg-id="辽宁卫视" tvg-name="辽宁卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="95.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="211.24" best="no" rank="2" local="no",辽宁卫视
 http://t.061899.xyz/tl/tl.php?id=lnws
-#EXTINF:-1 tvg-id="重庆卫视" tvg-name="重庆卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="346.85" best="yes" rank="1" local="no",重庆卫视
+#EXTINF:-1 tvg-id="重庆卫视" tvg-name="重庆卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="346.85" best="yes" rank="1" local="no",重庆卫视
 http://107.150.60.122/live/cqwshd.m3u8
-#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E9%99%95%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="90.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="29.43" best="yes" rank="1" local="no",陕西卫视
+#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E9%99%95%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="90.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="29.43" best="yes" rank="1" local="no",陕西卫视
 http://192.151.150.154/live/snwshd.m3u8
-#EXTINF:-1 tvg-id="黑龙江卫视" tvg-name="黑龙江卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E9%BB%91%E9%BE%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1108.46" best="yes" rank="1" local="no",黑龙江卫视
+#EXTINF:-1 tvg-id="黑龙江卫视" tvg-name="黑龙江卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E9%BB%91%E9%BE%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1108.46" best="yes" rank="1" local="no",黑龙江卫视
 http://112.27.235.94:8000/hls/48/index.m3u8
-#EXTINF:-1 tvg-id="黑龙江卫视" tvg-name="黑龙江卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E9%BB%91%E9%BE%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1031.79" best="no" rank="2" local="no",黑龙江卫视
+#EXTINF:-1 tvg-id="黑龙江卫视" tvg-name="黑龙江卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E9%BB%91%E9%BE%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1031.79" best="no" rank="2" local="no",黑龙江卫视
 http://192.151.150.154/live/hljwshd.m3u8
-#EXTINF:-1 tvg-id="黑龙江卫视" tvg-name="黑龙江卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E9%BB%91%E9%BE%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="621.76" best="no" rank="3" local="no",黑龙江卫视
+#EXTINF:-1 tvg-id="黑龙江卫视" tvg-name="黑龙江卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E9%BB%91%E9%BE%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="621.76" best="no" rank="3" local="no",黑龙江卫视
 http://198.204.228.26/live/hljwshd.m3u8
-#EXTINF:-1 tvg-id="黑龙江卫视" tvg-name="黑龙江卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E9%BB%91%E9%BE%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1001.74" best="no" rank="4" local="no",黑龙江卫视
+#EXTINF:-1 tvg-id="黑龙江卫视" tvg-name="黑龙江卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E9%BB%91%E9%BE%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1001.74" best="no" rank="4" local="no",黑龙江卫视
 https://live.264788.xyz/channel/heilongjiangweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=70e7900a371f6cb721786924bfba0418
-#EXTINF:-1 tvg-id="黑龙江卫视" tvg-name="黑龙江卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E9%BB%91%E9%BE%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="📺 电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="961.74" best="no" rank="5" local="no",黑龙江卫视
+#EXTINF:-1 tvg-id="黑龙江卫视" tvg-name="黑龙江卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E9%BB%91%E9%BE%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="961.74" best="no" rank="5" local="no",黑龙江卫视
 https://epg.pw/stream/c6c1262d0b35e59eac22bf513395f00f8b60cc5eab41f598412cdf8269312f32.m3u8

@@ -502,8 +502,8 @@ def build_output_m3u(channels, mode):
 
     def get_group(name):
         if name.startswith("CCTV") or "卫视" in name:
-            return "📺 电视频道"
-        return "🎬 媒体频道"
+            return "电视频道"
+        return "媒体频道"
 
     # ============================
     # 排序模式 → 启用哪些质量档（只执行一次）

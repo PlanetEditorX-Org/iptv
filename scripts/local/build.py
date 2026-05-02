@@ -649,7 +649,7 @@ def build_readme():
     # 电视频道表格
     # ============================
 
-    html.append("## 📺 电视频道\n\n<table>")
+    html.append("## 电视频道\n\n<table>")
     html.append("<tr><th>频道</th><th>可用源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
 
     for name, info in sorted(CHANNEL_REPORT.items(), key=lambda x: (x[1]["removed"], x[0])):
