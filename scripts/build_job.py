@@ -466,7 +466,7 @@ LOGO_BASES = [
     "https://gitee.com/cquptxiong/live/raw/main/tv/"
 ]
 
-def build_output_m3u(channels, mode):
+def build_output_m3u(channels, mode, WHITELIST):
     lines = []
     lines.append("#EXTM3U")
 
@@ -501,9 +501,11 @@ def build_output_m3u(channels, mode):
         return None
 
     def get_group(name):
-        if name.startswith("CCTV") or "卫视" in name:
+        # 白名单中的频道归为“电视频道”，否则归为“媒体频道”
+        if name in WHITELIST:
             return "电视频道"
-        return "媒体频道"
+        else:
+            return "媒体频道"
 
     # ============================
     # 排序模式 → 启用哪些质量档（只执行一次）
@@ -766,7 +768,7 @@ def main(mode):
     # 输出 TXT / M3U（永远生成文件）
     # ============================
     txt = build_output_txt(channels, mode)
-    m3u = build_output_m3u(channels, mode)
+    m3u = build_output_m3u(channels, mode, WHITELIST)
 
     txt_path = OUTPUT_DIR / f"channels_{mode}.txt"
     m3u_path = OUTPUT_DIR / f"channels_{mode}.m3u"
