@@ -1,38 +1,52 @@
 # IPTV 质量报表（仅统计远程源）
 
-⏱ **构建时间：2026-05-02 13:08:53 (CST)**
+⏱ **构建时间：2026-05-02 13:35:41 (CST)**
 
 
 ## 📊 总览统计
 
-- **总频道数：** 20
-- **保留频道数：** 20
+- **总频道数：** 30
+- **保留频道数：** 30
 - **已过滤频道数：** 0
-- **总可用远程源数：** 35
+- **总可用远程源数：** 62
 
 
 ## 电视频道（远程源统计）
 
-<tr>
-<td><th>频道</th><th>可用源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>
-<tr><td>CCTV1</td><td>3</td><td>1920x1080</td><td>94.9</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV2</td><td>1</td><td>1920x1080</td><td>93.2</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV3</td><td>1</td><td>1920x1080</td><td>96.3</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV4</td><td>2</td><td>1920x1080</td><td>96.7</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV5</td><td>4</td><td>1920x1080</td><td>97.4</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV6</td><td>1</td><td>1440x1080</td><td>94.7</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV7</td><td>2</td><td>1920x1080</td><td>92.8</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV8</td><td>3</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV10</td><td>2</td><td>1920x1080</td><td>94.9</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV12</td><td>3</td><td>1920x1080</td><td>95.7</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>CCTV13</td><td>3</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>北京卫视</td><td>1</td><td>1920x1080</td><td>96.4</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>山东卫视</td><td>1</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>浙江卫视</td><td>1</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>湖南卫视</td><td>2</td><td>3840x2160</td><td>100.0</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>甘肃卫视</td><td>1</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>贵州卫视</td><td>1</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>辽宁卫视</td><td>1</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>重庆卫视</td><td>1</td><td>1920x1080</td><td>93.1</td><td><span style="color:green">保留</span></td></tr>
-<tr><td>青海卫视</td><td>1</td><td>1920x1080</td><td>97.6</td><td><span style="color:green">保留</span></td></tr>
-</table>
+| 频道 | 可用源 | 最佳分辨率 | 最高得分 | 状态 |
+|------|--------|------------|----------|------|
+| CCTV1 | 3 | 1920x1080 | 94.9 | ✅ 保留 |
+| CCTV2 | 1 | 1920x1080 | 93.2 | ✅ 保留 |
+| CCTV3 | 2 | 1920x1080 | 96.3 | ✅ 保留 |
+| CCTV4 | 4 | 1920x1080 | 96.7 | ✅ 保留 |
+| CCTV5 | 7 | 1920x1080 | 97.6 | ✅ 保留 |
+| CCTV6 | 5 | 1920x1080 | 97.6 | ✅ 保留 |
+| CCTV7 | 2 | 1920x1080 | 92.8 | ✅ 保留 |
+| CCTV8 | 4 | 1920x1080 | 97.6 | ✅ 保留 |
+| CCTV9 | 2 | 1920x1080 | 94.2 | ✅ 保留 |
+| CCTV10 | 4 | 1920x1080 | 95.4 | ✅ 保留 |
+| CCTV11 | 3 | 1920x1080 | 96.2 | ✅ 保留 |
+| CCTV12 | 4 | 1920x1080 | 95.7 | ✅ 保留 |
+| CCTV13 | 3 | 1920x1080 | 97.6 | ✅ 保留 |
+| 北京卫视 | 1 | 1920x1080 | 95.3 | ✅ 保留 |
+| 吉林卫视 | 1 | 1920x1080 | 97.6 | ✅ 保留 |
+| 天津卫视 | 1 | 1920x1080 | 97.6 | ✅ 保留 |
+| 安徽卫视 | 1 | 1920x1080 | 97.6 | ✅ 保留 |
+| 山东卫视 | 1 | 1920x1080 | 97.6 | ✅ 保留 |
+| 河南卫视 | 1 | 3840x2160 | 100.0 | ✅ 保留 |
+| 浙江卫视 | 1 | 1920x1080 | 97.6 | ✅ 保留 |
+| 深圳卫视 | 1 | 1920x1080 | 91.0 | ✅ 保留 |
+| 湖北卫视 | 1 | 1920x1080 | 97.6 | ✅ 保留 |
+| 湖南卫视 | 2 | 3840x2160 | 100.0 | ✅ 保留 |
+| 甘肃卫视 | 1 | 1920x1080 | 97.6 | ✅ 保留 |
+| 贵州卫视 | 1 | 1920x1080 | 97.6 | ✅ 保留 |
+| 辽宁卫视 | 1 | 1920x1080 | 97.6 | ✅ 保留 |
+| 重庆卫视 | 1 | 1920x1080 | 93.1 | ✅ 保留 |
+| 青海卫视 | 1 | 1920x1080 | 97.6 | ✅ 保留 |
+
+## 媒体频道（远程源统计）
+
+| 频道 | 可用源 | 最佳分辨率 | 最高得分 | 状态 |
+|------|--------|------------|----------|------|
+| CHC动作电影 | 1 | 1920x1080 | 90.8 | ✅ 保留 |
+| CHC家庭影院 | 1 | 1920x1080 | 92.5 | ✅ 保留 |
