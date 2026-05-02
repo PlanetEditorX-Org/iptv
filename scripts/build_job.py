@@ -338,10 +338,21 @@ def detect_and_sort_urls(name, urls, is_entertainment=False):
 # ============================
 
 def channel_sort_key(name: str):
-    m = re.match(r"(CCTV|CETV)(\d+)", name)
-    if m:
-        return (m.group(1), int(m.group(2)))
-    return ("ZZZ", name)
+    # 自然排序辅助函数
+    def natural_key(s: str):
+        parts = re.split(r'(\d+)', s)
+        return [int(part) if part.isdigit() else part for part in parts]
+
+    # 定义优先级：0=CCTV，1=卫视，2=其他
+    if name.startswith("CCTV"):
+        # 提取数字，如 CCTV1 -> 1, CCTV5+ 暂时当作 5（可根据需要调整）
+        m = re.search(r'CCTV(\d+)', name)
+        num = int(m.group(1)) if m else 999
+        return (0, num, "")
+    elif "卫视" in name:
+        return (1, 0, natural_key(name))   # 卫视内部按自然排序
+    else:
+        return (2, 0, natural_key(name))   # 其他（CHC等）按自然排序，排在最后
 
 def build_output_txt(channels, mode):
     lines = []
