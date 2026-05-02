@@ -19,12 +19,12 @@ http://120.76.248.139/live/bfgd/4200000063.m3u8
 http://120.202.94.181:9446/tsfile/live/0004_1.m3u8?authid=0&key=txiptv&playlive=0
 #EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4.png" group-title="电视频道" score="93.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="136.46" best="no" rank="4" local="no",CCTV4
 http://go.bkpcp.top/mg/cctv4o
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="568.08" best="yes" rank="1" local="no",CCTV5
-http://120.202.94.181:9446/tsfile/live/0005_1.m3u8?authid=0&key=txiptv&playlive=0
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="466.02" best="no" rank="2" local="no",CCTV5
-http://120.76.248.139/live/bfgd/4200000064.m3u8
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="4088.81" best="no" rank="3" local="no",CCTV5
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="4088.81" best="yes" rank="1" local="no",CCTV5
 http://120.76.248.139/live/bfgd/4200000246.m3u8
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="568.08" best="no" rank="2" local="no",CCTV5
+http://120.202.94.181:9446/tsfile/live/0005_1.m3u8?authid=0&key=txiptv&playlive=0
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="466.02" best="no" rank="3" local="no",CCTV5
+http://120.76.248.139/live/bfgd/4200000064.m3u8
 #EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="97.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="378.78" best="no" rank="4" local="no",CCTV5
 http://go.bkpcp.top/mg/cctv5
 #EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="电视频道" score="95.4" resolution="1920x1080" bitrate="0" delay="1.0" blur="229.70" best="no" rank="5" local="no",CCTV5
@@ -35,10 +35,10 @@ http://42.237.157.101:9003/hls/5/index.m3u8
 http://221.7.175.154:8445/tsfile/live/1018_1.m3u8?authid=0%24%C3%A5%C2%B9%C2%BF%C3%A8%C2%A5%C2%BF%C3%A5%C5%92%E2%80%94%C3%A6%C2%B5%C2%B7%C3%A8%EF%BF%BD%E2%80%9D%C3%A9%E2%82%AC%C5%A1&key=txiptv&playlive=1
 #EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-6.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="537.15" best="yes" rank="1" local="no",CCTV6
 http://221.7.175.154:8445/tsfile/live/1004_1.m3u8?authid=0%24%C3%A5%C2%B9%C2%BF%C3%A8%C2%A5%C2%BF%C3%A5%C5%92%E2%80%94%C3%A6%C2%B5%C2%B7%C3%A8%EF%BF%BD%E2%80%9D%C3%A9%E2%82%AC%C5%A1&key=txiptv&playlive=1
-#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-6.png" group-title="电视频道" score="94.7" resolution="1440x1080" bitrate="4500000" delay="1.0" blur="627.56" best="no" rank="2" local="no",CCTV6
-http://m.061899.xyz/mg/cctv6
-#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-6.png" group-title="电视频道" score="94.7" resolution="1440x1080" bitrate="4500000" delay="1.0" blur="630.98" best="no" rank="3" local="no",CCTV6
+#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-6.png" group-title="电视频道" score="94.7" resolution="1440x1080" bitrate="4500000" delay="1.0" blur="630.98" best="no" rank="2" local="no",CCTV6
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv6
+#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-6.png" group-title="电视频道" score="94.7" resolution="1440x1080" bitrate="4500000" delay="1.0" blur="627.56" best="no" rank="3" local="no",CCTV6
+http://m.061899.xyz/mg/cctv6
 #EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-6.png" group-title="电视频道" score="94.7" resolution="1440x1080" bitrate="4500000" delay="1.0" blur="636.79" best="no" rank="4" local="no",CCTV6
 http://go.bkpcp.top/mg/cctv6
 #EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-6.png" group-title="电视频道" score="93.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="128.28" best="no" rank="5" local="no",CCTV6
@@ -81,16 +81,12 @@ http://221.7.175.154:8445/tsfile/live/1010_1.m3u8?authid=0%24%C3%A5%C2%B9%C2%BF%
 http://120.202.94.181:9446/tsfile/live/0012_1.m3u8?authid=0&key=txiptv&playlive=0
 #EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV12" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-12.png" group-title="电视频道" score="95.0" resolution="1920x1080" bitrate="0" delay="1.0" blur="207.50" best="no" rank="4" local="no",CCTV12
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv12
-#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-13.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1271.80" best="yes" rank="1" local="no",CCTV13
-http://120.202.94.181:9446/tsfile/live/0013_1.m3u8?authid=0&key=txiptv&playlive=0
-#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-13.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="3599360" delay="1.0" blur="828.67" best="no" rank="2" local="no",CCTV13
+#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-13.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="3599360" delay="1.0" blur="828.67" best="yes" rank="1" local="no",CCTV13
 http://m.061899.xyz/mg/cctv13
+#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-13.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="1271.80" best="no" rank="2" local="no",CCTV13
+http://120.202.94.181:9446/tsfile/live/0013_1.m3u8?authid=0&key=txiptv&playlive=0
 #EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-13.png" group-title="电视频道" score="93.1" resolution="1920x1080" bitrate="0" delay="1.0" blur="121.79" best="no" rank="3" local="no",CCTV13
 http://221.7.175.154:8445/tsfile/live/1011_1.m3u8?authid=0%24%C3%A5%C2%B9%C2%BF%C3%A8%C2%A5%C2%BF%C3%A5%C5%92%E2%80%94%C3%A6%C2%B5%C2%B7%C3%A8%EF%BF%BD%E2%80%9D%C3%A9%E2%82%AC%C5%A1&key=txiptv&playlive=1
-#EXTINF:-1 tvg-id="CHC动作电影" tvg-name="CHC动作电影" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CHC%E5%8A%A8%E4%BD%9C%E7%94%B5%E5%BD%B1.png" group-title="电视频道" score="90.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="43.56" best="yes" rank="1" local="no",CHC动作电影
-http://42.237.157.101:9003/hls/60/index.m3u8
-#EXTINF:-1 tvg-id="CHC家庭影院" tvg-name="CHC家庭影院" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CHC%E5%AE%B6%E5%BA%AD%E5%BD%B1%E9%99%A2.png" group-title="电视频道" score="92.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="99.36" best="yes" rank="1" local="no",CHC家庭影院
-http://42.237.157.101:9003/hls/61/index.m3u8
 #EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="95.3" resolution="1920x1080" bitrate="0" delay="1.0" blur="225.61" best="yes" rank="1" local="no",北京卫视
 http://42.237.157.101:9003/hls/31/index.m3u8
 #EXTINF:-1 tvg-id="吉林卫视" tvg-name="吉林卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="533.17" best="yes" rank="1" local="no",吉林卫视
@@ -123,3 +119,7 @@ http://42.237.157.101:9003/hls/42/index.m3u8
 http://42.237.157.101:9003/hls/44/index.m3u8
 #EXTINF:-1 tvg-id="青海卫视" tvg-name="青海卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="电视频道" score="97.6" resolution="1920x1080" bitrate="0" delay="1.0" blur="477.00" best="yes" rank="1" local="no",青海卫视
 http://42.237.157.101:9003/hls/53/index.m3u8
+#EXTINF:-1 tvg-id="CHC动作电影" tvg-name="CHC动作电影" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CHC%E5%8A%A8%E4%BD%9C%E7%94%B5%E5%BD%B1.png" group-title="电视频道" score="90.8" resolution="1920x1080" bitrate="0" delay="1.0" blur="43.56" best="yes" rank="1" local="no",CHC动作电影
+http://42.237.157.101:9003/hls/60/index.m3u8
+#EXTINF:-1 tvg-id="CHC家庭影院" tvg-name="CHC家庭影院" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CHC%E5%AE%B6%E5%BA%AD%E5%BD%B1%E9%99%A2.png" group-title="电视频道" score="92.5" resolution="1920x1080" bitrate="0" delay="1.0" blur="99.36" best="yes" rank="1" local="no",CHC家庭影院
+http://42.237.157.101:9003/hls/61/index.m3u8
