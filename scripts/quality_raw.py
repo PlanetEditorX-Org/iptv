@@ -24,7 +24,7 @@ CACHE_FILE = STATE_DIR / "cache.json"
 cache_lock = threading.Lock()
 cache = {}
 RAW_RESULTS = {}
-EXPIRE_SECONDS = 24 * 3600
+EXPIRE_SECONDS = 12 * 3600
 
 # ============================
 # JSON 工具
