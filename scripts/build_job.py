@@ -39,7 +39,8 @@ UPSTREAM_BLOCKLIST_FILE = STATE_DIR / "upstream_blocklist.json"
 # 全局变量
 # ============================
 
-WHITELIST = set()
+WHITELIST_ORDER = []   # 保持顺序的列表
+WHITELIST_SET = set()  # 用于快速成员判断
 BLACKLIST = []
 
 URL_SOURCE = {}              # URL → 上游源
@@ -183,7 +184,7 @@ def add_channel(channels, name, url, source_url=None, from_local_spider=False):
     if not name or not url:
         return
 
-    if name not in WHITELIST:
+    if name not in WHITELIST_SET:
         for key in BLACKLIST:
             if key in name:
                 FILTERED_LOG[name].append({
@@ -337,24 +338,7 @@ def detect_and_sort_urls(name, urls, is_entertainment=False):
 # TXT 输出
 # ============================
 
-def channel_sort_key(name: str):
-    # 自然排序辅助函数
-    def natural_key(s: str):
-        parts = re.split(r'(\d+)', s)
-        return [int(part) if part.isdigit() else part for part in parts]
-
-    # 定义优先级：0=CCTV，1=卫视，2=其他
-    if name.startswith("CCTV"):
-        # 提取数字，如 CCTV1 -> 1, CCTV5+ 暂时当作 5（可根据需要调整）
-        m = re.search(r'CCTV(\d+)', name)
-        num = int(m.group(1)) if m else 999
-        return (0, num, "")
-    elif "卫视" in name:
-        return (1, 0, natural_key(name))   # 卫视内部按自然排序
-    else:
-        return (2, 0, natural_key(name))   # 其他（CHC等）按自然排序，排在最后
-
-def build_output_txt(channels, mode):
+def build_output_txt(channels, mode, whitelist_order):
     lines = []
 
     # ============================
@@ -381,15 +365,16 @@ def build_output_txt(channels, mode):
     if mode in ("all", "cctv", "satellite"):
         lines.append("电视频道,#genre#")
 
-        for name in sorted(channels.keys(), key=channel_sort_key):
-
-            if name not in WHITELIST:
-                continue
-
+        # 遍历白名单顺序列表
+        for name in whitelist_order:   # 需要将 whitelist_order 作为参数传入
+            # 模式过滤
             if mode == "cctv" and not name.startswith("CCTV"):
                 continue
-
             if mode == "satellite" and name.startswith("CCTV"):
+                continue
+
+            # 如果该频道在 channels 中不存在，跳过
+            if name not in channels:
                 continue
 
             raw_urls = channels[name]
@@ -447,10 +432,8 @@ def build_output_txt(channels, mode):
     if mode in ("all", "entertainment"):
         lines.append("媒体频道,#genre#")
         for name in sorted(channels.keys()):
-
-            if name in WHITELIST:
+            if name in WHITELIST_SET:
                 continue
-
             raw_urls = channels[name]
 
             if len(raw_urls) < MINI_RAW_URLS:
@@ -477,7 +460,7 @@ LOGO_BASES = [
     "https://gitee.com/cquptxiong/live/raw/main/tv/"
 ]
 
-def build_output_m3u(channels, mode, WHITELIST):
+def build_output_m3u(channels, mode, whitelist_order):
     lines = []
     lines.append("#EXTM3U")
 
@@ -513,10 +496,9 @@ def build_output_m3u(channels, mode, WHITELIST):
 
     def get_group(name):
         # 白名单中的频道归为“电视频道”，否则归为“媒体频道”
-        if name in WHITELIST:
+        if name in WHITELIST_SET:   # 全局集合
             return "电视频道"
-        else:
-            return "媒体频道"
+        return "媒体频道"
 
     # ============================
     # 排序模式 → 启用哪些质量档（只执行一次）
@@ -540,15 +522,16 @@ def build_output_m3u(channels, mode, WHITELIST):
     # 电视台部分
     # ============================
     if mode in ("all", "cctv", "satellite"):
-        for name in sorted(channels.keys(), key=channel_sort_key):
-
-            if name not in WHITELIST:
-                continue
-
+        # 遍历白名单顺序列表
+        for name in whitelist_order:   # 需要将 whitelist_order 作为参数传入
+            # 模式过滤
             if mode == "cctv" and not name.startswith("CCTV"):
                 continue
-
             if mode == "satellite" and name.startswith("CCTV"):
+                continue
+
+            # 如果该频道在 channels 中不存在，跳过
+            if name not in channels:
                 continue
 
             raw_urls = channels[name]
@@ -718,14 +701,17 @@ def load_live_urls():
     return items
 
 def load_channel_whitelist():
-    whitelist = set()
+    order = []
+    s = set()
     if CHANNEL_LIST_FILE.exists():
         with CHANNEL_LIST_FILE.open("r", encoding="utf-8") as f:
             for line in f:
                 name = line.strip()
                 if name:
-                    whitelist.add(normalize_name(name))
-    return whitelist
+                    norm = normalize_name(name)
+                    order.append(norm)
+                    s.add(norm)
+    return order, s
 
 def load_blacklist():
     bl = []
@@ -755,8 +741,8 @@ def main(mode):
     # 强制创建 output 目录，避免 GitHub Actions 报错
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    global WHITELIST, BLACKLIST
-    WHITELIST = load_channel_whitelist()
+    global WHITELIST_SET, WHITELIST_ORDER, BLACKLIST
+    WHITELIST_ORDER, WHITELIST_SET = load_channel_whitelist()
     BLACKLIST = load_blacklist()
 
     # 加载上游源
@@ -778,8 +764,8 @@ def main(mode):
     # ============================
     # 输出 TXT / M3U（永远生成文件）
     # ============================
-    txt = build_output_txt(channels, mode)
-    m3u = build_output_m3u(channels, mode, WHITELIST)
+    txt = build_output_txt(channels, mode, WHITELIST_ORDER)
+    m3u = build_output_m3u(channels, mode, WHITELIST_ORDER)
 
     txt_path = OUTPUT_DIR / f"channels_{mode}.txt"
     m3u_path = OUTPUT_DIR / f"channels_{mode}.m3u"
