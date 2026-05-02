@@ -3541,39 +3541,6 @@
     "ts": 1777694918.7603588,
     "source": "https://d.kstore.dev/download/11344/yunduan.txt"
   },
-  "http://42.237.157.101:9003/hls/60/index.m3u8": {
-    "width": 1920,
-    "height": 1080,
-    "bitrate": 0,
-    "delay": 1.0,
-    "blur": 140.33484875345928,
-    "raw_score": -100,
-    "score": 0.0,
-    "ts": 1777698203.5798345,
-    "source": "local_spider"
-  },
-  "http://42.237.157.101:9003/hls/61/index.m3u8": {
-    "width": 1920,
-    "height": 1080,
-    "bitrate": 0,
-    "delay": 1.0,
-    "blur": 60.190222970093814,
-    "raw_score": -100,
-    "score": 0.0,
-    "ts": 1777698217.142254,
-    "source": "local_spider"
-  },
-  "http://42.237.157.101:9003/hls/31/index.m3u8": {
-    "width": 1920,
-    "height": 1080,
-    "bitrate": 0,
-    "delay": 1.0,
-    "blur": 294.25906478149034,
-    "raw_score": 41.18495323907452,
-    "score": 96.4249859739545,
-    "ts": 1777698230.0661883,
-    "source": "local_spider"
-  },
   "https://hlsbkmgsplive.miguvideo.com/envivo_v/2018/SD/jilin/1000/01.m3u8": {
     "width": 0,
     "height": 0,
