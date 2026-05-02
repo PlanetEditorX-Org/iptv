@@ -179,67 +179,63 @@ def rebuild_live_urls(upstream_blocklist):
 # ============================
 # 生成 README（基于远程源统计）
 # ============================
-
 def build_readme(report):
     import re
 
-    # 自然排序键函数
+    # 自然排序键
     def natural_key(name: str):
-        # 将名称拆分为文本和数字部分，例如 "CCTV10" -> ["CCTV", 10]
         parts = re.split(r'(\d+)', name)
-        # 转换数字部分为 int，非数字保持原样
         return [int(part) if part.isdigit() else part for part in parts]
 
-    html = []
-    html.append("# IPTV 质量报表（仅统计远程源）\n")
+    lines = []
+    lines.append("# IPTV 质量报表（仅统计远程源）\n")
 
     cst = timezone(timedelta(hours=8))
     build_time = datetime.now(cst).strftime("%Y-%m-%d %H:%M:%S")
-    html.append(f"⏱ **构建时间：{build_time} (CST)**\n\n")
+    lines.append(f"⏱ **构建时间：{build_time} (CST)**\n\n")
 
     total_channels = len(report)
     removed_channels = sum(1 for x in report.values() if x["removed"])
     kept_channels = total_channels - removed_channels
     total_usable = sum(x["usable"] for x in report.values())
 
-    html.append("## 📊 总览统计\n")
-    html.append(f"- **总频道数：** {total_channels}")
-    html.append(f"- **保留频道数：** {kept_channels}")
-    html.append(f"- **已过滤频道数：** {removed_channels}")
-    html.append(f"- **总可用远程源数：** {total_usable}\n\n")
+    lines.append("## 📊 总览统计\n")
+    lines.append(f"- **总频道数：** {total_channels}")
+    lines.append(f"- **保留频道数：** {kept_channels}")
+    lines.append(f"- **已过滤频道数：** {removed_channels}")
+    lines.append(f"- **总可用远程源数：** {total_usable}\n\n")
 
-    # 电视频道（使用自然排序）
-    html.append("## 电视频道（远程源统计）\n\n<tr>")
-    html.append("<td><th>频道</th><th>可用源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
+    # 电视频道（Markdown 表格）
+    lines.append("## 电视频道（远程源统计）\n")
+    lines.append("| 频道 | 可用源 | 最佳分辨率 | 最高得分 | 状态 |")
+    lines.append("|------|--------|------------|----------|------|")
 
     tv_items = [(name, info) for name, info in report.items() if info["type"] == "tv"]
-    # 按自然排序
-    tv_items.sort(key=lambda x: natural_key(x[0]))
+    tv_items.sort(key=lambda x: natural_key(x[0]))  # 自然排序
 
     for name, info in tv_items:
-        status = '<span style="color:red">过滤</span>' if info["removed"] else '<span style="color:green">保留</span>'
-        html.append(
-            f"<tr><td>{name}</td><td>{info['usable']}</td>"
-            f"<td>{info['best_res']}</td><td>{info['best_score']}</td><td>{status}</td></tr>"
+        status = "❌ 过滤" if info["removed"] else "✅ 保留"
+        lines.append(
+            f"| {name} | {info['usable']} | {info['best_res']} | {info['best_score']:.1f} | {status} |"
         )
 
-    html.append("</table>\n")
+    lines.append("")
 
-    # 媒体频道（同样使用自然排序，可选）
+    # 媒体频道（同样使用 Markdown 表格）
     ent_items = [(name, info) for name, info in report.items() if info["type"] == "entertainment"]
     if ent_items:
-        html.append("## 媒体频道（远程源统计）\n\n<table>")
-        html.append("<tr><th>频道</th><th>可用源</th><th>最佳分辨率</th><th>最高得分</th><th>状态</th></tr>")
+        lines.append("## 媒体频道（远程源统计）\n")
+        lines.append("| 频道 | 可用源 | 最佳分辨率 | 最高得分 | 状态 |")
+        lines.append("|------|--------|------------|----------|------|")
         ent_items.sort(key=lambda x: natural_key(x[0]))
         for name, info in ent_items:
-            status = '<span style="color:red">过滤</span>' if info["removed"] else '<span style="color:green">保留</span>'
-            html.append(
-                f"<tr><td>{name}</td><td>{info['total']}</td>"
-                f"<td>{info['best_res']}</td><td>{info['best_score']}</td><td>{status}</td></tr>"
+            status = "❌ 过滤" if info["removed"] else "✅ 保留"
+            lines.append(
+                f"| {name} | {info['total']} | {info['best_res']} | {info['best_score']:.1f} | {status} |"
             )
-        html.append("</table>\n")
+        lines.append("")
 
-    README_FILE.write_text("\n".join(html), encoding="utf-8")
+    README_FILE.write_text("\n".join(lines), encoding="utf-8")
 
 # ============================
 # 主流程
