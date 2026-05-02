@@ -2696,7 +2696,7 @@
   "http://cdn6.bkpcp.top/tl/tuiliu.php?id=bjws": 0,
   "http://1.94.31.214/php/py/k-web/ku9/py/socks5.py?ip=111.43.114.137%3A1080&u=http%3A%2F%2Fottrrs.hl.chinamobile.com%2FPLTV%2F88888888%2F224%2F3221225728%2Findex.m3u8+%24%E9%BB%91%E9%BE%99%E6%B1%9F%E7%A7%BB%E5%8A%A8": 2,
   "http://14.152.102.71:9901/tsfile/live/0122_1.m3u8?authid=0&key=txiptv&playlive=1": 2,
-  "http://120.211.62.180:8000/hls/35/index.m3u8": 2,
+  "http://120.211.62.180:8000/hls/35/index.m3u8": 0,
   "https://live.264788.xyz/channel/beijingweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=41225e7b85c7ba5b42d4c3979cce5d73": 2,
   "http://[2409:8087:3c02:21:0:1:0:100a]:6410/shandong_cabletv.live.zte.com////CHANNEL00000302/index.m3u8": 2,
   "https://live.264788.xyz/channel/beijingweishi4k?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=fc6b7ae1ab0bb4f6d1eec63f649cb72b": 0,
@@ -3307,7 +3307,7 @@
   "http://k.061899.xyz/k.php?id=sdws": 0,
   "https://live.264788.xyz/channel/shandongweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=584a5648f57ec60599e05d68c502946e": 2,
   "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?Contentid=1000000001000016568&channel-id=FifastbLive&livemode=1&mode=1&stbId=yu": 2,
-  "http://120.76.248.139/live/bfgd/4200000099.m3u8": 2,
+  "http://120.76.248.139/live/bfgd/4200000099.m3u8": 0,
   "http://116.149.160.228:9003//hls/27/index.m3u8": 2,
   "http://120.87.19.109:80/PLTV/88888973/224/3221225758/10000100000000060000000000334623_0.smil/01.m3u8?accountinfo=UoQbCSdhOfs+Fhzpjb+WON1faRQ9pU15SBx6EULzJM%2Fq63EjPL5%2FUXSVfEKzDq3xc0g8qb26m%2FB5LC+MPknpTwWZ1F4+6A1eDkDeh5XZlpvpn23wIF+ldb6dnBPa8zHj%2CEND&fmt=ts2hls%2C244%2C01.m3u8&tenantId=8601": 2,
   "http://[2409:8087:74f0:22::5]:6410/270000001128/9900000527/index.m3u8?Contentid=9900000527&channel-id=newtv&livemode=4": 2,
@@ -10820,5 +10820,6 @@
   "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=48fc11755b8e58fc21a86e39fa7f54e9&wsTime=1777737550": 0,
   "http://go.bkpcp.top/mg/dzdy": 0,
   "http://k.061899.xyz/k.php?id=dzdy": 0,
-  "http://cdn6.bkpcp.top/tl/tuiliu.php?id=dzdy": 0
+  "http://cdn6.bkpcp.top/tl/tuiliu.php?id=dzdy": 0,
+  "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=e29604c16b313155775bd5eb4081225e&wsTime=1777744764": 0
 }
