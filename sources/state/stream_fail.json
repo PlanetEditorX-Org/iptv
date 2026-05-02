@@ -10777,5 +10777,6 @@
   "http://175.11.73.113:9999/tsfile/live/0142_1.m3u8?authid=0&key=txiptv&playlive=1": 0,
   "http://42.237.157.101:9003/hls/44/index.m3u8": 0,
   "http://42.237.157.101:9003/hls/53/index.m3u8": 0,
-  "http://175.11.73.113:9999/tsfile/live/1136_1.m3u8?authid=0&key=txiptv&playlive=1": 0
+  "http://175.11.73.113:9999/tsfile/live/1136_1.m3u8?authid=0&key=txiptv&playlive=1": 0,
+  "http://42.237.157.101:9003/hls/31/index.m3u8": 0
 }
